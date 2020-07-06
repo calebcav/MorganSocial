@@ -44,15 +44,18 @@ Morgan Social is an app strictly for Morgan State Students that provides news, e
 * log in, log out, and sign up page
 * delete posts
 * like/unlike posts
-* profile picture
+* profile picture (camera feature alongside)
 * have a mini bio with your major and classification
+* messages
 
 **Optional Nice-to-have Stories**
 
 * bullying/profanity filter
 * a verified club/org feature
 * notification section
-* messaging (possibly group chats)
+* group messaging
+* friends list
+* settings page
 
 ### 2. Screen Archetypes
 
@@ -73,13 +76,20 @@ Morgan Social is an app strictly for Morgan State Students that provides news, e
 **Tab Navigation** (Tab to Screen)
 
 * [Home]
-* [all topics]
-* [profile page]
+* [Search topics]
+* [Messages]
+* [Profile page]
+
+**Flow Navigation** (Screen to Screen)
+* Forced Log-in -> Account creation if no log in is available
+* Search Topics -> Get's list of topics
+* Profile -> Able to edit profile picture and bio.
+* Messages -> Compose or reply to any messages
 
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="" width=600>
+<img src="https://i.imgur.com/4m3q0TV.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
