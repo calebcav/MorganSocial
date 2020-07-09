@@ -113,9 +113,6 @@ Morgan Social is an app strictly for Morgan State Students that provides news, e
 
 
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
 
 - Home Feed Screen
     - (Read/GET) Query all posts where it ranks the number of likes.
