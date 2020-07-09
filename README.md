@@ -98,8 +98,42 @@ Morgan Social is an app strictly for Morgan State Students that provides news, e
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+
+| Property      | Type            | Description                                         |
+| ------------- | --------------- | --------------------------------------------------- |
+| objectId      | String          | unique id for the user post (default field)         |
+| author        | Pointer to User | image author                                        |
+| image         | File            | image that user posts                               |
+| caption       | String          | image caption by author                             |
+| commentsCount | Number          | number of comments that has been posted to an image |
+| likesCount    | Number          | number of likes for the post|
+| createdAt | DateTime | date when post is created(default field)|
+| updatedAt | DateTime | date when post is last updated (default field)|
+| category | String | the category in which the post falls under |
+
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+- Home Feed Screen
+    - (Read/GET) Query all posts where it ranks the number of likes.
+    
+    
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    [query orderByDescending:@"likesCount"];
+    [query includeKey:@"author"];
+    [query includeKey:@"category"];
+    query.limit = 10;
+    
+    - (Create/POST) Create a new like on a post.
+    - (Delete) Delete existing like.
+    - (Create/POST) Create a new comment on a post.
+    - (Delete) Delete existing comment.
+- Create Post Screen
+    - (Create/POST) Create a new post object.
+- Profile Screen
+    - (Read/GET) Query logged in user object.
+    - (Update/PUT) Update user profile image.
