@@ -99,7 +99,7 @@ Morgan Social is an app strictly for Morgan State Students that provides news, e
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-
+Post
 | Property      | Type            | Description                                         |
 | ------------- | --------------- | --------------------------------------------------- |
 | objectId      | String          | unique id for the user post (default field)         |
@@ -111,6 +111,12 @@ Morgan Social is an app strictly for Morgan State Students that provides news, e
 | createdAt | DateTime | date when post is created(default field)|
 | updatedAt | DateTime | date when post is last updated (default field)|
 | category | String | the category in which the post falls under |
+
+User
+| Property | Type | Description |
+|----------| ------| ----------|
+
+
 
 
 ### Networking
