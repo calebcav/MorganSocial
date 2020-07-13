@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'morgan-social' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for morgan-social
+  pod 'Parse'
+  target 'morgan-socialTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'morgan-socialUITests' do
+    # Pods for testing
+  end
+
+end

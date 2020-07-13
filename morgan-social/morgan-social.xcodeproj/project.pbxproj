@@ -1,0 +1,826 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38B1A3C224BCCF2B001A049B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3C124BCCF2B001A049B /* AppDelegate.m */; };
+		38B1A3C524BCCF2B001A049B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3C424BCCF2B001A049B /* SceneDelegate.m */; };
+		38B1A3CB24BCCF2B001A049B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B1A3C924BCCF2B001A049B /* Main.storyboard */; };
+		38B1A3CD24BCCF2E001A049B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B1A3CC24BCCF2E001A049B /* Assets.xcassets */; };
+		38B1A3D024BCCF2E001A049B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B1A3CE24BCCF2E001A049B /* LaunchScreen.storyboard */; };
+		38B1A3D324BCCF2E001A049B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3D224BCCF2E001A049B /* main.m */; };
+		38B1A3DD24BCCF2E001A049B /* morgan_socialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3DC24BCCF2E001A049B /* morgan_socialTests.m */; };
+		38B1A3E824BCCF2E001A049B /* morgan_socialUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3E724BCCF2E001A049B /* morgan_socialUITests.m */; };
+		38B1A3F924BCD0E2001A049B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3F824BCD0E2001A049B /* LoginViewController.m */; };
+		38B1A3FC24BCEC25001A049B /* HomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3FB24BCEC25001A049B /* HomeFeedViewController.m */; };
+		38B1A3FF24BCF1B0001A049B /* CategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3FE24BCF1B0001A049B /* CategoryCollectionViewCell.m */; };
+		38B1A40224BCF208001A049B /* PostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A40124BCF208001A049B /* PostsViewController.m */; };
+		38B1A40524BCF784001A049B /* PostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A40424BCF784001A049B /* PostTableViewCell.m */; };
+		38B1A40824BD00F1001A049B /* CreatePostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A40724BD00F1001A049B /* CreatePostViewController.m */; };
+		38B1A40B24BD0413001A049B /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A40A24BD0413001A049B /* ProfileViewController.m */; };
+		38B1A40E24BD1402001A049B /* SearchFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A40D24BD1402001A049B /* SearchFriendViewController.m */; };
+		38B1A41124BD1610001A049B /* FriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41024BD1610001A049B /* FriendsTableViewCell.m */; };
+		38B1A41424BD162B001A049B /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41324BD162B001A049B /* ChatViewController.m */; };
+		38B1A41724BD176D001A049B /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41624BD176D001A049B /* ChatTableViewCell.m */; };
+		38B1A41A24BD1891001A049B /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41924BD1891001A049B /* SignupViewController.m */; };
+		5CADD3160CD2B0DAFBF78FB7 /* Pods_morgan_socialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D1BE97B16435D02596E746 /* Pods_morgan_socialTests.framework */; };
+		5FA0ABFAD3F0038567A5877E /* Pods_morgan_social_morgan_socialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E64A2187FC12C91DE32F33 /* Pods_morgan_social_morgan_socialUITests.framework */; };
+		92BBA2099FEE8DA53FAC2741 /* Pods_morgan_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7880714A81A5E09E2F96E5 /* Pods_morgan_social.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38B1A3D924BCCF2E001A049B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38B1A3B524BCCF2B001A049B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38B1A3BC24BCCF2B001A049B;
+			remoteInfo = "morgan-social";
+		};
+		38B1A3E424BCCF2E001A049B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38B1A3B524BCCF2B001A049B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38B1A3BC24BCCF2B001A049B;
+			remoteInfo = "morgan-social";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		274A760D5B8D4FF93CEA2D7F /* Pods-morgan-socialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-socialTests.release.xcconfig"; path = "Target Support Files/Pods-morgan-socialTests/Pods-morgan-socialTests.release.xcconfig"; sourceTree = "<group>"; };
+		27D1BE97B16435D02596E746 /* Pods_morgan_socialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_morgan_socialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38B1A3BD24BCCF2B001A049B /* morgan-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "morgan-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38B1A3C024BCCF2B001A049B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		38B1A3C124BCCF2B001A049B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		38B1A3C324BCCF2B001A049B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		38B1A3C424BCCF2B001A049B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		38B1A3CA24BCCF2B001A049B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38B1A3CC24BCCF2E001A049B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38B1A3CF24BCCF2E001A049B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		38B1A3D124BCCF2E001A049B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38B1A3D224BCCF2E001A049B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		38B1A3D824BCCF2E001A049B /* morgan-socialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "morgan-socialTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38B1A3DC24BCCF2E001A049B /* morgan_socialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = morgan_socialTests.m; sourceTree = "<group>"; };
+		38B1A3DE24BCCF2E001A049B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38B1A3E324BCCF2E001A049B /* morgan-socialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "morgan-socialUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38B1A3E724BCCF2E001A049B /* morgan_socialUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = morgan_socialUITests.m; sourceTree = "<group>"; };
+		38B1A3E924BCCF2E001A049B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38B1A3F724BCD0E2001A049B /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		38B1A3F824BCD0E2001A049B /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		38B1A3FA24BCEC25001A049B /* HomeFeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeFeedViewController.h; sourceTree = "<group>"; };
+		38B1A3FB24BCEC25001A049B /* HomeFeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeFeedViewController.m; sourceTree = "<group>"; };
+		38B1A3FD24BCF1B0001A049B /* CategoryCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryCollectionViewCell.h; sourceTree = "<group>"; };
+		38B1A3FE24BCF1B0001A049B /* CategoryCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryCollectionViewCell.m; sourceTree = "<group>"; };
+		38B1A40024BCF208001A049B /* PostsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostsViewController.h; sourceTree = "<group>"; };
+		38B1A40124BCF208001A049B /* PostsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostsViewController.m; sourceTree = "<group>"; };
+		38B1A40324BCF784001A049B /* PostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostTableViewCell.h; sourceTree = "<group>"; };
+		38B1A40424BCF784001A049B /* PostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostTableViewCell.m; sourceTree = "<group>"; };
+		38B1A40624BD00F1001A049B /* CreatePostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreatePostViewController.h; sourceTree = "<group>"; };
+		38B1A40724BD00F1001A049B /* CreatePostViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreatePostViewController.m; sourceTree = "<group>"; };
+		38B1A40924BD0413001A049B /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		38B1A40A24BD0413001A049B /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		38B1A40C24BD1402001A049B /* SearchFriendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchFriendViewController.h; sourceTree = "<group>"; };
+		38B1A40D24BD1402001A049B /* SearchFriendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchFriendViewController.m; sourceTree = "<group>"; };
+		38B1A40F24BD1610001A049B /* FriendsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewCell.h; sourceTree = "<group>"; };
+		38B1A41024BD1610001A049B /* FriendsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewCell.m; sourceTree = "<group>"; };
+		38B1A41224BD162B001A049B /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		38B1A41324BD162B001A049B /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		38B1A41524BD176D001A049B /* ChatTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
+		38B1A41624BD176D001A049B /* ChatTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
+		38B1A41824BD1891001A049B /* SignupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		38B1A41924BD1891001A049B /* SignupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		3A7880714A81A5E09E2F96E5 /* Pods_morgan_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_morgan_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FF2582F1A28294F7F0A990A /* Pods-morgan-social-morgan-socialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-social-morgan-socialUITests.debug.xcconfig"; path = "Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		763469C6E2B5A321E68257B1 /* Pods-morgan-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-social.debug.xcconfig"; path = "Target Support Files/Pods-morgan-social/Pods-morgan-social.debug.xcconfig"; sourceTree = "<group>"; };
+		90E64A2187FC12C91DE32F33 /* Pods_morgan_social_morgan_socialUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_morgan_social_morgan_socialUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8921A83775AB35CF7D48059 /* Pods-morgan-social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-social.release.xcconfig"; path = "Target Support Files/Pods-morgan-social/Pods-morgan-social.release.xcconfig"; sourceTree = "<group>"; };
+		AEB3F756E9E48FE7E7859D58 /* Pods-morgan-socialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-socialTests.debug.xcconfig"; path = "Target Support Files/Pods-morgan-socialTests/Pods-morgan-socialTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2B9934106E9AFD11E79C9FE /* Pods-morgan-social-morgan-socialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-social-morgan-socialUITests.release.xcconfig"; path = "Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38B1A3BA24BCCF2B001A049B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92BBA2099FEE8DA53FAC2741 /* Pods_morgan_social.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38B1A3D524BCCF2E001A049B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CADD3160CD2B0DAFBF78FB7 /* Pods_morgan_socialTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38B1A3E024BCCF2E001A049B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FA0ABFAD3F0038567A5877E /* Pods_morgan_social_morgan_socialUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38B1A3B424BCCF2B001A049B = {
+			isa = PBXGroup;
+			children = (
+				38B1A3BF24BCCF2B001A049B /* morgan-social */,
+				38B1A3DB24BCCF2E001A049B /* morgan-socialTests */,
+				38B1A3E624BCCF2E001A049B /* morgan-socialUITests */,
+				38B1A3BE24BCCF2B001A049B /* Products */,
+				88E1B9E50828F6398945693B /* Pods */,
+				59E34AF61292201D41A7B922 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		38B1A3BE24BCCF2B001A049B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38B1A3BD24BCCF2B001A049B /* morgan-social.app */,
+				38B1A3D824BCCF2E001A049B /* morgan-socialTests.xctest */,
+				38B1A3E324BCCF2E001A049B /* morgan-socialUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38B1A3BF24BCCF2B001A049B /* morgan-social */ = {
+			isa = PBXGroup;
+			children = (
+				38B1A3F624BCD006001A049B /* Cell */,
+				38B1A3F524BCCFFC001A049B /* ViewControllers */,
+				38B1A3C024BCCF2B001A049B /* AppDelegate.h */,
+				38B1A3C124BCCF2B001A049B /* AppDelegate.m */,
+				38B1A3C324BCCF2B001A049B /* SceneDelegate.h */,
+				38B1A3C424BCCF2B001A049B /* SceneDelegate.m */,
+				38B1A3C924BCCF2B001A049B /* Main.storyboard */,
+				38B1A3CC24BCCF2E001A049B /* Assets.xcassets */,
+				38B1A3CE24BCCF2E001A049B /* LaunchScreen.storyboard */,
+				38B1A3D124BCCF2E001A049B /* Info.plist */,
+				38B1A3D224BCCF2E001A049B /* main.m */,
+			);
+			path = "morgan-social";
+			sourceTree = "<group>";
+		};
+		38B1A3DB24BCCF2E001A049B /* morgan-socialTests */ = {
+			isa = PBXGroup;
+			children = (
+				38B1A3DC24BCCF2E001A049B /* morgan_socialTests.m */,
+				38B1A3DE24BCCF2E001A049B /* Info.plist */,
+			);
+			path = "morgan-socialTests";
+			sourceTree = "<group>";
+		};
+		38B1A3E624BCCF2E001A049B /* morgan-socialUITests */ = {
+			isa = PBXGroup;
+			children = (
+				38B1A3E724BCCF2E001A049B /* morgan_socialUITests.m */,
+				38B1A3E924BCCF2E001A049B /* Info.plist */,
+			);
+			path = "morgan-socialUITests";
+			sourceTree = "<group>";
+		};
+		38B1A3F524BCCFFC001A049B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				38B1A3F724BCD0E2001A049B /* LoginViewController.h */,
+				38B1A3F824BCD0E2001A049B /* LoginViewController.m */,
+				38B1A3FA24BCEC25001A049B /* HomeFeedViewController.h */,
+				38B1A3FB24BCEC25001A049B /* HomeFeedViewController.m */,
+				38B1A40024BCF208001A049B /* PostsViewController.h */,
+				38B1A40124BCF208001A049B /* PostsViewController.m */,
+				38B1A40624BD00F1001A049B /* CreatePostViewController.h */,
+				38B1A40724BD00F1001A049B /* CreatePostViewController.m */,
+				38B1A40924BD0413001A049B /* ProfileViewController.h */,
+				38B1A40A24BD0413001A049B /* ProfileViewController.m */,
+				38B1A40C24BD1402001A049B /* SearchFriendViewController.h */,
+				38B1A40D24BD1402001A049B /* SearchFriendViewController.m */,
+				38B1A41224BD162B001A049B /* ChatViewController.h */,
+				38B1A41324BD162B001A049B /* ChatViewController.m */,
+				38B1A41824BD1891001A049B /* SignupViewController.h */,
+				38B1A41924BD1891001A049B /* SignupViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		38B1A3F624BCD006001A049B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				38B1A3FD24BCF1B0001A049B /* CategoryCollectionViewCell.h */,
+				38B1A3FE24BCF1B0001A049B /* CategoryCollectionViewCell.m */,
+				38B1A40324BCF784001A049B /* PostTableViewCell.h */,
+				38B1A40424BCF784001A049B /* PostTableViewCell.m */,
+				38B1A40F24BD1610001A049B /* FriendsTableViewCell.h */,
+				38B1A41024BD1610001A049B /* FriendsTableViewCell.m */,
+				38B1A41524BD176D001A049B /* ChatTableViewCell.h */,
+				38B1A41624BD176D001A049B /* ChatTableViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		59E34AF61292201D41A7B922 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A7880714A81A5E09E2F96E5 /* Pods_morgan_social.framework */,
+				90E64A2187FC12C91DE32F33 /* Pods_morgan_social_morgan_socialUITests.framework */,
+				27D1BE97B16435D02596E746 /* Pods_morgan_socialTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88E1B9E50828F6398945693B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				763469C6E2B5A321E68257B1 /* Pods-morgan-social.debug.xcconfig */,
+				A8921A83775AB35CF7D48059 /* Pods-morgan-social.release.xcconfig */,
+				6FF2582F1A28294F7F0A990A /* Pods-morgan-social-morgan-socialUITests.debug.xcconfig */,
+				D2B9934106E9AFD11E79C9FE /* Pods-morgan-social-morgan-socialUITests.release.xcconfig */,
+				AEB3F756E9E48FE7E7859D58 /* Pods-morgan-socialTests.debug.xcconfig */,
+				274A760D5B8D4FF93CEA2D7F /* Pods-morgan-socialTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38B1A3BC24BCCF2B001A049B /* morgan-social */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38B1A3EC24BCCF2E001A049B /* Build configuration list for PBXNativeTarget "morgan-social" */;
+			buildPhases = (
+				CD6572ACFE5662FBE9912D66 /* [CP] Check Pods Manifest.lock */,
+				38B1A3B924BCCF2B001A049B /* Sources */,
+				38B1A3BA24BCCF2B001A049B /* Frameworks */,
+				38B1A3BB24BCCF2B001A049B /* Resources */,
+				19C2D0EF2A9A5B1799CA3389 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "morgan-social";
+			productName = "morgan-social";
+			productReference = 38B1A3BD24BCCF2B001A049B /* morgan-social.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38B1A3D724BCCF2E001A049B /* morgan-socialTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38B1A3EF24BCCF2E001A049B /* Build configuration list for PBXNativeTarget "morgan-socialTests" */;
+			buildPhases = (
+				D7602F1E33BE4F71B1690221 /* [CP] Check Pods Manifest.lock */,
+				38B1A3D424BCCF2E001A049B /* Sources */,
+				38B1A3D524BCCF2E001A049B /* Frameworks */,
+				38B1A3D624BCCF2E001A049B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38B1A3DA24BCCF2E001A049B /* PBXTargetDependency */,
+			);
+			name = "morgan-socialTests";
+			productName = "morgan-socialTests";
+			productReference = 38B1A3D824BCCF2E001A049B /* morgan-socialTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		38B1A3E224BCCF2E001A049B /* morgan-socialUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38B1A3F224BCCF2E001A049B /* Build configuration list for PBXNativeTarget "morgan-socialUITests" */;
+			buildPhases = (
+				F0BE63EA2A10CA4E7051D1B4 /* [CP] Check Pods Manifest.lock */,
+				38B1A3DF24BCCF2E001A049B /* Sources */,
+				38B1A3E024BCCF2E001A049B /* Frameworks */,
+				38B1A3E124BCCF2E001A049B /* Resources */,
+				46446F6BCD15AF1F99AB6030 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38B1A3E524BCCF2E001A049B /* PBXTargetDependency */,
+			);
+			name = "morgan-socialUITests";
+			productName = "morgan-socialUITests";
+			productReference = 38B1A3E324BCCF2E001A049B /* morgan-socialUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38B1A3B524BCCF2B001A049B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Caleb Caviness";
+				TargetAttributes = {
+					38B1A3BC24BCCF2B001A049B = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					38B1A3D724BCCF2E001A049B = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 38B1A3BC24BCCF2B001A049B;
+					};
+					38B1A3E224BCCF2E001A049B = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 38B1A3BC24BCCF2B001A049B;
+					};
+				};
+			};
+			buildConfigurationList = 38B1A3B824BCCF2B001A049B /* Build configuration list for PBXProject "morgan-social" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38B1A3B424BCCF2B001A049B;
+			productRefGroup = 38B1A3BE24BCCF2B001A049B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38B1A3BC24BCCF2B001A049B /* morgan-social */,
+				38B1A3D724BCCF2E001A049B /* morgan-socialTests */,
+				38B1A3E224BCCF2E001A049B /* morgan-socialUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38B1A3BB24BCCF2B001A049B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38B1A3D024BCCF2E001A049B /* LaunchScreen.storyboard in Resources */,
+				38B1A3CD24BCCF2E001A049B /* Assets.xcassets in Resources */,
+				38B1A3CB24BCCF2B001A049B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38B1A3D624BCCF2E001A049B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38B1A3E124BCCF2E001A049B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19C2D0EF2A9A5B1799CA3389 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-morgan-social/Pods-morgan-social-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-morgan-social/Pods-morgan-social-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-morgan-social/Pods-morgan-social-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46446F6BCD15AF1F99AB6030 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD6572ACFE5662FBE9912D66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-morgan-social-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7602F1E33BE4F71B1690221 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-morgan-socialTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0BE63EA2A10CA4E7051D1B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-morgan-social-morgan-socialUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38B1A3B924BCCF2B001A049B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38B1A41424BD162B001A049B /* ChatViewController.m in Sources */,
+				38B1A40824BD00F1001A049B /* CreatePostViewController.m in Sources */,
+				38B1A3FF24BCF1B0001A049B /* CategoryCollectionViewCell.m in Sources */,
+				38B1A41724BD176D001A049B /* ChatTableViewCell.m in Sources */,
+				38B1A40224BCF208001A049B /* PostsViewController.m in Sources */,
+				38B1A41124BD1610001A049B /* FriendsTableViewCell.m in Sources */,
+				38B1A3FC24BCEC25001A049B /* HomeFeedViewController.m in Sources */,
+				38B1A40B24BD0413001A049B /* ProfileViewController.m in Sources */,
+				38B1A40E24BD1402001A049B /* SearchFriendViewController.m in Sources */,
+				38B1A41A24BD1891001A049B /* SignupViewController.m in Sources */,
+				38B1A3C224BCCF2B001A049B /* AppDelegate.m in Sources */,
+				38B1A3D324BCCF2E001A049B /* main.m in Sources */,
+				38B1A3C524BCCF2B001A049B /* SceneDelegate.m in Sources */,
+				38B1A3F924BCD0E2001A049B /* LoginViewController.m in Sources */,
+				38B1A40524BCF784001A049B /* PostTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38B1A3D424BCCF2E001A049B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38B1A3DD24BCCF2E001A049B /* morgan_socialTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38B1A3DF24BCCF2E001A049B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38B1A3E824BCCF2E001A049B /* morgan_socialUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38B1A3DA24BCCF2E001A049B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38B1A3BC24BCCF2B001A049B /* morgan-social */;
+			targetProxy = 38B1A3D924BCCF2E001A049B /* PBXContainerItemProxy */;
+		};
+		38B1A3E524BCCF2E001A049B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38B1A3BC24BCCF2B001A049B /* morgan-social */;
+			targetProxy = 38B1A3E424BCCF2E001A049B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38B1A3C924BCCF2B001A049B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38B1A3CA24BCCF2B001A049B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38B1A3CE24BCCF2E001A049B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38B1A3CF24BCCF2E001A049B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38B1A3EA24BCCF2E001A049B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		38B1A3EB24BCCF2E001A049B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38B1A3ED24BCCF2E001A049B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 763469C6E2B5A321E68257B1 /* Pods-morgan-social.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2F4B9UHH3;
+				INFOPLIST_FILE = "morgan-social/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "calebc.morgan-social";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38B1A3EE24BCCF2E001A049B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8921A83775AB35CF7D48059 /* Pods-morgan-social.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2F4B9UHH3;
+				INFOPLIST_FILE = "morgan-social/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "calebc.morgan-social";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		38B1A3F024BCCF2E001A049B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEB3F756E9E48FE7E7859D58 /* Pods-morgan-socialTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2F4B9UHH3;
+				INFOPLIST_FILE = "morgan-socialTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "calebc.morgan-socialTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/morgan-social.app/morgan-social";
+			};
+			name = Debug;
+		};
+		38B1A3F124BCCF2E001A049B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 274A760D5B8D4FF93CEA2D7F /* Pods-morgan-socialTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2F4B9UHH3;
+				INFOPLIST_FILE = "morgan-socialTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "calebc.morgan-socialTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/morgan-social.app/morgan-social";
+			};
+			name = Release;
+		};
+		38B1A3F324BCCF2E001A049B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FF2582F1A28294F7F0A990A /* Pods-morgan-social-morgan-socialUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2F4B9UHH3;
+				INFOPLIST_FILE = "morgan-socialUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "calebc.morgan-socialUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "morgan-social";
+			};
+			name = Debug;
+		};
+		38B1A3F424BCCF2E001A049B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2B9934106E9AFD11E79C9FE /* Pods-morgan-social-morgan-socialUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2F4B9UHH3;
+				INFOPLIST_FILE = "morgan-socialUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "calebc.morgan-socialUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "morgan-social";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38B1A3B824BCCF2B001A049B /* Build configuration list for PBXProject "morgan-social" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38B1A3EA24BCCF2E001A049B /* Debug */,
+				38B1A3EB24BCCF2E001A049B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38B1A3EC24BCCF2E001A049B /* Build configuration list for PBXNativeTarget "morgan-social" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38B1A3ED24BCCF2E001A049B /* Debug */,
+				38B1A3EE24BCCF2E001A049B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38B1A3EF24BCCF2E001A049B /* Build configuration list for PBXNativeTarget "morgan-socialTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38B1A3F024BCCF2E001A049B /* Debug */,
+				38B1A3F124BCCF2E001A049B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38B1A3F224BCCF2E001A049B /* Build configuration list for PBXNativeTarget "morgan-socialUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38B1A3F324BCCF2E001A049B /* Debug */,
+				38B1A3F424BCCF2E001A049B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38B1A3B524BCCF2B001A049B /* Project object */;
+}

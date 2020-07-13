@@ -1,0 +1,6 @@
+framework module Pods_morgan_socialTests {
+  umbrella header "Pods-morgan-socialTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
