@@ -115,7 +115,14 @@ Post
 User
 | Property | Type | Description |
 |----------| ------| ----------|
-
+| objectId      | String          | unique id for user       |
+| emailVerified        | Bool | to verify email                                       |
+| profilePhoto         | File            | image that the user has                              |
+| ACL       | ACL          | no clue                            |
+| updatedAt |Date          | shows when user was created |
+| username    | String          | the name of the user|
+| password | String | password for user|
+| email | String | the email of the user|
 
 
 
