@@ -56,6 +56,7 @@ Morgan Social is an app strictly for Morgan State Students that provides news, e
 * group messaging
 * friends list
 * settings page
+* search topics
 
 ### 2. Screen Archetypes
 
