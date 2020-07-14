@@ -7,8 +7,11 @@
 //
 
 #import "SignupViewController.h"
-
+#import <Parse/Parse.h>
 @interface SignupViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *usernameField;
+@property (strong, nonatomic) IBOutlet UITextField *passwordField;
+@property (strong, nonatomic) IBOutlet UITextField *emailField;
 
 @end
 
@@ -18,6 +21,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+- (IBAction)signupButton:(id)sender {
+    PFUser *newUser = [PFUser user];
+    newUser.username = self.usernameField.text;
+    newUser.password = self.passwordField.text;
+    newUser.email = self.emailField.text;
+    
+    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+        if (error != nil) {
+            NSLog(@"Error: %@", error.localizedDescription);
+        } else {
+            NSLog(@"User registered successfully");
+            [self dismissViewControllerAnimated:true completion:nil];
+        }
+    }];
+}
+
+- (IBAction)closeButton:(id)sender {
+    [self dismissViewControllerAnimated:true completion:nil];
+}
+
 
 /*
 #pragma mark - Navigation

@@ -27,6 +27,7 @@
 		38B1A41424BD162B001A049B /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41324BD162B001A049B /* ChatViewController.m */; };
 		38B1A41724BD176D001A049B /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41624BD176D001A049B /* ChatTableViewCell.m */; };
 		38B1A41A24BD1891001A049B /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41924BD1891001A049B /* SignupViewController.m */; };
+		38B1A41E24BE4888001A049B /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41D24BE4888001A049B /* Post.m */; };
 		5CADD3160CD2B0DAFBF78FB7 /* Pods_morgan_socialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D1BE97B16435D02596E746 /* Pods_morgan_socialTests.framework */; };
 		5FA0ABFAD3F0038567A5877E /* Pods_morgan_social_morgan_socialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E64A2187FC12C91DE32F33 /* Pods_morgan_social_morgan_socialUITests.framework */; };
 		92BBA2099FEE8DA53FAC2741 /* Pods_morgan_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7880714A81A5E09E2F96E5 /* Pods_morgan_social.framework */; };
@@ -92,6 +93,8 @@
 		38B1A41624BD176D001A049B /* ChatTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
 		38B1A41824BD1891001A049B /* SignupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		38B1A41924BD1891001A049B /* SignupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		38B1A41C24BE4888001A049B /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		38B1A41D24BE4888001A049B /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		3A7880714A81A5E09E2F96E5 /* Pods_morgan_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_morgan_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF2582F1A28294F7F0A990A /* Pods-morgan-social-morgan-socialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-social-morgan-socialUITests.debug.xcconfig"; path = "Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		763469C6E2B5A321E68257B1 /* Pods-morgan-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-social.debug.xcconfig"; path = "Target Support Files/Pods-morgan-social/Pods-morgan-social.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 		38B1A3BF24BCCF2B001A049B /* morgan-social */ = {
 			isa = PBXGroup;
 			children = (
+				38B1A41B24BE4832001A049B /* Class */,
 				38B1A3F624BCD006001A049B /* Cell */,
 				38B1A3F524BCCFFC001A049B /* ViewControllers */,
 				38B1A3C024BCCF2B001A049B /* AppDelegate.h */,
@@ -223,6 +227,15 @@
 				38B1A41624BD176D001A049B /* ChatTableViewCell.m */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		38B1A41B24BE4832001A049B /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				38B1A41C24BE4888001A049B /* Post.h */,
+				38B1A41D24BE4888001A049B /* Post.m */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 		59E34AF61292201D41A7B922 /* Frameworks */ = {
@@ -493,6 +506,7 @@
 				38B1A40224BCF208001A049B /* PostsViewController.m in Sources */,
 				38B1A41124BD1610001A049B /* FriendsTableViewCell.m in Sources */,
 				38B1A3FC24BCEC25001A049B /* HomeFeedViewController.m in Sources */,
+				38B1A41E24BE4888001A049B /* Post.m in Sources */,
 				38B1A40B24BD0413001A049B /* ProfileViewController.m in Sources */,
 				38B1A40E24BD1402001A049B /* SearchFriendViewController.m in Sources */,
 				38B1A41A24BD1891001A049B /* SignupViewController.m in Sources */,

@@ -7,8 +7,11 @@
 //
 
 #import "ProfileViewController.h"
-
+#import <Parse/Parse.h>
+@import Parse;
 @interface ProfileViewController ()
+@property (strong, nonatomic) IBOutlet PFImageView *profilePicture;
+@property (strong, nonatomic) IBOutlet UILabel *profileUsername;
 
 @end
 
