@@ -10,17 +10,17 @@
 #import <Foundation/Foundation.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Post : PFObject
+@interface Post : PFObject<PFSubclassing>
 
 @property (nonatomic, strong) NSString *postID;
 @property (nonatomic, strong) NSString *userID;
 @property (nonatomic, strong) PFUser *author;
-
+@property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *caption;
 @property (nonatomic, strong) NSNumber *likeCount;
 @property (nonatomic, strong) NSNumber *commentCount;
 
-+ (void) createPost: (NSString * _Nullable )caption withCompletion: (PFBooleanResultBlock _Nullable)completion;
++ (void) createPost: (NSString * _Nullable )caption withTitle: (NSString *_Nullable) title withCompletion: (PFBooleanResultBlock _Nullable)completion;
 
 @end
 

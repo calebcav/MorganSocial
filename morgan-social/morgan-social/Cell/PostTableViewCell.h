@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Post.h"
+@import Parse;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PostTableViewCell : UITableViewCell
+@property (strong, nonatomic) Post *post;
+@property (strong, nonatomic) IBOutlet PFImageView *postUserPicture;
+@property (strong, nonatomic) IBOutlet UILabel *postUserName;
+@property (strong, nonatomic) IBOutlet UILabel *postTitle;
+@property (strong, nonatomic) IBOutlet UILabel *postBody;
 
 @end
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381024E224BF6244007B64E9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381024E124BF6244007B64E9 /* SettingsViewController.m */; };
 		38B1A3C224BCCF2B001A049B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3C124BCCF2B001A049B /* AppDelegate.m */; };
 		38B1A3C524BCCF2B001A049B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3C424BCCF2B001A049B /* SceneDelegate.m */; };
 		38B1A3CB24BCCF2B001A049B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B1A3C924BCCF2B001A049B /* Main.storyboard */; };
@@ -18,7 +19,6 @@
 		38B1A3F924BCD0E2001A049B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3F824BCD0E2001A049B /* LoginViewController.m */; };
 		38B1A3FC24BCEC25001A049B /* HomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3FB24BCEC25001A049B /* HomeFeedViewController.m */; };
 		38B1A3FF24BCF1B0001A049B /* CategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3FE24BCF1B0001A049B /* CategoryCollectionViewCell.m */; };
-		38B1A40224BCF208001A049B /* PostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A40124BCF208001A049B /* PostsViewController.m */; };
 		38B1A40524BCF784001A049B /* PostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A40424BCF784001A049B /* PostTableViewCell.m */; };
 		38B1A40824BD00F1001A049B /* CreatePostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A40724BD00F1001A049B /* CreatePostViewController.m */; };
 		38B1A40B24BD0413001A049B /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A40A24BD0413001A049B /* ProfileViewController.m */; };
@@ -53,6 +53,8 @@
 /* Begin PBXFileReference section */
 		274A760D5B8D4FF93CEA2D7F /* Pods-morgan-socialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-socialTests.release.xcconfig"; path = "Target Support Files/Pods-morgan-socialTests/Pods-morgan-socialTests.release.xcconfig"; sourceTree = "<group>"; };
 		27D1BE97B16435D02596E746 /* Pods_morgan_socialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_morgan_socialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		381024E024BF6244007B64E9 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		381024E124BF6244007B64E9 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		38B1A3BD24BCCF2B001A049B /* morgan-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "morgan-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B1A3C024BCCF2B001A049B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38B1A3C124BCCF2B001A049B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -75,8 +77,6 @@
 		38B1A3FB24BCEC25001A049B /* HomeFeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeFeedViewController.m; sourceTree = "<group>"; };
 		38B1A3FD24BCF1B0001A049B /* CategoryCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryCollectionViewCell.h; sourceTree = "<group>"; };
 		38B1A3FE24BCF1B0001A049B /* CategoryCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryCollectionViewCell.m; sourceTree = "<group>"; };
-		38B1A40024BCF208001A049B /* PostsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostsViewController.h; sourceTree = "<group>"; };
-		38B1A40124BCF208001A049B /* PostsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostsViewController.m; sourceTree = "<group>"; };
 		38B1A40324BCF784001A049B /* PostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostTableViewCell.h; sourceTree = "<group>"; };
 		38B1A40424BCF784001A049B /* PostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostTableViewCell.m; sourceTree = "<group>"; };
 		38B1A40624BD00F1001A049B /* CreatePostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreatePostViewController.h; sourceTree = "<group>"; };
@@ -198,8 +198,6 @@
 				38B1A3F824BCD0E2001A049B /* LoginViewController.m */,
 				38B1A3FA24BCEC25001A049B /* HomeFeedViewController.h */,
 				38B1A3FB24BCEC25001A049B /* HomeFeedViewController.m */,
-				38B1A40024BCF208001A049B /* PostsViewController.h */,
-				38B1A40124BCF208001A049B /* PostsViewController.m */,
 				38B1A40624BD00F1001A049B /* CreatePostViewController.h */,
 				38B1A40724BD00F1001A049B /* CreatePostViewController.m */,
 				38B1A40924BD0413001A049B /* ProfileViewController.h */,
@@ -210,6 +208,8 @@
 				38B1A41324BD162B001A049B /* ChatViewController.m */,
 				38B1A41824BD1891001A049B /* SignupViewController.h */,
 				38B1A41924BD1891001A049B /* SignupViewController.m */,
+				381024E024BF6244007B64E9 /* SettingsViewController.h */,
+				381024E124BF6244007B64E9 /* SettingsViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -503,11 +503,11 @@
 				38B1A40824BD00F1001A049B /* CreatePostViewController.m in Sources */,
 				38B1A3FF24BCF1B0001A049B /* CategoryCollectionViewCell.m in Sources */,
 				38B1A41724BD176D001A049B /* ChatTableViewCell.m in Sources */,
-				38B1A40224BCF208001A049B /* PostsViewController.m in Sources */,
 				38B1A41124BD1610001A049B /* FriendsTableViewCell.m in Sources */,
 				38B1A3FC24BCEC25001A049B /* HomeFeedViewController.m in Sources */,
 				38B1A41E24BE4888001A049B /* Post.m in Sources */,
 				38B1A40B24BD0413001A049B /* ProfileViewController.m in Sources */,
+				381024E224BF6244007B64E9 /* SettingsViewController.m in Sources */,
 				38B1A40E24BD1402001A049B /* SearchFriendViewController.m in Sources */,
 				38B1A41A24BD1891001A049B /* SignupViewController.m in Sources */,
 				38B1A3C224BCCF2B001A049B /* AppDelegate.m in Sources */,

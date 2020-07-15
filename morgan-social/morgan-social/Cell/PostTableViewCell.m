@@ -7,6 +7,7 @@
 //
 
 #import "PostTableViewCell.h"
+#import "Post.h"
 
 @implementation PostTableViewCell
 
@@ -19,6 +20,15 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setPost:(Post *)post {
+    _post = post;
+    self.postUserPicture.file = post.author[@"picture"];
+    [self.postUserPicture loadInBackground];
+    self.postUserName.text = post.author.username;
+    self.postTitle.text = post.title;
+    self.postBody.text = post.caption;
 }
 
 @end

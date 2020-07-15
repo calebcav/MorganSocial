@@ -12,6 +12,9 @@
 @interface ProfileViewController ()
 @property (strong, nonatomic) IBOutlet PFImageView *profilePicture;
 @property (strong, nonatomic) IBOutlet UILabel *profileUsername;
+@property (strong, nonatomic) IBOutlet UILabel *profileMajor;
+@property (strong, nonatomic) IBOutlet UILabel *profileClassification;
+@property (strong, nonatomic) PFUser *user;
 
 @end
 
@@ -20,14 +23,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    PFUser *user = PFUser.currentUser;
-    self.profileUsername.text = user.username;
-    self.profilePicture.file = user[@"picture"];
+    self.user = PFUser.currentUser;
+    self.profileUsername.text = self.user.username;
+    self.profilePicture.file = self.user[@"picture"];
+    self.profileMajor.text = self.user[@"major"];
+    self.profileClassification.text = self.user[@"classification"];
     [self.profilePicture loadInBackground];
+    [self.user saveInBackground];
     UITapGestureRecognizer *tapPhoto = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hello:)];
     [tapPhoto setDelegate:self];
     self.profilePicture.userInteractionEnabled = YES;
     [self.profilePicture addGestureRecognizer:tapPhoto];
+    [self reloadInputViews];
     
 }
 
@@ -54,13 +61,12 @@
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
 
     // Do something with the images (based on your use case)
-    PFUser *user = PFUser.currentUser;
-    user[@"picture"] = [self getPFFileFromImage:editedImage];
-    user.saveInBackground;
-    self.profilePicture.file = user[@"picture"];
-    [self.profilePicture loadInBackground];
+    self.user[@"picture"] = [self getPFFileFromImage:editedImage];
+    [self.user saveInBackground];
+    self.profilePicture.file = [self getPFFileFromImage:editedImage];
     // Dismiss UIImagePickerController to go back to your original view controller
     [self dismissViewControllerAnimated:YES completion:nil];
+    [self.profilePicture loadInBackground];
 }
 
 - (PFFileObject *)getPFFileFromImage: (UIImage * _Nullable)image {
