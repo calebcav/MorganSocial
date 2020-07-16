@@ -24,9 +24,6 @@
     [self.view addGestureRecognizer:tap];
     // Do any additional setup after loading the view.
 }
-- (IBAction)closeButton:(id)sender {
-    [self dismissViewControllerAnimated:true completion:nil];
-}
 
 - (IBAction)postButton:(id)sender {
     [Post createPost:self.captionField.text withTitle:self.titleField.text withCompletion:^(BOOL succeeded, NSError *error){

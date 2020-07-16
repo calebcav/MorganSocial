@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		381024E224BF6244007B64E9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381024E124BF6244007B64E9 /* SettingsViewController.m */; };
 		387F10D524C0DFC00066CE2C /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F10D424C0DFC00066CE2C /* Comment.m */; };
+		387F10D824C0FB190066CE2C /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F10D724C0FB190066CE2C /* CommentsViewController.m */; };
+		387F10DB24C0FEEC0066CE2C /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F10DA24C0FEEC0066CE2C /* CommentTableViewCell.m */; };
 		38B1A3C224BCCF2B001A049B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3C124BCCF2B001A049B /* AppDelegate.m */; };
 		38B1A3C524BCCF2B001A049B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3C424BCCF2B001A049B /* SceneDelegate.m */; };
 		38B1A3CB24BCCF2B001A049B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B1A3C924BCCF2B001A049B /* Main.storyboard */; };
@@ -58,6 +60,10 @@
 		381024E124BF6244007B64E9 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		387F10D324C0DFC00066CE2C /* Comment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		387F10D424C0DFC00066CE2C /* Comment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		387F10D624C0FB190066CE2C /* CommentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentsViewController.h; sourceTree = "<group>"; };
+		387F10D724C0FB190066CE2C /* CommentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentsViewController.m; sourceTree = "<group>"; };
+		387F10D924C0FEEC0066CE2C /* CommentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		387F10DA24C0FEEC0066CE2C /* CommentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
 		38B1A3BD24BCCF2B001A049B /* morgan-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "morgan-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B1A3C024BCCF2B001A049B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38B1A3C124BCCF2B001A049B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -213,6 +219,8 @@
 				38B1A41924BD1891001A049B /* SignupViewController.m */,
 				381024E024BF6244007B64E9 /* SettingsViewController.h */,
 				381024E124BF6244007B64E9 /* SettingsViewController.m */,
+				387F10D624C0FB190066CE2C /* CommentsViewController.h */,
+				387F10D724C0FB190066CE2C /* CommentsViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -228,6 +236,8 @@
 				38B1A41024BD1610001A049B /* FriendsTableViewCell.m */,
 				38B1A41524BD176D001A049B /* ChatTableViewCell.h */,
 				38B1A41624BD176D001A049B /* ChatTableViewCell.m */,
+				387F10D924C0FEEC0066CE2C /* CommentTableViewCell.h */,
+				387F10DA24C0FEEC0066CE2C /* CommentTableViewCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -518,7 +528,9 @@
 				38B1A41A24BD1891001A049B /* SignupViewController.m in Sources */,
 				38B1A3C224BCCF2B001A049B /* AppDelegate.m in Sources */,
 				38B1A3D324BCCF2E001A049B /* main.m in Sources */,
+				387F10D824C0FB190066CE2C /* CommentsViewController.m in Sources */,
 				38B1A3C524BCCF2B001A049B /* SceneDelegate.m in Sources */,
+				387F10DB24C0FEEC0066CE2C /* CommentTableViewCell.m in Sources */,
 				38B1A3F924BCD0E2001A049B /* LoginViewController.m in Sources */,
 				38B1A40524BCF784001A049B /* PostTableViewCell.m in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 #import <Parse/Parse.h>
 #import <Foundation/Foundation.h>
+#import "Post.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Comment : PFObject<PFSubclassing>
@@ -18,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *message;
 @property (nonatomic, strong) NSString *postID;
 
-+ (void) createComment: (NSString * _Nullable)message withCompletion: (PFBooleanResultBlock _Nullable) completion;
++ (void) createComment: (NSString * _Nullable)message withPostID: (NSString * _Nullable)postID withCompletion: (PFBooleanResultBlock _Nullable) completion;
 
 
 @end

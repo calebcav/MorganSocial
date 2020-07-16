@@ -21,7 +21,14 @@
     return @"Comment";
 }
 
-
++ (void)createComment:(NSString *)message withPostID:(NSString * _Nullable)postID withCompletion:(PFBooleanResultBlock)completion {
+    Comment *newComment = [Comment new];
+    newComment.author = [PFUser currentUser];
+    newComment.message = message;
+    newComment.postID = postID;
+    
+    [newComment saveInBackgroundWithBlock:completion];
+}
 
 
 @end

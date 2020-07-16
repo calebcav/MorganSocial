@@ -23,7 +23,7 @@
     return @"Post";
 }
 
-+ (void) createPost:(NSString *)caption withTitle:(NSString * _Nullable)title withCompletion:(PFBooleanResultBlock)completion {
++ (void)createPost:(NSString *)caption withTitle:(NSString * _Nullable)title withCompletion:(PFBooleanResultBlock)completion {
     Post *newPost = [Post new];
     newPost.author = [PFUser currentUser];
     newPost.caption = caption;

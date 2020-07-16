@@ -8,6 +8,7 @@
 
 #import "PostTableViewCell.h"
 #import "Post.h"
+#import "CommentsViewController.h"
 
 @implementation PostTableViewCell
 
@@ -47,5 +48,8 @@
         NSLog(@"Couldn't delete post");
     }
 }
+
+
+
 
 @end
