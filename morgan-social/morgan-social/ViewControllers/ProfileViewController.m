@@ -66,6 +66,7 @@
     self.profilePicture.file = [self getPFFileFromImage:editedImage];
     // Dismiss UIImagePickerController to go back to your original view controller
     [self dismissViewControllerAnimated:YES completion:nil];
+    [self viewDidLoad];
     [self.profilePicture loadInBackground];
 }
 

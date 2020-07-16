@@ -29,6 +29,23 @@
     self.postUserName.text = post.author.username;
     self.postTitle.text = post.title;
     self.postBody.text = post.caption;
+    if ([self.post.author.objectId isEqual:PFUser.currentUser.objectId]){
+        [self.deleteButton setHidden:NO];
+    } else {
+        [self.deleteButton setHidden:YES];
+    }
+}
+- (IBAction)deletePost:(id)sender {
+    if (self.post) {
+        [self.post deleteInBackground];
+        UIAlertController *alertvc = [UIAlertController alertControllerWithTitle:@"Deleted Successful!" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleDefault handler: ^ (UIAlertAction *_Nonnull action){
+        }];
+        [alertvc addAction:action];
+        NSLog(@"deleted");
+    } else {
+        NSLog(@"Couldn't delete post");
+    }
 }
 
 @end

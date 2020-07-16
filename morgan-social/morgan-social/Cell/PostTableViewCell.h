@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UILabel *postUserName;
 @property (strong, nonatomic) IBOutlet UILabel *postTitle;
 @property (strong, nonatomic) IBOutlet UILabel *postBody;
+@property (strong, nonatomic) IBOutlet UIButton *deleteButton;
 
 @end
 

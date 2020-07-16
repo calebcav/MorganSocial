@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -110,6 +110,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0f-y6-Yjj">
+                                                    <rect key="frame" x="379" y="3" width="35" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="35" id="9AK-sq-Bc1"/>
+                                                        <constraint firstAttribute="height" constant="38" id="pBq-pV-lWx"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Hello" image="trash" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="deletePost:" destination="qdS-JZ-703" eventType="touchUpInside" id="6KP-QY-eCn"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="QwX-1U-Dhd" secondAttribute="trailing" constant="55" id="0iF-wU-rPC"/>
@@ -122,9 +133,12 @@
                                                 <constraint firstItem="NnI-vD-Hbo" firstAttribute="leading" secondItem="LUM-cd-3zB" secondAttribute="leading" id="d52-Bw-KzJ"/>
                                                 <constraint firstItem="mYf-nm-dVM" firstAttribute="leading" secondItem="NnI-vD-Hbo" secondAttribute="trailing" constant="43" id="qir-K6-e8r"/>
                                                 <constraint firstItem="QwX-1U-Dhd" firstAttribute="top" secondItem="2TZ-dL-Hxw" secondAttribute="bottom" constant="8.5" id="vMf-zJ-pJf"/>
+                                                <constraint firstAttribute="bottom" secondItem="h0f-y6-Yjj" secondAttribute="bottom" constant="107.5" id="vUX-up-BFr"/>
+                                                <constraint firstAttribute="trailing" secondItem="h0f-y6-Yjj" secondAttribute="trailing" id="vs4-Ol-LJi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="deleteButton" destination="h0f-y6-Yjj" id="jXI-VH-KW6"/>
                                             <outlet property="postBody" destination="QwX-1U-Dhd" id="OLI-4S-h2a"/>
                                             <outlet property="postTitle" destination="2TZ-dL-Hxw" id="4lU-7c-5qb"/>
                                             <outlet property="postUserName" destination="mYf-nm-dVM" id="bOG-L8-fWG"/>
@@ -597,5 +611,6 @@
     <resources>
         <image name="Settings" width="50" height="50"/>
         <image name="square.and.pencil" catalog="system" width="128" height="118"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
     </resources>
 </document>
