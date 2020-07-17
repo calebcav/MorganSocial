@@ -17,8 +17,15 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
 }
+
+- (void)setUser:(PFUser *)user {
+    _user = user;
+    self.friendName.text = user.username;
+    self.friendPicture.file = user[@"picture"];
+    [self.friendPicture loadInBackground];
+}
+
 
 @end

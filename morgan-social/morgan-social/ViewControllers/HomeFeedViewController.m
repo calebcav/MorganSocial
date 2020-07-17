@@ -13,10 +13,12 @@
 #import "Post.h"
 #import "PostTableViewCell.h"
 #import "CommentsViewController.h"
+#import "CreatePostViewController.h"
 
-@interface HomeFeedViewController ()
+@interface HomeFeedViewController () <CreatePostViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *posts;
+@property (nonatomic) NSInteger indexRow;
 @end
 
 @implementation HomeFeedViewController
@@ -55,25 +57,27 @@
     }];
 }
 
-
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    UITableViewCell *tappedCell = sender;
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
-    Post *post = self.posts[indexPath.row];
-    CommentsViewController *commentsViewController = [segue destinationViewController];
-    commentsViewController.post = post;
+    if ([[segue identifier] isEqual:@"comments"]){
+        UITableViewCell *tappedCell = sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
+        Post *post = self.posts[indexPath.row];
+        CommentsViewController *commentsViewController = [segue destinationViewController];
+        commentsViewController.post = post;
+    } else {
+        CreatePostViewController *createPostViewController = [segue destinationViewController];
+        createPostViewController.delegate = self;
+    }
 }
-
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostTableViewCell"];
     Post *post = self.posts[indexPath.row];
-    NSLog(@"%lu", indexPath.row);
     cell.post = post;
     return cell;
 }
@@ -81,5 +85,11 @@
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.posts.count;
 }
+
+- (void)didPost {
+    [self queryPosts];
+    [self.tableView reloadData];
+}
+
 
 @end

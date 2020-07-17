@@ -17,7 +17,6 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
 }
 
@@ -26,7 +25,6 @@
     self.commentText.text = comment.message;
     self.commentUserPicture.file = comment.author[@"picture"];
     [self.commentUserPicture loadInBackground];
-    
 }
 
 

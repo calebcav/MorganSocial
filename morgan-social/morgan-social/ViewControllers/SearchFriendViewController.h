@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SearchFriendViewController : UIViewController
+@interface SearchFriendViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
 

@@ -78,11 +78,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostTableViewCell" id="qdS-JZ-703" customClass="PostTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PostTableViewCell" id="qdS-JZ-703" customClass="PostTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="414" height="148.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qdS-JZ-703" id="LUM-cd-3zB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="148.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="148.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NnI-vD-Hbo" customClass="PFImageView">
@@ -99,7 +99,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwX-1U-Dhd">
-                                                    <rect key="frame" x="138" y="103.5" width="221" height="20.5"/>
+                                                    <rect key="frame" x="138" y="103.5" width="190" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -111,7 +111,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0f-y6-Yjj">
-                                                    <rect key="frame" x="379" y="3" width="35" height="38"/>
+                                                    <rect key="frame" x="348" y="3" width="35" height="38"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="9AK-sq-Bc1"/>
                                                         <constraint firstAttribute="height" constant="38" id="pBq-pV-lWx"/>
@@ -121,23 +121,11 @@
                                                         <action selector="deletePost:" destination="qdS-JZ-703" eventType="touchUpInside" id="6KP-QY-eCn"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcg-nY-YJR">
-                                                    <rect key="frame" x="138" y="126.5" width="26" height="22"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="22" id="cok-tw-eq3"/>
-                                                        <constraint firstAttribute="width" constant="26" id="k8J-Cc-u5Y"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button" image="message" catalog="system"/>
-                                                    <connections>
-                                                        <segue destination="7TU-gn-G0v" kind="show" identifier="comments" id="Esv-ON-TNd"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="QwX-1U-Dhd" secondAttribute="trailing" constant="55" id="0iF-wU-rPC"/>
                                                 <constraint firstItem="2TZ-dL-Hxw" firstAttribute="leading" secondItem="NnI-vD-Hbo" secondAttribute="trailing" constant="43" id="HYG-2s-6Ql"/>
                                                 <constraint firstItem="2TZ-dL-Hxw" firstAttribute="top" secondItem="mYf-nm-dVM" secondAttribute="bottom" constant="21" id="JHV-nh-rOp"/>
-                                                <constraint firstItem="Vcg-nY-YJR" firstAttribute="top" secondItem="QwX-1U-Dhd" secondAttribute="bottom" constant="2" id="Oo2-Mp-jx7"/>
                                                 <constraint firstAttribute="bottom" secondItem="QwX-1U-Dhd" secondAttribute="bottom" constant="24" id="YGQ-3W-uv5"/>
                                                 <constraint firstItem="QwX-1U-Dhd" firstAttribute="leading" secondItem="NnI-vD-Hbo" secondAttribute="trailing" constant="43" id="Zjt-dC-0zN"/>
                                                 <constraint firstItem="mYf-nm-dVM" firstAttribute="top" secondItem="LUM-cd-3zB" secondAttribute="topMargin" constant="21" id="a1M-kN-sMo"/>
@@ -147,15 +135,14 @@
                                                 <constraint firstItem="QwX-1U-Dhd" firstAttribute="top" secondItem="2TZ-dL-Hxw" secondAttribute="bottom" constant="8.5" id="vMf-zJ-pJf"/>
                                                 <constraint firstAttribute="bottom" secondItem="h0f-y6-Yjj" secondAttribute="bottom" constant="107.5" id="vUX-up-BFr"/>
                                                 <constraint firstAttribute="trailing" secondItem="h0f-y6-Yjj" secondAttribute="trailing" id="vs4-Ol-LJi"/>
-                                                <constraint firstItem="Vcg-nY-YJR" firstAttribute="leading" secondItem="LUM-cd-3zB" secondAttribute="leading" constant="138" id="yOG-8v-MDC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="deleteButton" destination="h0f-y6-Yjj" id="jXI-VH-KW6"/>
                                             <outlet property="postBody" destination="QwX-1U-Dhd" id="OLI-4S-h2a"/>
                                             <outlet property="postTitle" destination="2TZ-dL-Hxw" id="4lU-7c-5qb"/>
                                             <outlet property="postUserName" destination="mYf-nm-dVM" id="bOG-L8-fWG"/>
                                             <outlet property="postUserPicture" destination="NnI-vD-Hbo" id="jCu-8n-ZJF"/>
+                                            <segue destination="7TU-gn-G0v" kind="show" identifier="comments" id="VX8-lS-Yz5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -285,7 +272,7 @@
                                 <rect key="frame" x="36" y="20" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
-                                    <action selector="closeButton:" destination="YC1-7j-nu2" eventType="touchUpInside" id="GI7-mz-Zgh"/>
+                                    <action selector="closeButton:" destination="YC1-7j-nu2" eventType="touchUpInside" id="WQN-66-ihl"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sj5-2d-JaL">
@@ -368,22 +355,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FriendsTableViewCell" rowHeight="144" id="ysB-J2-M0y" customClass="FriendsTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FriendsTableViewCell" id="ysB-J2-M0y" customClass="FriendsTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="414" height="144"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ysB-J2-M0y" id="Lql-xy-50P">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="144"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sDd-Ti-eth">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sDd-Ti-eth" customClass="PFImageView">
                                                     <rect key="frame" x="0.0" y="5" width="121" height="128"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="121" id="Z6Y-FK-SEx"/>
                                                         <constraint firstAttribute="height" constant="128" id="kMf-xQ-7qx"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ul2-dw-WhB">
-                                                    <rect key="frame" x="166" y="62" width="219" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ul2-dw-WhB">
+                                                    <rect key="frame" x="166" y="62" width="45" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -392,11 +379,14 @@
                                             <constraints>
                                                 <constraint firstItem="sDd-Ti-eth" firstAttribute="top" secondItem="Lql-xy-50P" secondAttribute="top" constant="5" id="Hgm-x0-rAb"/>
                                                 <constraint firstItem="Ul2-dw-WhB" firstAttribute="top" secondItem="Lql-xy-50P" secondAttribute="top" constant="62" id="Lvz-OH-3Ov"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ul2-dw-WhB" secondAttribute="bottom" constant="61" id="POa-xv-6Uh"/>
                                                 <constraint firstItem="sDd-Ti-eth" firstAttribute="leading" secondItem="Lql-xy-50P" secondAttribute="leading" id="kdQ-UV-lRq"/>
                                                 <constraint firstItem="Ul2-dw-WhB" firstAttribute="leading" secondItem="sDd-Ti-eth" secondAttribute="trailing" constant="45" id="rlB-y7-TBD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="friendName" destination="Ul2-dw-WhB" id="Ift-4H-aJJ"/>
+                                            <outlet property="friendPicture" destination="sDd-Ti-eth" id="nRe-Z3-v9G"/>
                                             <segue destination="uax-cM-e6V" kind="push" id="0lr-UA-79Y"/>
                                         </connections>
                                     </tableViewCell>
@@ -407,6 +397,9 @@
                         <viewLayoutGuide key="safeArea" id="vic-2D-gai"/>
                     </view>
                     <navigationItem key="navigationItem" id="Kg8-QG-gLD"/>
+                    <connections>
+                        <outlet property="tableView" destination="EIb-Dr-hiS" id="owm-LO-i0p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ZR-Zf-56z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -712,7 +705,6 @@
     </scenes>
     <resources>
         <image name="Settings" width="50" height="50"/>
-        <image name="message" catalog="system" width="128" height="113"/>
         <image name="square.and.pencil" catalog="system" width="128" height="118"/>
         <image name="trash" catalog="system" width="121" height="128"/>
     </resources>

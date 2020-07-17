@@ -27,12 +27,12 @@
 
 - (IBAction)postButton:(id)sender {
     [Post createPost:self.captionField.text withTitle:self.titleField.text withCompletion:^(BOOL succeeded, NSError *error){
-       UIAlertController *alertvc = [UIAlertController alertControllerWithTitle:@"Post Successful!" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-       UIAlertAction *action = [UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleDefault handler: ^ (UIAlertAction *_Nonnull action){
-       }];
-       [alertvc addAction:action];
-       [self presentViewController:alertvc animated:true completion:nil];
+        [self.delegate didPost];
     }];
+    [self dismissViewControllerAnimated:true completion:nil];
+}
+
+- (IBAction)closeButton:(id)sender {
     [self dismissViewControllerAnimated:true completion:nil];
 }
 

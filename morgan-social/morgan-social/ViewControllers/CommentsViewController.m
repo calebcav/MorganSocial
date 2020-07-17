@@ -38,6 +38,7 @@
     NSLog(@"%@", self.post.postID);
     [Comment createComment:self.commentField.text withPostID:self.post.objectId withCompletion:^(BOOL succeeded, NSError *error){
     }];
+    [self queryPosts];
     [self.tableView reloadData];
 }
 

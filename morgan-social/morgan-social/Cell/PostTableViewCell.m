@@ -31,8 +31,10 @@
     self.postTitle.text = post.title;
     self.postBody.text = post.caption;
     if ([self.post.author.objectId isEqual:PFUser.currentUser.objectId]){
+        NSLog(@"Hello");
         [self.deleteButton setHidden:NO];
     } else {
+        NSLog(@"God");
         [self.deleteButton setHidden:YES];
     }
 }
@@ -48,6 +50,7 @@
         NSLog(@"Couldn't delete post");
     }
 }
+
 
 
 
