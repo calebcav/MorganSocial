@@ -17,8 +17,14 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
+}
+
+-(void)setMessage:(Message *)message {
+    _message = message;
+    self.messageLabel.text = message.message;
+    self.profilePicture.file = message.sender[@"picture"];
+    [self.profilePicture loadInBackground];
 }
 
 @end

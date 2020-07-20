@@ -7,8 +7,13 @@
 //
 
 #import "ChatViewController.h"
-
+#import "ChatTableViewCell.h"
+#import "Message.h"
+#import <Parse/Parse.h>
 @interface ChatViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray *messages;
+@property (strong, nonatomic) IBOutlet UITextField *messageField;
 
 @end
 
@@ -16,7 +21,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.tableView reloadData];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+    [self queryMessages];
     // Do any additional setup after loading the view.
+}
+
+-(void)dismissKeyboard {
+    [_messageField resignFirstResponder];
+}
+
+- (void) queryMessages {
+    NSPredicate *matchingUsers = [NSPredicate predicateWithFormat:@"(receiver = %@ AND sender = %@) OR (receiver = %@ AND sender = %@)", PFUser.currentUser, self.friend, self.friend, PFUser.currentUser];
+    PFQuery *query = [PFQuery queryWithClassName:@"Message" predicate:matchingUsers];
+    [query orderByDescending:@"createdAt"];
+    [query includeKey:@"sender"];
+    [query includeKey:@"receiver"];
+    query.limit = 10;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *messages, NSError *error){
+        if (messages != nil){
+            self.messages = messages;
+            NSLog(@"%lu", messages.count);
+        }
+        else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+        [self.tableView reloadData];
+    }];
+}
+
+- (IBAction)sendButton:(id)sender {
+    [Message createMessage:self.messageField.text withReceiver:self.friend withCompletion:^(BOOL succeeded, NSError *error){
+        [self queryMessages];
+        [self.tableView reloadData];
+    }];
 }
 
 /*
@@ -28,5 +69,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    ChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatTableViewCell"];
+    Message *message = self.messages[indexPath.row];
+    cell.message = message;
+    return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.messages.count;
+}
+
 
 @end

@@ -9,6 +9,7 @@
 #import "SearchFriendViewController.h"
 #import <Parse/Parse.h>
 #import "FriendsTableViewCell.h"
+#import "ChatViewController.h"
 
 @interface SearchFriendViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -44,15 +45,19 @@
     }];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    UITableViewCell *tappedCell = sender;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
+    PFUser *user = self.friends[indexPath.row];
+    ChatViewController *chatViewController = [segue destinationViewController];
+    chatViewController.friend = user;
 }
-*/
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     FriendsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FriendsTableViewCell"];

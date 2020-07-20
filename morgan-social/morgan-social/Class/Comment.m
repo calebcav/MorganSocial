@@ -30,5 +30,4 @@
     [newComment saveInBackgroundWithBlock:completion];
 }
 
-
 @end

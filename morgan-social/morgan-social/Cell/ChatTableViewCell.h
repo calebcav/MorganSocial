@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Message.h"
+@import Parse;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ChatTableViewCell : UITableViewCell
+@property (strong, nonatomic) Message *message;
+@property (strong, nonatomic) IBOutlet PFImageView *profilePicture;
+@property (strong, nonatomic) IBOutlet UILabel *messageLabel;
+
 
 @end
 

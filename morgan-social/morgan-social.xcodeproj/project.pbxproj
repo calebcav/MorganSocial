@@ -11,6 +11,7 @@
 		387F10D524C0DFC00066CE2C /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F10D424C0DFC00066CE2C /* Comment.m */; };
 		387F10D824C0FB190066CE2C /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F10D724C0FB190066CE2C /* CommentsViewController.m */; };
 		387F10DB24C0FEEC0066CE2C /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F10DA24C0FEEC0066CE2C /* CommentTableViewCell.m */; };
+		387F10DE24C60AEF0066CE2C /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F10DD24C60AEF0066CE2C /* Message.m */; };
 		38B1A3C224BCCF2B001A049B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3C124BCCF2B001A049B /* AppDelegate.m */; };
 		38B1A3C524BCCF2B001A049B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3C424BCCF2B001A049B /* SceneDelegate.m */; };
 		38B1A3CB24BCCF2B001A049B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B1A3C924BCCF2B001A049B /* Main.storyboard */; };
@@ -64,6 +65,8 @@
 		387F10D724C0FB190066CE2C /* CommentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentsViewController.m; sourceTree = "<group>"; };
 		387F10D924C0FEEC0066CE2C /* CommentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
 		387F10DA24C0FEEC0066CE2C /* CommentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		387F10DC24C60AEF0066CE2C /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		387F10DD24C60AEF0066CE2C /* Message.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		38B1A3BD24BCCF2B001A049B /* morgan-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "morgan-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B1A3C024BCCF2B001A049B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38B1A3C124BCCF2B001A049B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -249,6 +252,8 @@
 				38B1A41D24BE4888001A049B /* Post.m */,
 				387F10D324C0DFC00066CE2C /* Comment.h */,
 				387F10D424C0DFC00066CE2C /* Comment.m */,
+				387F10DC24C60AEF0066CE2C /* Message.h */,
+				387F10DD24C60AEF0066CE2C /* Message.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -531,6 +536,7 @@
 				387F10D824C0FB190066CE2C /* CommentsViewController.m in Sources */,
 				38B1A3C524BCCF2B001A049B /* SceneDelegate.m in Sources */,
 				387F10DB24C0FEEC0066CE2C /* CommentTableViewCell.m in Sources */,
+				387F10DE24C60AEF0066CE2C /* Message.m in Sources */,
 				38B1A3F924BCD0E2001A049B /* LoginViewController.m in Sources */,
 				38B1A40524BCF784001A049B /* PostTableViewCell.m in Sources */,
 			);

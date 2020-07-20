@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ChatViewController : UIViewController
-
+@interface ChatViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) PFUser *friend;
 @end
 
 NS_ASSUME_NONNULL_END

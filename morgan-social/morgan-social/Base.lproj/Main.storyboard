@@ -405,10 +405,10 @@
             </objects>
             <point key="canvasLocation" x="2000.0000000000002" y="986.38392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="qWx-gF-SBD">
             <objects>
-                <viewController id="uax-cM-e6V" sceneMemberID="viewController">
+                <viewController id="uax-cM-e6V" customClass="ChatViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dZX-JU-in3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -418,26 +418,40 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewCell" id="h34-fe-wAE" customClass="ChatTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="94"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewCell" rowHeight="118" id="h34-fe-wAE" customClass="ChatTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h34-fe-wAE" id="huk-u7-Gb1">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gge-2C-ZQa">
-                                                    <rect key="frame" x="55" y="37" width="136" height="21"/>
+                                                    <rect key="frame" x="103" y="37" width="227" height="45"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6WG-PQ-aGv" customClass="PFImageView">
+                                                    <rect key="frame" x="0.0" y="11" width="95" height="96"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="96" id="57H-nE-rqk"/>
+                                                        <constraint firstAttribute="width" constant="95" id="GKi-Kx-KoR"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="Gge-2C-ZQa" secondAttribute="bottom" constant="36" id="6SF-VP-Cqu"/>
-                                                <constraint firstItem="Gge-2C-ZQa" firstAttribute="leading" secondItem="huk-u7-Gb1" secondAttribute="leading" constant="55" id="TIA-By-L0R"/>
+                                                <constraint firstItem="6WG-PQ-aGv" firstAttribute="top" secondItem="huk-u7-Gb1" secondAttribute="top" constant="11" id="6hN-Rf-n7W"/>
+                                                <constraint firstAttribute="trailing" secondItem="Gge-2C-ZQa" secondAttribute="trailing" constant="84" id="CFh-RZ-GhX"/>
+                                                <constraint firstItem="Gge-2C-ZQa" firstAttribute="leading" secondItem="6WG-PQ-aGv" secondAttribute="trailing" constant="8" id="ZL4-uK-fJB"/>
+                                                <constraint firstItem="6WG-PQ-aGv" firstAttribute="leading" secondItem="huk-u7-Gb1" secondAttribute="leading" id="ZtJ-f7-brn"/>
                                                 <constraint firstItem="Gge-2C-ZQa" firstAttribute="top" secondItem="huk-u7-Gb1" secondAttribute="top" constant="37" id="u1J-Y8-NA1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="messageLabel" destination="Gge-2C-ZQa" id="gpY-zk-uCX"/>
+                                            <outlet property="profilePicture" destination="6WG-PQ-aGv" id="JEF-57-D1N"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -451,12 +465,23 @@
                                 <rect key="frame" x="362" y="772" width="36" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendButton:" destination="uax-cM-e6V" eventType="touchUpInside" id="YaE-PZ-KPc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Gge-2C-ZQa" firstAttribute="leading" secondItem="6WG-PQ-aGv" secondAttribute="trailing" constant="8" id="3PQ-WE-9pB"/>
+                            <constraint firstItem="6WG-PQ-aGv" firstAttribute="leading" secondItem="dZX-JU-in3" secondAttribute="leading" id="eyX-bH-gHw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1uN-No-KmP"/>
                     </view>
                     <navigationItem key="navigationItem" id="nhg-L6-n4z"/>
+                    <connections>
+                        <outlet property="messageField" destination="LVD-cq-vd1" id="Cs0-vS-ug1"/>
+                        <outlet property="tableView" destination="x0C-L4-jlD" id="jfH-FX-E6P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVH-Vq-8gP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
