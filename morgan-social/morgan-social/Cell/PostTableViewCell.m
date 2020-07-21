@@ -30,6 +30,8 @@
     self.postUserName.text = post.author.username;
     self.postTitle.text = post.title;
     self.postBody.text = post.caption;
+    self.commentCount.text = [NSString stringWithFormat:@"%d", post.commentCount];
+    self.likeCount.text = [NSString stringWithFormat:@"%d", post.likeCount];
     if ([self.post.author.objectId isEqual:PFUser.currentUser.objectId]){
         NSLog(@"Hello");
         [self.deleteButton setHidden:NO];
@@ -51,8 +53,19 @@
     }
 }
 
-
-
-
-
+- (IBAction)likePost:(id)sender {
+    if (self.post) {
+        if ([self.post.likeList containsObject:PFUser.currentUser]){
+            [self.post.likeList addObject:PFUser.currentUser];
+            [self.likeButton setImage:[UIImage imageNamed:@"heart.fill"] forState:UIControlStateNormal];
+            self.post.likeCount += 1;
+        }
+        else {
+            self.post.likeCount -= 1;
+            [self.post.likeList removeObject:PFUser.currentUser];
+            [self.likeButton setImage:[UIImage imageNamed:@"heart"] forState:UIControlStateNormal];
+        }
+        [self.post saveInBackground];
+    }
+}
 @end

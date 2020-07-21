@@ -12,8 +12,12 @@
 #import "ChatViewController.h"
 
 @interface SearchFriendViewController ()
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *friends;
+@property (strong, nonatomic) NSArray *filteredFriends;
+@property (strong, nonatomic) NSMutableArray *friendNames;
+@property (nonatomic) NSInteger friendsListSize;
 @end
 
 @implementation SearchFriendViewController
@@ -22,9 +26,9 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.searchBar.delegate = self;
     [self queryFriends];
     [self.tableView reloadData];
-    // Do any additional setup after loading the view.
 }
 
 - (void) queryFriends {
@@ -35,8 +39,6 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *friends, NSError *error){
         if (friends != nil){
             self.friends = friends;
-            NSLog(@"%lu", self.friends.count);
-            NSLog(@"%lu", friends.count);
         }
         else {
             NSLog(@"%@", error.localizedDescription);
@@ -44,7 +46,6 @@
         [self.tableView reloadData];
     }];
 }
-
 
 #pragma mark - Navigation
 

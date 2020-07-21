@@ -17,10 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) PFUser *author;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *caption;
-@property (nonatomic, strong) NSNumber *likeCount;
-@property (nonatomic, strong) NSNumber *commentCount;
+@property (nonatomic) int likeCount;
+@property (nonatomic) int commentCount;
+@property (nonatomic, strong) NSMutableArray *likeList;
+@property (nonatomic, strong) NSString *category;
 
-+ (void) createPost: (NSString * _Nullable )caption withTitle: (NSString *_Nullable) title withCompletion: (PFBooleanResultBlock _Nullable)completion;
++ (void) createPost: (NSString * _Nullable )caption withTitle: (NSString * _Nullable) title withCategory: (NSString * _Nullable)category withCompletion: (PFBooleanResultBlock _Nullable)completion;
 
 @end
 

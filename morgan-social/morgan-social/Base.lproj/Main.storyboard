@@ -78,11 +78,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PostTableViewCell" id="qdS-JZ-703" customClass="PostTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="148.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="167" id="qdS-JZ-703" customClass="PostTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="167"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qdS-JZ-703" id="LUM-cd-3zB">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="148.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="167"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NnI-vD-Hbo" customClass="PFImageView">
@@ -111,34 +111,71 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0f-y6-Yjj">
-                                                    <rect key="frame" x="348" y="3" width="35" height="38"/>
+                                                    <rect key="frame" x="348" y="21.5" width="35" height="38"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="9AK-sq-Bc1"/>
                                                         <constraint firstAttribute="height" constant="38" id="pBq-pV-lWx"/>
                                                     </constraints>
-                                                    <state key="normal" title="Hello" image="trash" catalog="system"/>
+                                                    <state key="normal" image="trash" catalog="system"/>
                                                     <connections>
                                                         <action selector="deletePost:" destination="qdS-JZ-703" eventType="touchUpInside" id="6KP-QY-eCn"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxc-Cr-S81">
+                                                    <rect key="frame" x="38" y="141" width="21" height="26"/>
+                                                    <state key="normal" image="heart" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="likePost:" destination="qdS-JZ-703" eventType="touchUpInside" id="IfU-CO-8er"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likeCount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o12-2e-fss">
+                                                    <rect key="frame" x="66.5" y="140" width="72" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eH8-IU-IKs">
+                                                    <rect key="frame" x="158" y="141" width="22" height="24"/>
+                                                    <state key="normal" image="message" catalog="system"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="commentCount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9A-UY-oZz">
+                                                    <rect key="frame" x="191" y="140" width="119" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="QwX-1U-Dhd" secondAttribute="trailing" constant="55" id="0iF-wU-rPC"/>
+                                                <constraint firstItem="eH8-IU-IKs" firstAttribute="top" secondItem="hxc-Cr-S81" secondAttribute="top" id="CEO-oS-yRq"/>
+                                                <constraint firstAttribute="bottom" secondItem="eH8-IU-IKs" secondAttribute="bottom" constant="2" id="DUi-Pa-E62"/>
+                                                <constraint firstItem="hxc-Cr-S81" firstAttribute="top" secondItem="NnI-vD-Hbo" secondAttribute="bottom" constant="49" id="DmK-54-yRf"/>
                                                 <constraint firstItem="2TZ-dL-Hxw" firstAttribute="leading" secondItem="NnI-vD-Hbo" secondAttribute="trailing" constant="43" id="HYG-2s-6Ql"/>
                                                 <constraint firstItem="2TZ-dL-Hxw" firstAttribute="top" secondItem="mYf-nm-dVM" secondAttribute="bottom" constant="21" id="JHV-nh-rOp"/>
+                                                <constraint firstAttribute="bottom" secondItem="hxc-Cr-S81" secondAttribute="bottom" id="LW0-hx-Cpg"/>
+                                                <constraint firstItem="q9A-UY-oZz" firstAttribute="leading" secondItem="eH8-IU-IKs" secondAttribute="trailing" constant="11" id="RAm-te-f3X"/>
+                                                <constraint firstItem="q9A-UY-oZz" firstAttribute="top" secondItem="o12-2e-fss" secondAttribute="top" id="X0a-k0-lbW"/>
                                                 <constraint firstAttribute="bottom" secondItem="QwX-1U-Dhd" secondAttribute="bottom" constant="24" id="YGQ-3W-uv5"/>
                                                 <constraint firstItem="QwX-1U-Dhd" firstAttribute="leading" secondItem="NnI-vD-Hbo" secondAttribute="trailing" constant="43" id="Zjt-dC-0zN"/>
                                                 <constraint firstItem="mYf-nm-dVM" firstAttribute="top" secondItem="LUM-cd-3zB" secondAttribute="topMargin" constant="21" id="a1M-kN-sMo"/>
                                                 <constraint firstItem="NnI-vD-Hbo" firstAttribute="top" secondItem="LUM-cd-3zB" secondAttribute="top" id="ba4-4Q-e9V"/>
                                                 <constraint firstItem="NnI-vD-Hbo" firstAttribute="leading" secondItem="LUM-cd-3zB" secondAttribute="leading" id="d52-Bw-KzJ"/>
+                                                <constraint firstItem="o12-2e-fss" firstAttribute="leading" secondItem="hxc-Cr-S81" secondAttribute="trailing" constant="7.5" id="ehC-YZ-kZa"/>
+                                                <constraint firstItem="hxc-Cr-S81" firstAttribute="leading" secondItem="LUM-cd-3zB" secondAttribute="leading" constant="38" id="nmq-oC-hhH"/>
+                                                <constraint firstItem="o12-2e-fss" firstAttribute="top" secondItem="NnI-vD-Hbo" secondAttribute="bottom" constant="48" id="ntb-Dc-7R0"/>
+                                                <constraint firstItem="eH8-IU-IKs" firstAttribute="leading" secondItem="o12-2e-fss" secondAttribute="trailing" constant="19.5" id="owu-Dd-2WK"/>
                                                 <constraint firstItem="mYf-nm-dVM" firstAttribute="leading" secondItem="NnI-vD-Hbo" secondAttribute="trailing" constant="43" id="qir-K6-e8r"/>
                                                 <constraint firstItem="QwX-1U-Dhd" firstAttribute="top" secondItem="2TZ-dL-Hxw" secondAttribute="bottom" constant="8.5" id="vMf-zJ-pJf"/>
                                                 <constraint firstAttribute="bottom" secondItem="h0f-y6-Yjj" secondAttribute="bottom" constant="107.5" id="vUX-up-BFr"/>
                                                 <constraint firstAttribute="trailing" secondItem="h0f-y6-Yjj" secondAttribute="trailing" id="vs4-Ol-LJi"/>
+                                                <constraint firstAttribute="bottom" secondItem="q9A-UY-oZz" secondAttribute="bottom" constant="3" id="y16-3K-N9X"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="commentCount" destination="q9A-UY-oZz" id="NZq-WQ-kwV"/>
                                             <outlet property="deleteButton" destination="h0f-y6-Yjj" id="29Z-iH-xfm"/>
+                                            <outlet property="likeButton" destination="hxc-Cr-S81" id="DTY-nz-FnW"/>
+                                            <outlet property="likeCount" destination="o12-2e-fss" id="xjA-81-szi"/>
                                             <outlet property="postBody" destination="QwX-1U-Dhd" id="OLI-4S-h2a"/>
                                             <outlet property="postTitle" destination="2TZ-dL-Hxw" id="4lU-7c-5qb"/>
                                             <outlet property="postUserName" destination="mYf-nm-dVM" id="bOG-L8-fWG"/>
@@ -399,6 +436,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Kg8-QG-gLD"/>
                     <connections>
+                        <outlet property="searchBar" destination="zQr-TC-3PB" id="ZVp-aV-Xog"/>
                         <outlet property="tableView" destination="EIb-Dr-hiS" id="owm-LO-i0p"/>
                     </connections>
                 </viewController>
@@ -743,6 +781,8 @@
     </scenes>
     <resources>
         <image name="Settings" width="50" height="50"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="message" catalog="system" width="128" height="113"/>
         <image name="square.and.pencil" catalog="system" width="128" height="118"/>
         <image name="trash" catalog="system" width="121" height="128"/>
     </resources>

@@ -18,18 +18,22 @@
 @dynamic likeCount;
 @dynamic commentCount;
 @dynamic title;
+@dynamic category;
+@dynamic likeList;
 
 + (nonnull NSString *)parseClassName {
     return @"Post";
 }
 
-+ (void)createPost:(NSString *)caption withTitle:(NSString * _Nullable)title withCompletion:(PFBooleanResultBlock)completion {
++ (void)createPost:(NSString *)caption withTitle:(NSString * _Nullable)title withCategory:(NSString *_Nullable)category withCompletion:(PFBooleanResultBlock)completion {
     Post *newPost = [Post new];
     newPost.author = [PFUser currentUser];
     newPost.caption = caption;
-    newPost.likeCount = @(0);
-    newPost.commentCount = @(0);
+    newPost.likeCount = 0;
+    newPost.commentCount = 0;
     newPost.title = title;
+    newPost.category = category;
+    newPost.likeList = [NSMutableArray new];
     
     [newPost saveInBackgroundWithBlock: completion];
 }

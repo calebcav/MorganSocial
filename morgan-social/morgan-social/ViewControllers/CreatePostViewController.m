@@ -26,7 +26,7 @@
 }
 
 - (IBAction)postButton:(id)sender {
-    [Post createPost:self.captionField.text withTitle:self.titleField.text withCompletion:^(BOOL succeeded, NSError *error){
+    [Post createPost:self.captionField.text withTitle:self.titleField.text withCategory:@"" withCompletion:^(BOOL succeeded, NSError *error){
         [self.delegate didPost];
     }];
     [self dismissViewControllerAnimated:true completion:nil];

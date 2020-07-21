@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UILabel *postTitle;
 @property (strong, nonatomic) IBOutlet UILabel *postBody;
 @property (strong, nonatomic) IBOutlet UIButton *deleteButton;
+@property (strong, nonatomic) IBOutlet UILabel *likeCount;
+@property (strong, nonatomic) IBOutlet UILabel *commentCount;
+@property (strong, nonatomic) IBOutlet UIButton *likeButton;
 
 @end
 
