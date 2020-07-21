@@ -27,8 +27,15 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
     [self queryMessages];
+    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(reloadTable) userInfo:nil repeats:YES];
     // Do any additional setup after loading the view.
 }
+
+- (void)reloadTable {
+    [self queryMessages];
+    [self.tableView reloadData];
+}
+
 
 -(void)dismissKeyboard {
     [_messageField resignFirstResponder];
@@ -44,7 +51,6 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *messages, NSError *error){
         if (messages != nil){
             self.messages = messages;
-            NSLog(@"%lu", messages.count);
         }
         else {
             NSLog(@"%@", error.localizedDescription);
