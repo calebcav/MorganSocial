@@ -13,15 +13,15 @@
 
 @dynamic receiver;
 @dynamic sender;
-@dynamic message;
+@dynamic text;
 
 + (nonnull NSString *)parseClassName {
     return @"Message";
 }
 
-+ (void) createMessage:(NSString *)message withReceiver:(PFUser *)receiver withCompletion:(PFBooleanResultBlock)completion {
++ (void) createMessage:(NSString *)text withReceiver:(PFUser *)receiver withCompletion:(PFBooleanResultBlock)completion {
     Message *newMessage = [Message new];
-    newMessage.message = message;
+    newMessage.text = text;
     newMessage.receiver = receiver;
     newMessage.sender = [PFUser currentUser];
     

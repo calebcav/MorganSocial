@@ -22,7 +22,7 @@
 
 -(void)setMessage:(Message *)message {
     _message = message;
-    self.messageLabel.text = message.message;
+    self.messageLabel.text = message.text;
     self.profilePicture.file = message.sender[@"picture"];
     [self.profilePicture loadInBackground];
 }

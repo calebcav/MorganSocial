@@ -35,8 +35,8 @@
 }
 
 - (IBAction)sendButton:(id)sender {
-    NSLog(@"%@", self.post.postID);
     [Comment createComment:self.commentField.text withPostID:self.post.objectId withCompletion:^(BOOL succeeded, NSError *error){
+        //self.post.commentCount += @1;
     }];
     [self queryPosts];
     [self.tableView reloadData];

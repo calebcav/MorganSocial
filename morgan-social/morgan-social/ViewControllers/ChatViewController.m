@@ -24,7 +24,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView reloadData];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    UITapGestureRecognizer *const tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
     [self queryMessages];
     [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(reloadTable) userInfo:nil repeats:YES];
@@ -36,20 +36,19 @@
     [self.tableView reloadData];
 }
 
-
 -(void)dismissKeyboard {
     [_messageField resignFirstResponder];
 }
 
-- (void) queryMessages {
-    NSPredicate *matchingUsers = [NSPredicate predicateWithFormat:@"(receiver = %@ AND sender = %@) OR (receiver = %@ AND sender = %@)", PFUser.currentUser, self.friend, self.friend, PFUser.currentUser];
+- (void)queryMessages {
+    NSPredicate *const matchingUsers = [NSPredicate predicateWithFormat:@"(receiver = %@ AND sender = %@) OR (receiver = %@ AND sender = %@)", PFUser.currentUser, self.friend, self.friend, PFUser.currentUser];
     PFQuery *query = [PFQuery queryWithClassName:@"Message" predicate:matchingUsers];
-    [query orderByDescending:@"createdAt"];
+    [query orderByAscending:@"createdAt"];
     [query includeKey:@"sender"];
     [query includeKey:@"receiver"];
     query.limit = 10;
     [query findObjectsInBackgroundWithBlock:^(NSArray *messages, NSError *error){
-        if (messages != nil){
+        if (messages != nil) {
             self.messages = messages;
         }
         else {
