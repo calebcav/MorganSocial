@@ -18,6 +18,8 @@
 @interface HomeFeedViewController () <CreatePostViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *posts;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (nonatomic) NSInteger indexRow;
 @end
 
@@ -29,6 +31,9 @@
     self.tableView.dataSource = self;
     [self queryPosts];
     [self.tableView reloadData];
+    self.refreshControl = [UIRefreshControl new];
+    [self.refreshControl addTarget:self action:@selector(queryPosts) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:self.refreshControl atIndex:0];
     // Do any additional setup after loading the view.
 }
 - (IBAction)logoutButton:(id)sender {
@@ -42,9 +47,11 @@
 
 
 - (void) queryPosts {
+    [self.activityIndicator startAnimating];
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
     [query orderByDescending:@"createdAt"];
     [query includeKey:@"author"];
+    [query includeKey:@"likeList"];
     query.limit = 10;
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error){
         if (posts != nil) {
@@ -54,6 +61,8 @@
             NSLog(@"%@", error.localizedDescription);
         }
         [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
+        [self.activityIndicator stopAnimating];
     }];
 }
 

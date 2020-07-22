@@ -16,8 +16,8 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *friends;
 @property (strong, nonatomic) NSArray *filteredFriends;
-@property (strong, nonatomic) NSMutableArray *friendNames;
-@property (nonatomic) NSInteger friendsListSize;
+@property (strong, nonatomic) NSArray *friendNames;
+@property (strong, nonatomic) NSArray *data;
 @end
 
 @implementation SearchFriendViewController
@@ -27,11 +27,31 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.searchBar.delegate = self;
+    self.searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone;
     [self queryFriends];
     [self.tableView reloadData];
+    
 }
 
-- (void) queryFriends {
+- (void)makeFriendNameList {
+    NSMutableArray *temp = [NSMutableArray new];
+    for (PFUser *friend in self.friends) {
+        [temp addObject:friend.username];
+    }
+    self.friendNames = [temp copy];
+}
+
+- (void)createFilteredFriends {
+    NSMutableArray *temp = [NSMutableArray new];
+    for (PFUser *user in self.friends){
+        if ([self.friendNames containsObject:user.username]) {
+            [temp addObject:user];
+        }
+    }
+    self.filteredFriends = [temp copy];
+}
+
+- (void)queryFriends {
     PFQuery *query = [PFQuery queryWithClassName:@"_User"];
     [query whereKey:@"objectId" notEqualTo:PFUser.currentUser.objectId];
     [query includeKey:@"username"];
@@ -39,6 +59,8 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *friends, NSError *error){
         if (friends != nil){
             self.friends = friends;
+            self.filteredFriends = friends;
+            [self makeFriendNameList];
         }
         else {
             NSLog(@"%@", error.localizedDescription);
@@ -62,14 +84,29 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     FriendsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FriendsTableViewCell"];
-    PFUser *user = self.friends[indexPath.row];
+    PFUser *user = self.filteredFriends[indexPath.row];
     cell.user = user;
     return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.friends.count;
+    return self.filteredFriends.count;
 }
 
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    if (searchText.length != 0) {
+        NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSString *evaluatedObject, NSDictionary *bindings) {
+            return [evaluatedObject containsString:searchText];
+        }];
+        self.friendNames = [self.friendNames filteredArrayUsingPredicate:predicate];
+        [self createFilteredFriends];
+        [self makeFriendNameList];
+    }
+    else {
+        self.filteredFriends = self.friends;
+        [self makeFriendNameList];
+    }
+    [self.tableView reloadData];
+}
 
 @end
