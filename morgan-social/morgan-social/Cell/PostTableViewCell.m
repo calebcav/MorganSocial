@@ -55,7 +55,7 @@
 
 - (IBAction)likePost:(id)sender {
     if (self.post) {
-        if ([self.post.likeList containsObject:PFUser.currentUser]){
+        if (![self.post.likeList containsObject:PFUser.currentUser]){
             [self.post.likeList addObject:PFUser.currentUser];
             [self.likeButton setImage:[UIImage imageNamed:@"heart.fill"] forState:UIControlStateNormal];
             self.post.likeCount += 1;

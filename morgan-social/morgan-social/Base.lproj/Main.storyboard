@@ -122,24 +122,24 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxc-Cr-S81">
-                                                    <rect key="frame" x="38" y="141" width="21" height="26"/>
+                                                    <rect key="frame" x="38" y="141" width="20.5" height="26"/>
                                                     <state key="normal" image="heart" catalog="system"/>
                                                     <connections>
                                                         <action selector="likePost:" destination="qdS-JZ-703" eventType="touchUpInside" id="IfU-CO-8er"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likeCount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o12-2e-fss">
-                                                    <rect key="frame" x="66.5" y="140" width="72" height="21"/>
+                                                    <rect key="frame" x="66" y="140" width="72" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eH8-IU-IKs">
-                                                    <rect key="frame" x="158" y="141" width="22" height="24"/>
+                                                    <rect key="frame" x="157.5" y="141" width="22" height="24"/>
                                                     <state key="normal" image="message" catalog="system"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="commentCount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9A-UY-oZz">
-                                                    <rect key="frame" x="191" y="140" width="119" height="24"/>
+                                                    <rect key="frame" x="190.5" y="140" width="119" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -330,6 +330,10 @@
                                     <action selector="postButton:" destination="YC1-7j-nu2" eventType="touchUpInside" id="e8c-yE-xG4"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kUq-sl-ILw">
+                                <rect key="frame" x="5" y="379" width="414" height="142"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -349,6 +353,7 @@
                     </view>
                     <connections>
                         <outlet property="captionField" destination="9xP-OF-yin" id="Vta-2Z-S73"/>
+                        <outlet property="pickerView" destination="kUq-sl-ILw" id="kI0-tw-C1Z"/>
                         <outlet property="titleField" destination="Sj5-2d-JaL" id="dEN-yS-dBe"/>
                     </connections>
                 </viewController>
@@ -519,7 +524,6 @@
                             <constraint firstItem="x0C-L4-jlD" firstAttribute="leading" secondItem="1uN-No-KmP" secondAttribute="leading" id="N07-sr-V96"/>
                             <constraint firstItem="1uN-No-KmP" firstAttribute="trailing" secondItem="zHs-7I-wQg" secondAttribute="trailing" constant="16" id="bUV-rE-yPr"/>
                             <constraint firstItem="LVD-cq-vd1" firstAttribute="leading" secondItem="1uN-No-KmP" secondAttribute="leading" constant="20" id="d6x-gJ-Jq0"/>
-                            <constraint firstItem="6WG-PQ-aGv" firstAttribute="leading" secondItem="dZX-JU-in3" secondAttribute="leading" id="eyX-bH-gHw"/>
                             <constraint firstItem="x0C-L4-jlD" firstAttribute="top" secondItem="1uN-No-KmP" secondAttribute="top" id="fH9-x7-2LU"/>
                             <constraint firstItem="LVD-cq-vd1" firstAttribute="top" secondItem="x0C-L4-jlD" secondAttribute="bottom" constant="8" id="jlu-AH-ALB"/>
                             <constraint firstItem="x0C-L4-jlD" firstAttribute="trailing" secondItem="1uN-No-KmP" secondAttribute="trailing" id="pi1-Im-8VK"/>

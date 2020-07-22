@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didPost;
 @end
 
-@interface CreatePostViewController : UIViewController
+@interface CreatePostViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 @property (nonatomic, weak) id<CreatePostViewControllerDelegate> delegate;
 @end
 

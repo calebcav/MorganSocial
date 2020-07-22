@@ -13,7 +13,9 @@
 @interface CreatePostViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *titleField;
 @property (strong, nonatomic) IBOutlet UITextField *captionField;
-
+@property (strong, nonatomic) IBOutlet UIPickerView *pickerView;
+@property (strong, nonatomic) NSArray *const categories;
+@property (strong, nonatomic) NSString *category;
 @end
 
 @implementation CreatePostViewController
@@ -22,11 +24,15 @@
     [super viewDidLoad];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
+    self.pickerView.delegate = self;
+    self.pickerView.dataSource = self;
+    self.categories = @[@"Food", @"Dorms", @"Professors"];
+    self.category = @"Food";
     // Do any additional setup after loading the view.
 }
 
 - (IBAction)postButton:(id)sender {
-    [Post createPost:self.captionField.text withTitle:self.titleField.text withCategory:@"" withCompletion:^(BOOL succeeded, NSError *error){
+    [Post createPost:self.captionField.text withTitle:self.titleField.text withCategory:self.category withCompletion:^(BOOL succeeded, NSError *error){
         [self.delegate didPost];
     }];
     [self dismissViewControllerAnimated:true completion:nil];
@@ -41,6 +47,21 @@
     [_titleField resignFirstResponder];
 }
 
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return self.categories.count;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return self.categories[row];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    self.category = self.categories[row];
+}
 
 /*
 #pragma mark - Navigation
