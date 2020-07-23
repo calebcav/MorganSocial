@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+@import GoogleMaps;
 @interface AppDelegate ()
 
 @end
@@ -22,6 +23,7 @@
         configuration.server = @"https://morgan-social.herokuapp.com/parse";
     }];
     [Parse initializeWithConfiguration:configuration];
+    [GMSServices provideAPIKey:@"AIzaSyBK1kCQSh1FOaovXlil5LLIV0MKJCP0nWg"];
     
     return YES;
 }

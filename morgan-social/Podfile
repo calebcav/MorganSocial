@@ -8,6 +8,8 @@ target 'morgan-social' do
   # Pods for morgan-social
   pod 'Parse'
   pod 'Parse/UI'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
   target 'morgan-socialTests' do
     inherit! :search_paths
     # Pods for testing

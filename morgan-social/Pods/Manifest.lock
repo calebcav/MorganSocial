@@ -1,5 +1,12 @@
 PODS:
   - Bolts/Tasks (1.9.1)
+  - GoogleMaps (3.9.0):
+    - GoogleMaps/Maps (= 3.9.0)
+  - GoogleMaps/Base (3.9.0)
+  - GoogleMaps/Maps (3.9.0):
+    - GoogleMaps/Base
+  - GooglePlaces (3.9.0):
+    - GoogleMaps/Base (= 3.9.0)
   - Parse (1.18.0):
     - Parse/Core (= 1.18.0)
   - Parse/Core (1.18.0):
@@ -8,18 +15,24 @@ PODS:
     - Parse/Core
 
 DEPENDENCIES:
+  - GoogleMaps
+  - GooglePlaces
   - Parse
   - Parse/UI
 
 SPEC REPOS:
   trunk:
     - Bolts
+    - GoogleMaps
+    - GooglePlaces
     - Parse
 
 SPEC CHECKSUMS:
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
+  GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
+  GooglePlaces: 1634d019549b969d40fe0ccb0b9513055adebe01
   Parse: 79bdda34fdb7eb2a707a43a951c8aae236cb3e34
 
-PODFILE CHECKSUM: a965a5cd6c640d16d8a14612b64190d20e1e0c9b
+PODFILE CHECKSUM: 6d34d9b1a38ae7fa735c276e7e6ea243492fc013
 
 COCOAPODS: 1.9.3
