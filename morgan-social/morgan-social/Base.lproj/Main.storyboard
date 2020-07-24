@@ -337,7 +337,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Choose Location"/>
                                 <connections>
-                                    <segue destination="FGY-Kq-xJ6" kind="presentation" id="4qB-h4-U17"/>
+                                    <segue destination="dDE-pL-ESB" kind="presentation" id="fzP-H6-d21"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="De9-yP-qY3">
@@ -374,20 +374,100 @@
             </objects>
             <point key="canvasLocation" x="4421.739130434783" y="143.97321428571428"/>
         </scene>
+        <!--Choose Location View Controller-->
+        <scene sceneID="0bv-cM-Wjj">
+            <objects>
+                <viewController id="dDE-pL-ESB" customClass="ChooseLocationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vth-Ju-xBb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfG-kq-toF">
+                                <rect key="frame" x="24" y="20" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeButton:" destination="dDE-pL-ESB" eventType="touchUpInside" id="1ug-uN-eko"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="address line 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cr9-G9-yiA">
+                                <rect key="frame" x="94" y="147" width="225" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="address line 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3GC-b9-PKu">
+                                <rect key="frame" x="95" y="211" width="225" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Gy-dM-wWq">
+                                <rect key="frame" x="94" y="274" width="225" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="state" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2gy-or-xfL">
+                                <rect key="frame" x="94" y="339" width="225" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="postal code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pS-kQ-p8F">
+                                <rect key="frame" x="94" y="404" width="225" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jgq-p4-8cL">
+                                <rect key="frame" x="94" y="488" width="225" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEr-Ud-8dQ">
+                                <rect key="frame" x="121" y="95" width="172" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="tap to search for address"/>
+                                <connections>
+                                    <action selector="searchAddressButton:" destination="dDE-pL-ESB" eventType="touchUpInside" id="PZd-Gn-p7P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rfG-kq-toF" firstAttribute="top" secondItem="Rkb-US-6AI" secondAttribute="top" constant="20" id="YTF-QQ-Ldo"/>
+                            <constraint firstItem="rfG-kq-toF" firstAttribute="leading" secondItem="Rkb-US-6AI" secondAttribute="leading" constant="24" id="ulU-SQ-C14"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rkb-US-6AI"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressLine1" destination="Cr9-G9-yiA" id="nSP-dj-0RJ"/>
+                        <outlet property="addressLine2" destination="3GC-b9-PKu" id="MQd-b4-Mgj"/>
+                        <outlet property="city" destination="8Gy-dM-wWq" id="BEN-5m-Skz"/>
+                        <outlet property="countryField" destination="jgq-p4-8cL" id="cQw-5P-jWu"/>
+                        <outlet property="postalCodeField" destination="4pS-kQ-p8F" id="b1u-D3-Gke"/>
+                        <outlet property="state" destination="2gy-or-xfL" id="NMZ-O5-kxa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VVc-DD-z6j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5240.579710144928" y="145.98214285714286"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="iGX-no-HK5">
             <objects>
                 <viewController id="FGY-Kq-xJ6" customClass="MapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lfB-Uu-riG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8N-i2-KM7">
-                                <rect key="frame" x="0.0" y="168" width="414" height="616"/>
+                                <rect key="frame" x="0.0" y="212" width="414" height="626"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCa-j1-Yxj">
-                                <rect key="frame" x="24" y="20" width="39" height="30"/>
+                                <rect key="frame" x="24" y="64" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="closeButton:" destination="FGY-Kq-xJ6" eventType="touchUpInside" id="cp2-AY-wea"/>
@@ -411,7 +491,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fM8-5b-0D9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5489.8550724637689" y="137.94642857142856"/>
+            <point key="canvasLocation" x="6245" y="-378"/>
         </scene>
         <!--Home-->
         <scene sceneID="grl-WL-TBT">

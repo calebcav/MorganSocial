@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param place The |GMSPlace| that was returned.
  */
 - (void)viewController:(GMSAutocompleteViewController *)viewController
-    didAutocompleteWithPlace:(GMSPlace *)place;
+didAutocompleteWithPlace:(GMSPlace *)place;
 
 /**
  * Called when a non-retryable error occurred when retrieving autocomplete predictions or place

@@ -8,23 +8,34 @@
 
 #import "MapViewController.h"
 @import GoogleMaps;
+@import GooglePlaces;
 @interface MapViewController ()
 @property (strong, nonatomic) IBOutlet UIView *map;
 
 @end
 
-@implementation MapViewController
+@implementation MapViewController {
+    GMSPlacesClient *_placesClient;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _placesClient = [GMSPlacesClient sharedClient];
     // Do any additional setup after loading the view.
     CGRect currentFrame = self.map.frame;
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:39.3438 longitude:-76.5844 zoom:18];
     GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectMake(0, 100, currentFrame.size.width, currentFrame.size.height) camera:camera];
     mapView.mapType = kGMSTypeHybrid;
     mapView.myLocationEnabled = YES;
+    
+    GMSMarker *marker = [[GMSMarker alloc] init];
+    marker.position = CLLocationCoordinate2DMake(39.3438, -76.5844);
+    marker.title = @"Morgan";
+    marker.snippet = @"University";
+    marker.map = mapView;
     self.map = mapView;
     [self.view addSubview:self.map];
+    
 }
 - (IBAction)closeButton:(id)sender {
     [self dismissViewControllerAnimated:true completion:nil];

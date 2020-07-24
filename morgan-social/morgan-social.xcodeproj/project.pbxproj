@@ -13,6 +13,7 @@
 		387F10DB24C0FEEC0066CE2C /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F10DA24C0FEEC0066CE2C /* CommentTableViewCell.m */; };
 		387F10DE24C60AEF0066CE2C /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F10DD24C60AEF0066CE2C /* Message.m */; };
 		387F10E124CA33750066CE2C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F10E024CA33750066CE2C /* MapViewController.m */; };
+		387F10EA24CB58FD0066CE2C /* ChooseLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F10E924CB58FD0066CE2C /* ChooseLocationViewController.m */; };
 		38B1A3C224BCCF2B001A049B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3C124BCCF2B001A049B /* AppDelegate.m */; };
 		38B1A3C524BCCF2B001A049B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A3C424BCCF2B001A049B /* SceneDelegate.m */; };
 		38B1A3CB24BCCF2B001A049B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B1A3C924BCCF2B001A049B /* Main.storyboard */; };
@@ -70,6 +71,8 @@
 		387F10DD24C60AEF0066CE2C /* Message.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		387F10DF24CA33750066CE2C /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		387F10E024CA33750066CE2C /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		387F10E824CB58FD0066CE2C /* ChooseLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseLocationViewController.h; sourceTree = "<group>"; };
+		387F10E924CB58FD0066CE2C /* ChooseLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseLocationViewController.m; sourceTree = "<group>"; };
 		38B1A3BD24BCCF2B001A049B /* morgan-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "morgan-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B1A3C024BCCF2B001A049B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38B1A3C124BCCF2B001A049B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -229,6 +232,8 @@
 				387F10D724C0FB190066CE2C /* CommentsViewController.m */,
 				387F10DF24CA33750066CE2C /* MapViewController.h */,
 				387F10E024CA33750066CE2C /* MapViewController.m */,
+				387F10E824CB58FD0066CE2C /* ChooseLocationViewController.h */,
+				387F10E924CB58FD0066CE2C /* ChooseLocationViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -562,6 +567,7 @@
 			files = (
 				38B1A41424BD162B001A049B /* ChatViewController.m in Sources */,
 				38B1A40824BD00F1001A049B /* CreatePostViewController.m in Sources */,
+				387F10EA24CB58FD0066CE2C /* ChooseLocationViewController.m in Sources */,
 				38B1A3FF24BCF1B0001A049B /* CategoryCollectionViewCell.m in Sources */,
 				38B1A41724BD176D001A049B /* ChatTableViewCell.m in Sources */,
 				387F10D524C0DFC00066CE2C /* Comment.m in Sources */,
