@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3800844424CB90BA0035359F /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 3800844324CB90BA0035359F /* Address.m */; };
 		381024E224BF6244007B64E9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381024E124BF6244007B64E9 /* SettingsViewController.m */; };
 		387F10D524C0DFC00066CE2C /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F10D424C0DFC00066CE2C /* Comment.m */; };
 		387F10D824C0FB190066CE2C /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F10D724C0FB190066CE2C /* CommentsViewController.m */; };
@@ -59,6 +60,8 @@
 /* Begin PBXFileReference section */
 		274A760D5B8D4FF93CEA2D7F /* Pods-morgan-socialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-socialTests.release.xcconfig"; path = "Target Support Files/Pods-morgan-socialTests/Pods-morgan-socialTests.release.xcconfig"; sourceTree = "<group>"; };
 		27D1BE97B16435D02596E746 /* Pods_morgan_socialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_morgan_socialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3800844224CB90BA0035359F /* Address.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		3800844324CB90BA0035359F /* Address.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
 		381024E024BF6244007B64E9 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		381024E124BF6244007B64E9 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		387F10D324C0DFC00066CE2C /* Comment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
@@ -264,6 +267,8 @@
 				387F10D424C0DFC00066CE2C /* Comment.m */,
 				387F10DC24C60AEF0066CE2C /* Message.h */,
 				387F10DD24C60AEF0066CE2C /* Message.m */,
+				3800844224CB90BA0035359F /* Address.h */,
+				3800844324CB90BA0035359F /* Address.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -580,6 +585,7 @@
 				38B1A40E24BD1402001A049B /* SearchFriendViewController.m in Sources */,
 				38B1A41A24BD1891001A049B /* SignupViewController.m in Sources */,
 				38B1A3C224BCCF2B001A049B /* AppDelegate.m in Sources */,
+				3800844424CB90BA0035359F /* Address.m in Sources */,
 				38B1A3D324BCCF2E001A049B /* main.m in Sources */,
 				387F10D824C0FB190066CE2C /* CommentsViewController.m in Sources */,
 				38B1A3C524BCCF2B001A049B /* SceneDelegate.m in Sources */,

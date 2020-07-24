@@ -20,12 +20,13 @@
 @dynamic title;
 @dynamic category;
 @dynamic likeList;
+@dynamic address;
 
 + (nonnull NSString *)parseClassName {
     return @"Post";
 }
 
-+ (void)createPost:(NSString *)caption withTitle:(NSString * _Nullable)title withCategory:(NSString *_Nullable)category withCompletion:(PFBooleanResultBlock)completion {
++ (void)createPost:(NSString *)caption withTitle:(NSString * _Nullable)title withCategory:(NSString *_Nullable)category withAddress:(Address * _Nullable)address withCompletion:(PFBooleanResultBlock _Nullable)completion{
     Post *newPost = [Post new];
     newPost.author = [PFUser currentUser];
     newPost.caption = caption;
@@ -34,6 +35,7 @@
     newPost.title = title;
     newPost.category = category;
     newPost.likeList = [NSMutableArray new];
+    newPost.address = address;
     
     [newPost saveInBackgroundWithBlock: completion];
 }

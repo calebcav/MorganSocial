@@ -8,6 +8,7 @@
 
 #import <Parse/Parse.h>
 #import <Foundation/Foundation.h>
+#import "Address.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Post : PFObject<PFSubclassing>
@@ -21,8 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int commentCount;
 @property (nonatomic, strong) NSMutableArray *likeList;
 @property (nonatomic, strong) NSString *category;
+@property (nonatomic, strong) Address *address;
 
-+ (void) createPost: (NSString * _Nullable )caption withTitle: (NSString * _Nullable) title withCategory: (NSString * _Nullable)category withCompletion: (PFBooleanResultBlock _Nullable)completion;
++ (void) createPost: (NSString * _Nullable )caption withTitle: (NSString * _Nullable) title withCategory: (NSString * _Nullable)category withAddress: (Address *_Nullable)address withCompletion: (PFBooleanResultBlock _Nullable)completion;
 
 @end
 
