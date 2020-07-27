@@ -17,7 +17,7 @@
 @property (strong, nonatomic) NSString *country;
 @property (strong, nonatomic) NSString *postal_code;
 @property (strong, nonatomic) NSString *postal_code_suffix;
-
+@property (strong, nonatomic) Address *address;
 @end
 
 @implementation ChooseLocationViewController
@@ -25,9 +25,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.address = [Address new];
     // Do any additional setup after loading the view.
 }
+- (void)updateAddress {
+    self.address.addressLine1 = self.addressLine1.text;
+    self.address.city = self.city.text;
+    self.address.state = self.state.text;
+    self.address.postalCode = self.postalCodeField.text;
+    self.address.country = self.countryField.text;
+    self.address.addressLine2 = @"";
+}
 - (IBAction)closeButton:(id)sender {
+    [self.delegate addressFields:self.address];
     [self dismissViewControllerAnimated:true completion:nil];
 }
 
@@ -94,10 +104,10 @@
             if ([field.type isEqualToString:kGMSPlaceTypeCountry]) {
                 self.country = field.name;
             }
-            
         }
     }
     [self fillAddressForm];
+    [self updateAddress];
     [self dismissViewControllerAnimated:true completion:nil];
 }
 

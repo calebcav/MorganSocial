@@ -36,12 +36,9 @@
     if ([post.likeList containsObject:PFUser.currentUser]){
         [self.likeButton setImage:[UIImage imageNamed:@"favor-icon-red"] forState:UIControlStateNormal];
     }
-    NSLog(@"number before like: %lu", self.post.likeList.count);
     if ([self.post.author.objectId isEqual:PFUser.currentUser.objectId]){
-        NSLog(@"Hello");
         [self.deleteButton setHidden:NO];
     } else {
-        NSLog(@"God");
         [self.deleteButton setHidden:YES];
     }
 }

@@ -7,15 +7,18 @@
 //
 
 #import "CreatePostViewController.h"
+#import "ChooseLocationViewController.h"
 #import "Post.h"
+#import "Address.h"
 #import <Parse/Parse.h>
 
-@interface CreatePostViewController ()
+@interface CreatePostViewController () <ChooseLocationViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *titleField;
 @property (strong, nonatomic) IBOutlet UITextField *captionField;
 @property (strong, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (strong, nonatomic) NSArray *const categories;
 @property (strong, nonatomic) NSString *category;
+@property (strong, nonatomic) Address *address;
 @end
 
 @implementation CreatePostViewController
@@ -30,10 +33,15 @@
     self.category = @"Food";
     // Do any additional setup after loading the view.
 }
+- (void)addressFields:(nonnull Address *)address {
+    self.address = address;
+    NSLog(@"Works!");
+}
 
 - (IBAction)postButton:(id)sender {
-    [Post createPost:self.captionField.text withTitle:self.titleField.text withCategory:self.category withCompletion:^(BOOL succeeded, NSError *error){
+    [Post createPost:self.captionField.text withTitle:self.titleField.text withCategory:self.category withAddress:self.address withCompletion:^(BOOL succeeded, NSError *error){
         [self.delegate didPost];
+        NSLog(@"%@", self.address.addressLine1);
     }];
     [self dismissViewControllerAnimated:true completion:nil];
 }
@@ -63,14 +71,18 @@
     self.category = self.categories[row];
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    ChooseLocationViewController *chooseLocationViewController = [segue destinationViewController];
+    chooseLocationViewController.delegate = self;
+    
 }
-*/
+
+
+
 
 @end

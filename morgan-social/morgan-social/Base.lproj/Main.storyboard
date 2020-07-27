@@ -328,20 +328,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kUq-sl-ILw">
-                                <rect key="frame" x="5" y="316" width="414" height="142"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kUq-sl-ILw">
+                                <rect key="frame" x="5" y="399" width="414" height="216"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C87-ei-EPS">
-                                <rect key="frame" x="150" y="500" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C87-ei-EPS">
+                                <rect key="frame" x="150" y="657" width="115" height="30"/>
                                 <state key="normal" title="Choose Location"/>
                                 <connections>
                                     <segue destination="dDE-pL-ESB" kind="presentation" id="fzP-H6-d21"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="De9-yP-qY3">
-                                <rect key="frame" x="189" y="598" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="De9-yP-qY3">
+                                <rect key="frame" x="189" y="726" width="46" height="30"/>
                                 <state key="normal" title="Post"/>
                                 <connections>
                                     <action selector="postButton:" destination="YC1-7j-nu2" eventType="touchUpInside" id="e8c-yE-xG4"/>
@@ -353,14 +351,18 @@
                             <constraint firstItem="Sj5-2d-JaL" firstAttribute="top" secondItem="Evh-lG-EPD" secondAttribute="top" constant="192" id="1dx-QM-6WZ"/>
                             <constraint firstItem="Evh-lG-EPD" firstAttribute="trailing" secondItem="De9-yP-qY3" secondAttribute="trailing" constant="179" id="28d-F3-735"/>
                             <constraint firstItem="Evh-lG-EPD" firstAttribute="trailing" secondItem="9xP-OF-yin" secondAttribute="trailing" constant="112" id="AGa-sc-jQI"/>
+                            <constraint firstItem="Evh-lG-EPD" firstAttribute="trailing" secondItem="C87-ei-EPS" secondAttribute="trailing" constant="149" id="Bfi-8D-vlM"/>
                             <constraint firstItem="9xP-OF-yin" firstAttribute="leading" secondItem="Evh-lG-EPD" secondAttribute="leading" constant="123" id="DpL-cv-U2h"/>
                             <constraint firstItem="yz0-EJ-k8k" firstAttribute="leading" secondItem="Evh-lG-EPD" secondAttribute="leading" constant="36" id="RuM-Si-JAM"/>
                             <constraint firstItem="Evh-lG-EPD" firstAttribute="trailing" secondItem="Sj5-2d-JaL" secondAttribute="trailing" constant="112" id="Woh-iC-nOJ"/>
+                            <constraint firstItem="kUq-sl-ILw" firstAttribute="top" secondItem="9xP-OF-yin" secondAttribute="bottom" constant="28" id="YD6-DB-OYz"/>
                             <constraint firstItem="9xP-OF-yin" firstAttribute="top" secondItem="Sj5-2d-JaL" secondAttribute="bottom" constant="111" id="cpg-fL-vvS"/>
                             <constraint firstItem="yz0-EJ-k8k" firstAttribute="top" secondItem="Evh-lG-EPD" secondAttribute="top" constant="20" id="fvH-gq-c0S"/>
                             <constraint firstItem="Sj5-2d-JaL" firstAttribute="leading" secondItem="Evh-lG-EPD" secondAttribute="leading" constant="123" id="nAH-px-0wR"/>
+                            <constraint firstItem="C87-ei-EPS" firstAttribute="top" secondItem="kUq-sl-ILw" secondAttribute="bottom" constant="42" id="q2y-Ju-aVZ"/>
+                            <constraint firstItem="De9-yP-qY3" firstAttribute="top" secondItem="C87-ei-EPS" secondAttribute="bottom" constant="39" id="spB-7e-NGE"/>
                             <constraint firstItem="De9-yP-qY3" firstAttribute="leading" secondItem="Evh-lG-EPD" secondAttribute="leading" constant="189" id="u6Z-6V-TQB"/>
-                            <constraint firstItem="De9-yP-qY3" firstAttribute="top" secondItem="9xP-OF-yin" secondAttribute="bottom" constant="164" id="wrG-OB-dfA"/>
+                            <constraint firstItem="C87-ei-EPS" firstAttribute="leading" secondItem="Evh-lG-EPD" secondAttribute="leading" constant="150" id="zGU-PA-jwk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Evh-lG-EPD"/>
                     </view>

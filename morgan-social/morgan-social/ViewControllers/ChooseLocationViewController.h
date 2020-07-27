@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Address.h"
 @import GooglePlaces;
 NS_ASSUME_NONNULL_BEGIN
+@protocol ChooseLocationViewControllerDelegate
+- (void) addressFields: (Address *)address;
+@end
 
 @interface ChooseLocationViewController : UIViewController <GMSAutocompleteViewControllerDelegate>
 
@@ -18,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UITextField *state;
 @property (strong, nonatomic) IBOutlet UITextField *postalCodeField;
 @property (strong, nonatomic) IBOutlet UITextField *countryField;
-
+@property (nonatomic, weak) id<ChooseLocationViewControllerDelegate> delegate;
 @end
 
 NS_ASSUME_NONNULL_END
