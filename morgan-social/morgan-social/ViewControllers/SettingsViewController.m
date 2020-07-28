@@ -7,10 +7,10 @@
 //
 
 #import "SettingsViewController.h"
+#import "LoginViewController.h"
+#import "SceneDelegate.h"
 #import <Parse/Parse.h>
 @interface SettingsViewController ()
-@property (strong, nonatomic) IBOutlet UITextField *majorField;
-@property (strong, nonatomic) IBOutlet UITextField *classificationField;
 @property (strong, nonatomic) PFUser *user;
 
 @end
@@ -20,19 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.user = PFUser.currentUser;
-    self.majorField.text = self.user[@"major"];
-    self.classificationField.text = self.user[@"classification"];
     // Do any additional setup after loading the view.
 }
-- (IBAction)saveButton:(id)sender {
-    self.user[@"major"] = self.majorField.text;
-    self.user[@"classification"] = self.classificationField.text;
-    [self.user saveInBackground];
-    UIAlertController *alertvc = [UIAlertController alertControllerWithTitle:@"Saved!" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleDefault handler: ^ (UIAlertAction *_Nonnull action){
+
+- (IBAction)logoutButton:(id)sender {
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error){
+        SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        sceneDelegate.window.rootViewController = loginViewController;
     }];
-    [alertvc addAction:action];
-    [self presentViewController:alertvc animated:true completion:nil];
 }
 
 /*

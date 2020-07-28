@@ -35,13 +35,11 @@
 }
 - (void)addressFields:(nonnull Address *)address {
     self.address = address;
-    NSLog(@"Works!");
 }
 
 - (IBAction)postButton:(id)sender {
     [Post createPost:self.captionField.text withTitle:self.titleField.text withCategory:self.category withAddress:self.address withCompletion:^(BOOL succeeded, NSError *error){
         [self.delegate didPost];
-        NSLog(@"%@", self.address.addressLine1);
     }];
     [self dismissViewControllerAnimated:true completion:nil];
 }
