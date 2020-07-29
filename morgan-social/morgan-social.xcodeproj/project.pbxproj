@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3800844424CB90BA0035359F /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 3800844324CB90BA0035359F /* Address.m */; };
+		3800844A24D2033A0035359F /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3800844924D2033A0035359F /* EditProfileViewController.m */; };
 		381024E224BF6244007B64E9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381024E124BF6244007B64E9 /* SettingsViewController.m */; };
 		387F10D524C0DFC00066CE2C /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F10D424C0DFC00066CE2C /* Comment.m */; };
 		387F10D824C0FB190066CE2C /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F10D724C0FB190066CE2C /* CommentsViewController.m */; };
@@ -62,6 +63,8 @@
 		27D1BE97B16435D02596E746 /* Pods_morgan_socialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_morgan_socialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3800844224CB90BA0035359F /* Address.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
 		3800844324CB90BA0035359F /* Address.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
+		3800844824D2033A0035359F /* EditProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
+		3800844924D2033A0035359F /* EditProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 		381024E024BF6244007B64E9 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		381024E124BF6244007B64E9 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		387F10D324C0DFC00066CE2C /* Comment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
@@ -237,6 +240,8 @@
 				387F10E024CA33750066CE2C /* MapViewController.m */,
 				387F10E824CB58FD0066CE2C /* ChooseLocationViewController.h */,
 				387F10E924CB58FD0066CE2C /* ChooseLocationViewController.m */,
+				3800844824D2033A0035359F /* EditProfileViewController.h */,
+				3800844924D2033A0035359F /* EditProfileViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -590,6 +595,7 @@
 				387F10D824C0FB190066CE2C /* CommentsViewController.m in Sources */,
 				38B1A3C524BCCF2B001A049B /* SceneDelegate.m in Sources */,
 				387F10DB24C0FEEC0066CE2C /* CommentTableViewCell.m in Sources */,
+				3800844A24D2033A0035359F /* EditProfileViewController.m in Sources */,
 				387F10DE24C60AEF0066CE2C /* Message.m in Sources */,
 				38B1A3F924BCD0E2001A049B /* LoginViewController.m in Sources */,
 				38B1A40524BCF784001A049B /* PostTableViewCell.m in Sources */,

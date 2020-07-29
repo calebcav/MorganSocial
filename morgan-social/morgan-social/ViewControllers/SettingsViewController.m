@@ -5,13 +5,20 @@
 //  Created by Caleb Caviness on 7/15/20.
 //  Copyright © 2020 Caleb Caviness. All rights reserved.
 //
-
 #import "SettingsViewController.h"
 #import "LoginViewController.h"
 #import "SceneDelegate.h"
 #import <Parse/Parse.h>
+@import Parse;
 @interface SettingsViewController ()
+
 @property (strong, nonatomic) PFUser *user;
+@property (strong, nonatomic) IBOutlet PFImageView *profilePicture;
+@property (strong, nonatomic) IBOutlet UITextField *profileFirstName;
+@property (strong, nonatomic) IBOutlet UITextField *profileLastName;
+@property (strong, nonatomic) IBOutlet UITextField *profileMajor;
+@property (strong, nonatomic) IBOutlet UITextField *profileClass;
+@property (strong, nonatomic) UIPickerView *majorPickerView;
 
 @end
 
@@ -20,6 +27,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.user = PFUser.currentUser;
+    self.profileFirstName.text = self.user[@"firstName"];
+    self.profileLastName.text = self.user[@"lastName"];
+    self.profileClass.text = self.user[@"classification"];
+    self.profileMajor.text = self.user[@"major"];
+    self.majorPickerView.delegate = self;
+    self.majorPickerView.dataSource = self;
+    
     // Do any additional setup after loading the view.
 }
 
@@ -31,6 +45,8 @@
         sceneDelegate.window.rootViewController = loginViewController;
     }];
 }
+
+
 
 /*
 #pragma mark - Navigation
