@@ -38,7 +38,8 @@
     self.filters = [NSMutableArray new];
     // Do any additional setup after loading the view.
 }
-- (NSString *)addToPredicate:(NSString *)predicate withCategory: (NSString *)category withIndex:(int)index{
+
+- (NSString *)addToPredicate:(NSString *)predicate withCategory: (NSString *)category withIndex:(int)index {
     NSString *expected = @"";
     if (index > 0){
         expected = [predicate stringByAppendingFormat:@" OR category = '%@'", category];
@@ -53,7 +54,6 @@
     [self changeButton:button withName:@"Dorms"];
     [self queryPosts];
     [self.tableView reloadData];
-    NSLog(@"%lu", (unsigned long)self.filters.count);
 }
 
 - (IBAction)professorsButton:(id)sender {
@@ -100,7 +100,7 @@
     [query includeKey:@"likeList"];
     
     query.limit = 10;
-    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error){
+    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
         if (posts != nil) {
             self.posts = posts;
         }
