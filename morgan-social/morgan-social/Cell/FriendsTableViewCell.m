@@ -25,6 +25,8 @@
     self.friendName.text = user.username;
     self.friendPicture.file = user[@"picture"];
     [self.friendPicture loadInBackground];
+    self.friendPicture.layer.cornerRadius = self.friendPicture.frame.size.width / 2;
+    self.friendPicture.clipsToBounds = YES;
 }
 
 

@@ -49,6 +49,11 @@
                     @"Psychology", @"Screenwriting & Animation", @"Services and Supply Chain Management", @"Social Work", @"Sociology and Anthropology", @"Strategic and Communication",
                     @"Theater Arts", @"Transportation Systems", @"Visual Arts"];
     [self.profileFirstName addTarget:self action:@selector(snackBarSavePopUp) forControlEvents:UIControlEventEditingChanged];
+    [self.profileLastName addTarget:self action:@selector(snackBarSavePopUp) forControlEvents:UIControlEventEditingChanged];
+    [self.profileMajor addTarget:self action:@selector(snackBarSavePopUp) forControlEvents:UIControlEventEditingChanged];
+    [self.segmentedClasses addTarget:self action:@selector(snackBarSavePopUp) forControlEvents:UIControlEventAllEvents];
+    UITapGestureRecognizer *tapPhoto = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(choosePhoto:)];
+    [tapPhoto setDelegate:self];
     // Do any additional setup after loading the view.
 }
 
@@ -61,23 +66,32 @@
     }
 }
 
-- (IBAction)logoutButton:(id)sender {
-    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error){
-        SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-        sceneDelegate.window.rootViewController = loginViewController;
-    }];
+- (void)choosePhoto:(id)sender {
+    
 }
 
 - (void)snackBarSavePopUp {
     MDCSnackbarMessageAction *action = [[MDCSnackbarMessageAction alloc] init];
     MDCSnackbarMessage *answerMessage = [[MDCSnackbarMessage alloc] init];
-    answerMessage.text = @"A lot";
+    answerMessage.text = @"Save the current changes you've made";
+    answerMessage.action = action;
     [MDCSnackbarManager showMessage:answerMessage];
-    action.title = @"Answer";
+    action.title = @"Save";
+    action.handler = ^(void) {
+        [self saveProfile];
+    };
+    
 }
 
+- (void) saveProfile {
+    NSArray *class = @[@"Freshman", @"Sophomore", @"Junior", @"Senior"];
+    PFUser *user = PFUser.currentUser;
+    user[@"firstName"] = self.profileFirstName.text;
+    user[@"lastName"] = self.profileLastName.text;
+    user[@"major"] = self.profileMajor.text;
+    user[@"classification"] = class[self.segmentedClasses.selectedSegmentIndex];
+    [user saveInBackground];
+}
 /*
 #pragma mark - Navigation
 

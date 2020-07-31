@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ChatViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface ChatViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 @property (strong, nonatomic) PFUser *friend;
 @end
 

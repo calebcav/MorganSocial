@@ -7,9 +7,10 @@
 //
 
 #import "ChatViewController.h"
-#import "ChatTableViewCell.h"
 #import "Message.h"
 #import <Parse/Parse.h>
+#import "SenderTableViewCell.h"
+#import "ReceiverTableViewCell.h"
 @interface ChatViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *messages;
@@ -28,6 +29,8 @@
     [self.view addGestureRecognizer:tap];
     [self queryMessages];
     [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(reloadTable) userInfo:nil repeats:YES];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.messageField.delegate = self;
     // Do any additional setup after loading the view.
 }
 
@@ -43,10 +46,10 @@
 - (void)queryMessages {
     NSPredicate *const matchingUsers = [NSPredicate predicateWithFormat:@"(receiver = %@ AND sender = %@) OR (receiver = %@ AND sender = %@)", PFUser.currentUser, self.friend, self.friend, PFUser.currentUser];
     PFQuery *query = [PFQuery queryWithClassName:@"Message" predicate:matchingUsers];
+    query.limit = 30;
     [query orderByAscending:@"createdAt"];
     [query includeKey:@"sender"];
     [query includeKey:@"receiver"];
-    query.limit = 10;
     [query findObjectsInBackgroundWithBlock:^(NSArray *messages, NSError *error){
         if (messages != nil) {
             self.messages = messages;
@@ -62,6 +65,7 @@
     [Message createMessage:self.messageField.text withReceiver:self.friend withCompletion:^(BOOL succeeded, NSError *error){
         [self queryMessages];
         [self.tableView reloadData];
+        self.messageField.text = @"";
     }];
 }
 
@@ -76,15 +80,26 @@
 */
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    ChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatTableViewCell"];
     Message *message = self.messages[indexPath.row];
-    cell.message = message;
+    ReceiverTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ReceiverTableViewCell"];
+    if ([message.sender.username isEqualToString:PFUser.currentUser.username]) {
+        SenderTableViewCell *otherCell = [tableView dequeueReusableCellWithIdentifier:@"SenderTableViewCell"];
+        otherCell.backgroundColor = [UIColor clearColor];
+        otherCell.message = message;
+        return otherCell;
+    } else {
+        ReceiverTableViewCell *otherCell = [tableView dequeueReusableCellWithIdentifier:@"ReceiverTableViewCell"];
+        otherCell.backgroundColor = [UIColor clearColor];
+        otherCell.message = message;
+        return otherCell;
+    }
     return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.messages.count;
 }
+
 
 
 @end
