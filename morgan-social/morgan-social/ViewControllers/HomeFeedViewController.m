@@ -146,6 +146,7 @@
     [self queryPosts];
     [self.tableView reloadData];
 }
+
 - (IBAction)logoutButton:(id)sender {
     [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error){
         SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;

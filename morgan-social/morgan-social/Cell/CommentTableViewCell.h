@@ -13,6 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CommentTableViewCell : UITableViewCell
+
 @property (strong, nonatomic) IBOutlet PFImageView *commentUserPicture;
 @property (strong, nonatomic) IBOutlet UILabel *commentText;
 @property (strong, nonatomic) Comment *comment;

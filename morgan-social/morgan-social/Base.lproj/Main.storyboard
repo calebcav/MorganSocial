@@ -740,7 +740,7 @@
             </objects>
             <point key="canvasLocation" x="2905.7971014492755" y="985.71428571428567"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--My Profile-->
         <scene sceneID="4Oi-bv-dSm">
             <objects>
                 <viewController id="7iy-sB-HNt" customClass="ProfileViewController" sceneMemberID="viewController">
@@ -749,27 +749,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xKF-2b-yyX" customClass="PFImageView">
-                                <rect key="frame" x="112" y="189" width="193" height="157"/>
+                                <rect key="frame" x="127" y="165" width="161" height="131"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="193" id="Us1-aA-qGz"/>
-                                    <constraint firstAttribute="height" constant="157" id="dAJ-Y1-s4I"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="131" id="Unj-cc-k1h"/>
+                                    <constraint firstAttribute="width" constant="161" id="Us1-aA-qGz"/>
+                                    <constraint firstAttribute="height" constant="131" id="dAJ-Y1-s4I"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="161" id="dVh-AT-Vc6"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DL5-S2-TrT">
-                                <rect key="frame" x="186" y="407" width="45" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DL5-S2-TrT">
+                                <rect key="frame" x="66" y="374" width="297" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYH-9e-9Uw">
-                                <rect key="frame" x="186" y="470" width="43" height="21"/>
+                                <rect key="frame" x="66" y="427" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Classification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk3-sq-7X2">
-                                <rect key="frame" x="186" y="548" width="45" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fullname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhq-GI-oab">
+                                <rect key="frame" x="66" y="336" width="297" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk3-sq-7X2">
+                                <rect key="frame" x="261" y="427" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -777,19 +785,23 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="eYH-9e-9Uw" firstAttribute="top" secondItem="DL5-S2-TrT" secondAttribute="bottom" constant="42" id="DIG-Dk-LJO"/>
-                            <constraint firstItem="eYH-9e-9Uw" firstAttribute="leading" secondItem="zn2-eI-1kv" secondAttribute="leading" constant="186" id="Erw-jI-wxY"/>
-                            <constraint firstItem="xKF-2b-yyX" firstAttribute="leading" secondItem="zn2-eI-1kv" secondAttribute="leading" constant="112" id="IfS-FP-FRj"/>
-                            <constraint firstItem="sk3-sq-7X2" firstAttribute="leading" secondItem="zn2-eI-1kv" secondAttribute="leading" constant="186" id="NDX-JV-YaT"/>
-                            <constraint firstItem="DL5-S2-TrT" firstAttribute="top" secondItem="xKF-2b-yyX" secondAttribute="bottom" constant="61" id="Nfi-jE-hX1"/>
-                            <constraint firstItem="DL5-S2-TrT" firstAttribute="leading" secondItem="zn2-eI-1kv" secondAttribute="leading" constant="186" id="Xso-2Q-5NO"/>
-                            <constraint firstItem="xKF-2b-yyX" firstAttribute="top" secondItem="zn2-eI-1kv" secondAttribute="top" constant="101" id="lp0-Pc-e6O"/>
-                            <constraint firstItem="zn2-eI-1kv" firstAttribute="trailing" secondItem="xKF-2b-yyX" secondAttribute="trailing" constant="109" id="w4k-aJ-NBM"/>
-                            <constraint firstItem="sk3-sq-7X2" firstAttribute="top" secondItem="eYH-9e-9Uw" secondAttribute="bottom" constant="57" id="xXe-as-iCD"/>
+                            <constraint firstItem="eYH-9e-9Uw" firstAttribute="leading" secondItem="zn2-eI-1kv" secondAttribute="leading" constant="66" id="8fc-2y-vTN"/>
+                            <constraint firstItem="sk3-sq-7X2" firstAttribute="top" secondItem="zn2-eI-1kv" secondAttribute="top" constant="339" id="Kc8-Bv-yas"/>
+                            <constraint firstItem="DL5-S2-TrT" firstAttribute="top" secondItem="Rhq-GI-oab" secondAttribute="bottom" constant="8" id="QA8-6z-pf3"/>
+                            <constraint firstItem="zn2-eI-1kv" firstAttribute="trailing" secondItem="xKF-2b-yyX" secondAttribute="trailing" constant="126" id="TZM-dm-FKh"/>
+                            <constraint firstItem="zn2-eI-1kv" firstAttribute="trailing" secondItem="Rhq-GI-oab" secondAttribute="trailing" constant="51" id="URc-O2-dgX"/>
+                            <constraint firstItem="Rhq-GI-oab" firstAttribute="leading" secondItem="zn2-eI-1kv" secondAttribute="leading" constant="66" id="W0O-Jy-zrq"/>
+                            <constraint firstItem="xKF-2b-yyX" firstAttribute="top" secondItem="zn2-eI-1kv" secondAttribute="top" constant="77" id="dDq-f1-Tug"/>
+                            <constraint firstItem="DL5-S2-TrT" firstAttribute="leading" secondItem="zn2-eI-1kv" secondAttribute="leading" constant="66" id="deg-hj-tB0"/>
+                            <constraint firstItem="xKF-2b-yyX" firstAttribute="leading" secondItem="zn2-eI-1kv" secondAttribute="leading" constant="127" id="fxN-d8-k2t"/>
+                            <constraint firstItem="eYH-9e-9Uw" firstAttribute="top" secondItem="zn2-eI-1kv" secondAttribute="top" constant="339" id="jDY-WZ-Zxe"/>
+                            <constraint firstItem="Rhq-GI-oab" firstAttribute="top" secondItem="xKF-2b-yyX" secondAttribute="bottom" constant="40" id="rYL-hc-fvS"/>
+                            <constraint firstItem="zn2-eI-1kv" firstAttribute="trailing" secondItem="DL5-S2-TrT" secondAttribute="trailing" constant="51" id="xHK-a0-1Xd"/>
+                            <constraint firstItem="zn2-eI-1kv" firstAttribute="trailing" secondItem="sk3-sq-7X2" secondAttribute="trailing" constant="51" id="z61-4a-GGo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zn2-eI-1kv"/>
                     </view>
-                    <navigationItem key="navigationItem" id="X3U-hN-9yD">
+                    <navigationItem key="navigationItem" title="My Profile" id="X3U-hN-9yD">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="Settings" id="dnR-bV-NzI">
                             <connections>
                                 <segue destination="zg6-rB-XV6" kind="push" id="E2z-Fs-vvi"/>
@@ -798,6 +810,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="profileClassification" destination="sk3-sq-7X2" id="SOQ-Ec-Gnz"/>
+                        <outlet property="profileFullName" destination="Rhq-GI-oab" id="8xE-G7-PxH"/>
                         <outlet property="profileMajor" destination="eYH-9e-9Uw" id="67C-V2-8bL"/>
                         <outlet property="profilePicture" destination="xKF-2b-yyX" id="K4J-lv-tg1"/>
                         <outlet property="profileUsername" destination="DL5-S2-TrT" id="Ys5-wl-xq0"/>

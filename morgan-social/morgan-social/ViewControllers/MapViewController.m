@@ -35,8 +35,8 @@
     marker.map = mapView;
     self.map = mapView;
     [self.view addSubview:self.map];
-    
 }
+
 - (IBAction)closeButton:(id)sender {
     [self dismissViewControllerAnimated:true completion:nil];
 }

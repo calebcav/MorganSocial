@@ -54,6 +54,8 @@
     [self.segmentedClasses addTarget:self action:@selector(snackBarSavePopUp) forControlEvents:UIControlEventAllEvents];
     UITapGestureRecognizer *tapPhoto = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(choosePhoto:)];
     [tapPhoto setDelegate:self];
+    self.profilePicture.userInteractionEnabled = YES;
+    [self.profilePicture addGestureRecognizer:tapPhoto];
     // Do any additional setup after loading the view.
 }
 
@@ -67,7 +69,49 @@
 }
 
 - (void)choosePhoto:(id)sender {
+    UIImagePickerController *imagePickerVC = [UIImagePickerController new];
+    imagePickerVC.delegate = self;
+    imagePickerVC.allowsEditing = YES;
     
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    else {
+        imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    // Get the image captured by the UIImagePickerController
+    UIImage *editedImage = info[UIImagePickerControllerEditedImage];
+
+    // Do something with the images (based on your use case)
+    PFUser *user = PFUser.currentUser;
+    user[@"picture"] = [self getPFFileFromImage:editedImage];
+    [user saveInBackground];
+    self.profilePicture.file = [self getPFFileFromImage:editedImage];
+    // Dismiss UIImagePickerController to go back to your original view controller
+    [self viewDidLoad];
+    [self.profilePicture loadInBackground];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (PFFileObject *)getPFFileFromImage: (UIImage * _Nullable)image {
+    
+    if (!image){
+        return nil;
+    }
+    
+    NSData *imageData = UIImagePNGRepresentation(image);
+    
+    if (!imageData) {
+        return nil;
+    }
+    
+    return [PFFileObject fileObjectWithName:@"image.png" data:imageData];
 }
 
 - (void)snackBarSavePopUp {
@@ -92,6 +136,7 @@
     user[@"classification"] = class[self.segmentedClasses.selectedSegmentIndex];
     [user saveInBackground];
 }
+
 /*
 #pragma mark - Navigation
 

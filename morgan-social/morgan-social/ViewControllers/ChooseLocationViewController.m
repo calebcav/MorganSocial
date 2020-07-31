@@ -22,12 +22,12 @@
 
 @implementation ChooseLocationViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.address = [Address new];
     // Do any additional setup after loading the view.
 }
+
 - (void)updateAddress {
     self.address.addressLine1 = self.addressLine1.text;
     self.address.city = self.city.text;
@@ -36,6 +36,7 @@
     self.address.country = self.countryField.text;
     self.address.addressLine2 = @"";
 }
+
 - (IBAction)closeButton:(id)sender {
     [self.delegate addressFields:self.address];
     [self dismissViewControllerAnimated:true completion:nil];
@@ -50,6 +51,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 - (IBAction)searchAddressButton:(id)sender {
     GMSAutocompleteViewController *autoCompleteController = [GMSAutocompleteViewController new];
     autoCompleteController.delegate = self;
@@ -80,7 +82,6 @@
     self.postal_code = @"";
     self.postal_code_suffix = @"";
 }
-
 
 - (void)viewController:(nonnull GMSAutocompleteViewController *)viewController didAutocompleteWithPlace:(nonnull GMSPlace *)place {
     if (place.addressComponents) {
@@ -118,6 +119,5 @@
 - (void)wasCancelled:(nonnull GMSAutocompleteViewController *)viewController {
     [self dismissViewControllerAnimated:true completion:nil];
 }
-
 
 @end

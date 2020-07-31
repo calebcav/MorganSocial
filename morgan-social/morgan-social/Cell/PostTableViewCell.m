@@ -59,7 +59,6 @@
             [self.likeButton setImage:[UIImage imageNamed:@"favor-icon-red"] forState:UIControlStateNormal];
             self.post.likeCount += 1;
             self.likeCount.text = [NSString stringWithFormat:@"%d", self.post.likeCount];
-            
         }
         else {
             NSLog(@"dislike");

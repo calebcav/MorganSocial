@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3800844424CB90BA0035359F /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 3800844324CB90BA0035359F /* Address.m */; };
-		3800844A24D2033A0035359F /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3800844924D2033A0035359F /* EditProfileViewController.m */; };
 		3800844D24D471A30035359F /* ReceiverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3800844C24D471A30035359F /* ReceiverTableViewCell.m */; };
 		3800845024D471AE0035359F /* SenderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3800844F24D471AE0035359F /* SenderTableViewCell.m */; };
 		381024E224BF6244007B64E9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381024E124BF6244007B64E9 /* SettingsViewController.m */; };
@@ -35,7 +34,6 @@
 		38B1A40E24BD1402001A049B /* SearchFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A40D24BD1402001A049B /* SearchFriendViewController.m */; };
 		38B1A41124BD1610001A049B /* FriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41024BD1610001A049B /* FriendsTableViewCell.m */; };
 		38B1A41424BD162B001A049B /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41324BD162B001A049B /* ChatViewController.m */; };
-		38B1A41724BD176D001A049B /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41624BD176D001A049B /* ChatTableViewCell.m */; };
 		38B1A41A24BD1891001A049B /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41924BD1891001A049B /* SignupViewController.m */; };
 		38B1A41E24BE4888001A049B /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41D24BE4888001A049B /* Post.m */; };
 		5CADD3160CD2B0DAFBF78FB7 /* Pods_morgan_socialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D1BE97B16435D02596E746 /* Pods_morgan_socialTests.framework */; };
@@ -65,8 +63,6 @@
 		27D1BE97B16435D02596E746 /* Pods_morgan_socialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_morgan_socialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3800844224CB90BA0035359F /* Address.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
 		3800844324CB90BA0035359F /* Address.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
-		3800844824D2033A0035359F /* EditProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
-		3800844924D2033A0035359F /* EditProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 		3800844B24D471A30035359F /* ReceiverTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiverTableViewCell.h; sourceTree = "<group>"; };
 		3800844C24D471A30035359F /* ReceiverTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiverTableViewCell.m; sourceTree = "<group>"; };
 		3800844E24D471AE0035359F /* SenderTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SenderTableViewCell.h; sourceTree = "<group>"; };
@@ -119,8 +115,6 @@
 		38B1A41024BD1610001A049B /* FriendsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewCell.m; sourceTree = "<group>"; };
 		38B1A41224BD162B001A049B /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		38B1A41324BD162B001A049B /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
-		38B1A41524BD176D001A049B /* ChatTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
-		38B1A41624BD176D001A049B /* ChatTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
 		38B1A41824BD1891001A049B /* SignupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		38B1A41924BD1891001A049B /* SignupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 		38B1A41C24BE4888001A049B /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
@@ -246,8 +240,6 @@
 				387F10E024CA33750066CE2C /* MapViewController.m */,
 				387F10E824CB58FD0066CE2C /* ChooseLocationViewController.h */,
 				387F10E924CB58FD0066CE2C /* ChooseLocationViewController.m */,
-				3800844824D2033A0035359F /* EditProfileViewController.h */,
-				3800844924D2033A0035359F /* EditProfileViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -261,8 +253,6 @@
 				38B1A40424BCF784001A049B /* PostTableViewCell.m */,
 				38B1A40F24BD1610001A049B /* FriendsTableViewCell.h */,
 				38B1A41024BD1610001A049B /* FriendsTableViewCell.m */,
-				38B1A41524BD176D001A049B /* ChatTableViewCell.h */,
-				38B1A41624BD176D001A049B /* ChatTableViewCell.m */,
 				387F10D924C0FEEC0066CE2C /* CommentTableViewCell.h */,
 				387F10DA24C0FEEC0066CE2C /* CommentTableViewCell.m */,
 				3800844B24D471A30035359F /* ReceiverTableViewCell.h */,
@@ -589,7 +579,6 @@
 				38B1A40824BD00F1001A049B /* CreatePostViewController.m in Sources */,
 				387F10EA24CB58FD0066CE2C /* ChooseLocationViewController.m in Sources */,
 				38B1A3FF24BCF1B0001A049B /* CategoryCollectionViewCell.m in Sources */,
-				38B1A41724BD176D001A049B /* ChatTableViewCell.m in Sources */,
 				387F10D524C0DFC00066CE2C /* Comment.m in Sources */,
 				38B1A41124BD1610001A049B /* FriendsTableViewCell.m in Sources */,
 				387F10E124CA33750066CE2C /* MapViewController.m in Sources */,
@@ -605,7 +594,6 @@
 				387F10D824C0FB190066CE2C /* CommentsViewController.m in Sources */,
 				38B1A3C524BCCF2B001A049B /* SceneDelegate.m in Sources */,
 				387F10DB24C0FEEC0066CE2C /* CommentTableViewCell.m in Sources */,
-				3800844A24D2033A0035359F /* EditProfileViewController.m in Sources */,
 				387F10DE24C60AEF0066CE2C /* Message.m in Sources */,
 				38B1A3F924BCD0E2001A049B /* LoginViewController.m in Sources */,
 				38B1A40524BCF784001A049B /* PostTableViewCell.m in Sources */,

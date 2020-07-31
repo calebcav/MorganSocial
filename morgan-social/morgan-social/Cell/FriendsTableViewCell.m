@@ -29,5 +29,4 @@
     self.friendPicture.clipsToBounds = YES;
 }
 
-
 @end

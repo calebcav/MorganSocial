@@ -27,5 +27,4 @@
     [self.commentUserPicture loadInBackground];
 }
 
-
 @end

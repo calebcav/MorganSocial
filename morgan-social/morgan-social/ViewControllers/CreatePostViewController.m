@@ -33,6 +33,7 @@
     self.category = @"Food";
     // Do any additional setup after loading the view.
 }
+
 - (void)addressFields:(nonnull Address *)address {
     self.address = address;
 }
@@ -77,10 +78,6 @@
     // Pass the selected object to the new view controller.
     ChooseLocationViewController *chooseLocationViewController = [segue destinationViewController];
     chooseLocationViewController.delegate = self;
-    
 }
-
-
-
 
 @end

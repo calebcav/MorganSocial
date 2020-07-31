@@ -26,12 +26,7 @@
     self.tableView.dataSource = self;
     [self.tableView reloadData];
     [self queryPosts];
-    
-    
     // Do any additional setup after loading the view.
-}
-- (IBAction)closeButton:(id)sender {
-    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 - (IBAction)sendButton:(id)sender {
@@ -43,8 +38,6 @@
     [self queryPosts];
     [self.tableView reloadData];
 }
-
-
 
 - (void) queryPosts {
     PFQuery *query = [PFQuery queryWithClassName:@"Comment"];

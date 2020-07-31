@@ -31,6 +31,7 @@
     [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(reloadTable) userInfo:nil repeats:YES];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.messageField.delegate = self;
+    self.navigationItem.title = [self.friend[@"firstName"] stringByAppendingFormat:@" %@", self.friend[@"lastName"]];
     // Do any additional setup after loading the view.
 }
 
@@ -99,7 +100,5 @@
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.messages.count;
 }
-
-
 
 @end

@@ -42,7 +42,6 @@
     [_passwordField resignFirstResponder];
 }
 
-
 /*
 #pragma mark - Navigation
 

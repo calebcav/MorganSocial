@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *profileUsername;
 @property (strong, nonatomic) IBOutlet UILabel *profileMajor;
 @property (strong, nonatomic) IBOutlet UILabel *profileClassification;
+@property (strong, nonatomic) IBOutlet UILabel *profileFullName;
 @property (strong, nonatomic) PFUser *user;
 
 @end
@@ -24,65 +25,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.user = PFUser.currentUser;
-    self.profileUsername.text = self.user.username;
+    self.profileUsername.text = [@"@" stringByAppendingFormat:self.user.username];
     self.profilePicture.file = self.user[@"picture"];
+    self.profilePicture.layer.cornerRadius = self.profilePicture.frame.size.width / 2;
+    self.profilePicture.clipsToBounds = YES;
     self.profileMajor.text = self.user[@"major"];
     self.profileClassification.text = self.user[@"classification"];
     [self.profilePicture loadInBackground];
     [self.user saveInBackground];
-    UITapGestureRecognizer *tapPhoto = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hello:)];
-    [tapPhoto setDelegate:self];
-    self.profilePicture.userInteractionEnabled = YES;
-    [self.profilePicture addGestureRecognizer:tapPhoto];
-    [self reloadInputViews];
-    
-}
-
-- (void) hello:(id)sender {
-    UIImagePickerController *imagePickerVC = [UIImagePickerController new];
-    imagePickerVC.delegate = self;
-    imagePickerVC.allowsEditing = YES;
-    
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
-    }
-    else {
-        NSLog(@"Camera 🚫 available so we will use photo library instead");
-        imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    }
-    
-    [self presentViewController:imagePickerVC animated:YES completion:nil];
-}
-
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
-    
-    // Get the image captured by the UIImagePickerController
-    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
-    UIImage *editedImage = info[UIImagePickerControllerEditedImage];
-
-    // Do something with the images (based on your use case)
-    self.user[@"picture"] = [self getPFFileFromImage:editedImage];
-    [self.user saveInBackground];
-    self.profilePicture.file = [self getPFFileFromImage:editedImage];
-    // Dismiss UIImagePickerController to go back to your original view controller
-    [self dismissViewControllerAnimated:YES completion:nil];
-    [self viewDidLoad];
-    [self.profilePicture loadInBackground];
-}
-
-- (PFFileObject *)getPFFileFromImage: (UIImage * _Nullable)image {
-    
-    if (!image){
-        return nil;
-    }
-    
-    NSData *imageData = UIImagePNGRepresentation(image);
-    
-    if (!imageData) {
-        return nil;
-    }
-    
-    return [PFFileObject fileObjectWithName:@"image.png" data:imageData];
+    self.profileFullName.text = [self.user[@"firstName"] stringByAppendingFormat:@" %@", self.user[@"lastName"]];
 }
 
 /*
