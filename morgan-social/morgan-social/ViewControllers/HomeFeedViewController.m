@@ -20,8 +20,8 @@
 @property (strong, nonatomic) NSArray *posts;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
-@property (nonatomic) NSInteger indexRow;
 @property (strong, nonatomic) NSMutableArray *filters;
+@property (strong, nonatomic) CommentsViewController *CommentsVC;
 @end
 
 @implementation HomeFeedViewController
@@ -98,7 +98,6 @@
     [query orderByDescending:@"createdAt"];
     [query includeKey:@"author"];
     [query includeKey:@"likeList"];
-    
     query.limit = 10;
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
         if (posts != nil) {
@@ -116,25 +115,20 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    if ([[segue identifier] isEqual:@"comments"]){
-        UITableViewCell *tappedCell = sender;
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
-        Post *post = self.posts[indexPath.row];
-        CommentsViewController *commentsViewController = [segue destinationViewController];
-        commentsViewController.post = post;
-    } else {
-        CreatePostViewController *createPostViewController = [segue destinationViewController];
-        createPostViewController.delegate = self;
-    }
+
+
+- (void)atapCommentsButton:(id)sender {
+    UIButton *button = (UIButton*)sender;
+    self.CommentsVC.post = self.posts[button.tag];
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostTableViewCell"];
     Post *post = self.posts[indexPath.row];
     cell.post = post;
+    NSLog(@"Comment Button: %@", cell.commentButton);
+    cell.commentButton.tag = indexPath.row;
+    [cell.commentButton addTarget:self action:@selector(atapCommentsButton:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 
@@ -154,6 +148,18 @@
         LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
         sceneDelegate.window.rootViewController = loginViewController;
     }];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqual:@"createPost"]){
+        CreatePostViewController *createPostViewController = [segue destinationViewController];
+        createPostViewController.delegate = self;
+    } else if ([[segue identifier] isEqual:@"comments"]){
+        CommentsViewController *commentsViewController = (CommentsViewController *)[segue destinationViewController];
+        self.CommentsVC = commentsViewController;
+    }
 }
 
 @end

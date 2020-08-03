@@ -20,6 +20,16 @@
 
 @implementation CommentsViewController
 
+/*
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self){
+     self.post = [Post new];
+    }
+    return self;
+}
+*/
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.delegate = self;

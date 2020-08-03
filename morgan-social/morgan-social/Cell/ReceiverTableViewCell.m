@@ -31,11 +31,10 @@
 - (void)setMessage:(Message *)message {
     _message = message;
     self.receiverText.text = message.text;
-    self.receiverBubble.layer.masksToBounds = NO;
-    self.receiverBubble.layer.shadowOffset = CGSizeMake(.0f, 2.5f);
-    self.receiverBubble.layer.shadowRadius = 1.5f;
-    self.receiverBubble.layer.shadowOpacity = .9f;
-    self.receiverBubble.layer.shadowColor = [UIColor colorWithRed:176.f/255.f green:199.f/255.f blue:226.f/255.f alpha:1.f].CGColor;
+    [self.receiverBubble.layer setShadowColor:[UIColor grayColor].CGColor];
+    [self.receiverBubble.layer setShadowOpacity:0.8];
+    [self.receiverBubble.layer setShadowRadius:3.0];
+    [self.receiverBubble.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
 }
 
 @end

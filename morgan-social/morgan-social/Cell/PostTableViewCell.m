@@ -15,6 +15,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    //self.commentButton = [UIButton new];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -26,7 +27,10 @@
     _post = post;
     self.postUserPicture.file = post.author[@"picture"];
     [self.postUserPicture loadInBackground];
-    self.postUserName.text = post.author.username;
+    self.postUserPicture.layer.cornerRadius = self.postUserPicture.frame.size.width / 2;
+    self.postUserPicture.clipsToBounds = YES;
+    self.postUserName.text = [@"@" stringByAppendingFormat:@"%@",post.author.username];
+    self.postFullName.text = [post.author[@"firstName"] stringByAppendingFormat:@" %@", post.author[@"lastName"]];
     self.postTitle.text = post.title;
     self.postBody.text = post.caption;
     self.commentCount.text = [NSString stringWithFormat:@"%d", post.commentCount];
@@ -40,6 +44,11 @@
     } else {
         [self.deleteButton setHidden:YES];
     }
+    self.postBubble.layer.cornerRadius = 7;
+    [self.postBubble.layer setShadowColor:[UIColor grayColor].CGColor];
+    [self.postBubble.layer setShadowOpacity:0.8];
+    [self.postBubble.layer setShadowRadius:3.0];
+    [self.postBubble.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
 }
 
 - (IBAction)deletePost:(id)sender {
