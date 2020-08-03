@@ -24,7 +24,9 @@
     _comment = comment;
     self.commentText.text = comment.message;
     self.commentUserPicture.file = comment.author[@"picture"];
+    self.commentUserPicture.layer.cornerRadius = self.commentUserPicture.frame.size.width /2;
     [self.commentUserPicture loadInBackground];
+    self.commentUsername.text = comment.author.username;
 }
 
 @end

@@ -126,7 +126,6 @@
     PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostTableViewCell"];
     Post *post = self.posts[indexPath.row];
     cell.post = post;
-    NSLog(@"Comment Button: %@", cell.commentButton);
     cell.commentButton.tag = indexPath.row;
     [cell.commentButton addTarget:self action:@selector(atapCommentsButton:) forControlEvents:UIControlEventTouchUpInside];
     return cell;

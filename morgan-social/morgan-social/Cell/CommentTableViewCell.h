@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) IBOutlet PFImageView *commentUserPicture;
 @property (strong, nonatomic) IBOutlet UILabel *commentText;
+@property (strong, nonatomic) IBOutlet UILabel *commentUsername;
 @property (strong, nonatomic) Comment *comment;
 @end
 

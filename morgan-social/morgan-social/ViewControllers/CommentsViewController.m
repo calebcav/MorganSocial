@@ -20,16 +20,6 @@
 
 @implementation CommentsViewController
 
-/*
-- (instancetype)initWithCoder:(NSCoder *)coder {
-    self = [super initWithCoder:coder];
-    if (self){
-     self.post = [Post new];
-    }
-    return self;
-}
-*/
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.delegate = self;
@@ -41,7 +31,6 @@
 
 - (IBAction)sendButton:(id)sender {
     [Comment createComment:self.commentField.text withPostID:self.post.objectId withCompletion:^(BOOL succeeded, NSError *error){
-        //self.post.commentCount += @1;
     }];
     self.post.commentCount += 1;
     [self.post saveInBackground];
