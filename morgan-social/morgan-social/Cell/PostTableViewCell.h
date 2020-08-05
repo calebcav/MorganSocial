@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UILabel *postFullName;
 @property (strong, nonatomic) IBOutlet UIView *postBubble;
 @property (strong, nonatomic) IBOutlet UIButton *commentButton;
+@property (strong, nonatomic) IBOutlet UILabel *postLocation;
 
 @end
 

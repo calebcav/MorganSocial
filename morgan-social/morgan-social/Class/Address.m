@@ -8,6 +8,7 @@
 
 #import "Address.h"
 #import <Parse/Parse.h>
+#import <Parse/PFObject+Subclass.h>
 
 @implementation Address
 

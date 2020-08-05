@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "Address.h"
 @import GoogleMaps;
 @import GooglePlaces;
 @interface AppDelegate ()
@@ -26,8 +27,13 @@
     [Parse initializeWithConfiguration:configuration];
     [GMSServices provideAPIKey:@"AIzaSyBK1kCQSh1FOaovXlil5LLIV0MKJCP0nWg"];
     [GMSPlacesClient provideAPIKey:@"AIzaSyBK1kCQSh1FOaovXlil5LLIV0MKJCP0nWg"];
+    [self configureAddress];
     
     return YES;
+}
+
+- (void)configureAddress {
+    [Address registerSubclass];
 }
 
 #pragma mark - UISceneSession lifecycle

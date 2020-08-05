@@ -40,6 +40,7 @@
 
 - (IBAction)postButton:(id)sender {
     [Post createPost:self.captionField.text withTitle:self.titleField.text withCategory:self.category withAddress:self.address withCompletion:^(BOOL succeeded, NSError *error){
+        NSLog(@"%@", self.address);
         [self.delegate didPost];
     }];
     [self dismissViewControllerAnimated:true completion:nil];

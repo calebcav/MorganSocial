@@ -151,14 +151,19 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0f-y6-Yjj">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0f-y6-Yjj">
                                                             <rect key="frame" x="346" y="8" width="19.5" height="22"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <state key="normal" image="trash" catalog="system"/>
                                                             <connections>
                                                                 <action selector="deletePost:" destination="qdS-JZ-703" eventType="touchUpInside" id="6KP-QY-eCn"/>
                                                             </connections>
                                                         </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City and State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjW-jT-jX3">
+                                                            <rect key="frame" x="255" y="123" width="108" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
@@ -167,8 +172,11 @@
                                                         <constraint firstItem="9J9-r6-4nB" firstAttribute="leading" secondItem="NnI-vD-Hbo" secondAttribute="trailing" constant="20" id="6yC-xd-up6"/>
                                                         <constraint firstItem="mYf-nm-dVM" firstAttribute="leading" secondItem="NnI-vD-Hbo" secondAttribute="trailing" constant="20" id="9Kp-dB-hjt"/>
                                                         <constraint firstItem="eH8-IU-IKs" firstAttribute="top" secondItem="QwX-1U-Dhd" secondAttribute="bottom" constant="12" id="A45-GG-qgV"/>
+                                                        <constraint firstItem="qjW-jT-jX3" firstAttribute="top" secondItem="QwX-1U-Dhd" secondAttribute="bottom" constant="12" id="D7m-Nc-0v2"/>
                                                         <constraint firstItem="q9A-UY-oZz" firstAttribute="top" secondItem="QwX-1U-Dhd" secondAttribute="bottom" constant="13" id="EYi-Dn-cJA"/>
+                                                        <constraint firstAttribute="trailing" secondItem="h0f-y6-Yjj" secondAttribute="trailing" constant="20.5" id="HMb-A6-ETt"/>
                                                         <constraint firstItem="9J9-r6-4nB" firstAttribute="top" secondItem="hUs-jl-Krq" secondAttribute="top" constant="8" id="K7U-dv-h7c"/>
+                                                        <constraint firstAttribute="trailing" secondItem="qjW-jT-jX3" secondAttribute="trailing" constant="23" id="LOf-4o-tvq"/>
                                                         <constraint firstItem="hxc-Cr-S81" firstAttribute="leading" secondItem="q9A-UY-oZz" secondAttribute="trailing" constant="18" id="MRd-rT-rjx"/>
                                                         <constraint firstItem="QwX-1U-Dhd" firstAttribute="top" secondItem="NnI-vD-Hbo" secondAttribute="bottom" constant="11.5" id="Nxb-x1-nLi"/>
                                                         <constraint firstItem="q9A-UY-oZz" firstAttribute="leading" secondItem="eH8-IU-IKs" secondAttribute="trailing" constant="8" id="Ord-Il-u4D"/>
@@ -180,6 +188,7 @@
                                                         <constraint firstItem="QwX-1U-Dhd" firstAttribute="top" secondItem="2TZ-dL-Hxw" secondAttribute="bottom" constant="11.5" id="jYE-Xy-NqJ"/>
                                                         <constraint firstItem="o12-2e-fss" firstAttribute="leading" secondItem="hxc-Cr-S81" secondAttribute="trailing" constant="14" id="lUo-Rd-H71"/>
                                                         <constraint firstItem="NnI-vD-Hbo" firstAttribute="top" secondItem="hUs-jl-Krq" secondAttribute="top" constant="8" id="lVz-9a-jDm"/>
+                                                        <constraint firstItem="h0f-y6-Yjj" firstAttribute="top" secondItem="hUs-jl-Krq" secondAttribute="top" constant="8" id="s1Y-1n-9Ai"/>
                                                         <constraint firstItem="2TZ-dL-Hxw" firstAttribute="leading" secondItem="NnI-vD-Hbo" secondAttribute="trailing" constant="20" id="vmf-9C-j0i"/>
                                                         <constraint firstItem="hxc-Cr-S81" firstAttribute="top" secondItem="QwX-1U-Dhd" secondAttribute="bottom" constant="8" id="yKS-9R-uWz"/>
                                                         <constraint firstItem="o12-2e-fss" firstAttribute="top" secondItem="QwX-1U-Dhd" secondAttribute="bottom" constant="13" id="yfb-HV-jxz"/>
@@ -202,6 +211,7 @@
                                             <outlet property="postBody" destination="QwX-1U-Dhd" id="OLI-4S-h2a"/>
                                             <outlet property="postBubble" destination="hUs-jl-Krq" id="Cwd-ny-6oQ"/>
                                             <outlet property="postFullName" destination="9J9-r6-4nB" id="gyT-YV-Ibb"/>
+                                            <outlet property="postLocation" destination="qjW-jT-jX3" id="2ps-fk-aGN"/>
                                             <outlet property="postTitle" destination="2TZ-dL-Hxw" id="4lU-7c-5qb"/>
                                             <outlet property="postUserName" destination="mYf-nm-dVM" id="bOG-L8-fWG"/>
                                             <outlet property="postUserPicture" destination="NnI-vD-Hbo" id="jCu-8n-ZJF"/>
@@ -270,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bty-CW-7tR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3486" y="139"/>
+            <point key="canvasLocation" x="3485.507246376812" y="138.61607142857142"/>
         </scene>
         <!--Comments View Controller-->
         <scene sceneID="09p-sv-bse">
@@ -561,7 +571,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fM8-5b-0D9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6245" y="-378"/>
+            <point key="canvasLocation" x="3068" y="-558"/>
         </scene>
         <!--Home-->
         <scene sceneID="grl-WL-TBT">

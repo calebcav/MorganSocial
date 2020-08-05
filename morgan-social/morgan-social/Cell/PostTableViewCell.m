@@ -9,6 +9,7 @@
 #import "PostTableViewCell.h"
 #import "Post.h"
 #import "CommentsViewController.h"
+#import "Address.h"
 
 @implementation PostTableViewCell
 
@@ -25,6 +26,13 @@
     // Configure the view for the selected state
 }
 
+- (Address *)fetchAddress {
+    PFQuery *query = [PFQuery queryWithClassName:@"Address"];
+    [query whereKey:@"objectId" equalTo:self.post.address.objectId];
+    NSArray *address = [query findObjects];
+    return address[0];
+}
+
 - (void)setPost:(Post *)post {
     _post = post;
     self.postUserPicture.file = post.author[@"picture"];
@@ -38,6 +46,12 @@
     self.commentCount.text = [NSString stringWithFormat:@"%d", post.commentCount];
     self.likeCount.text = [NSString stringWithFormat:@"%d", post.likeCount];
     self.post.likeList = post.likeList;
+    Address *address = [self fetchAddress];
+    if (address.city && address.state) {
+        self.postLocation.text = [address.city stringByAppendingFormat:@", %@", address.state];
+    } else {
+        self.postLocation.text = @"";
+    }
     if ([self.post.likeList containsObject:PFUser.currentUser.username]){
         [self.likeButton setImage:[UIImage imageNamed:@"favor-icon-red"] forState:UIControlStateNormal];
     }
@@ -88,10 +102,6 @@
     if (sender.state == UIGestureRecognizerStateRecognized) {
         [self likePostHelper];
     }
-}
-
-- (void)animateHeart {
-    
 }
 
 @end
