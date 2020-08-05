@@ -36,6 +36,7 @@
     [self.refreshControl addTarget:self action:@selector(queryPosts) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
     self.filters = [NSMutableArray new];
+    
     // Do any additional setup after loading the view.
 }
 

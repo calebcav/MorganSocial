@@ -22,7 +22,7 @@
 
 - (void)setUser:(PFUser *)user {
     _user = user;
-    self.friendName.text = user.username;
+    self.friendName.text = [user[@"firstName"] stringByAppendingFormat:@" %@", user[@"lastName"]];
     self.friendPicture.file = user[@"picture"];
     [self.friendPicture loadInBackground];
     self.friendPicture.layer.cornerRadius = self.friendPicture.frame.size.width / 2;

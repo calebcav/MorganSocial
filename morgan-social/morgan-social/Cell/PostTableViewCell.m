@@ -15,7 +15,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    //self.commentButton = [UIButton new];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(likePost:)];
+    tapGesture.numberOfTapsRequired = 2;
+    [self.postBubble addGestureRecognizer:tapGesture];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -61,23 +63,30 @@
 }
 
 - (IBAction)likePost:(id)sender {
+    [self likePostHelper];
+}
+
+- (void)likePostHelper {
     if (self.post) {
         if (![self.post.likeList containsObject:PFUser.currentUser.username]){
-            NSLog(@"like");
             [self.post addObject:PFUser.currentUser.username forKey:@"likeList"];
             [self.likeButton setImage:[UIImage imageNamed:@"favor-icon-red"] forState:UIControlStateNormal];
             self.post.likeCount += 1;
             self.likeCount.text = [NSString stringWithFormat:@"%d", self.post.likeCount];
         }
         else {
-            NSLog(@"dislike");
             self.post.likeCount -= 1;
             [self.post removeObject:PFUser.currentUser.username forKey:@"likeList"];
             [self.likeButton setImage:[UIImage imageNamed:@"favor-icon"] forState:UIControlStateNormal];
             self.likeCount.text = [NSString stringWithFormat:@"%d", self.post.likeCount];
         }
-        NSLog(@"number after like:%lu", self.post.likeList.count);
         [self.post saveInBackground];
+    }
+}
+
+- (void)handleDoubleTap: (UITapGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateRecognized) {
+        [self likePostHelper];
     }
 }
 

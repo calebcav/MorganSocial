@@ -30,13 +30,13 @@
     self.searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone;
     [self queryFriends];
     [self.tableView reloadData];
-    
 }
 
 - (void)makeFriendNameList {
     NSMutableArray *temp = [NSMutableArray new];
     for (PFUser *friend in self.friends) {
-        [temp addObject:friend.username];
+        NSString *fullName = [friend[@"firstName"] stringByAppendingFormat:@" %@", friend[@"lastName"]];
+        [temp addObject:fullName];
     }
     self.friendNames = [temp copy];
 }
@@ -44,7 +44,7 @@
 - (void)createFilteredFriends {
     NSMutableArray *temp = [NSMutableArray new];
     for (PFUser *user in self.friends){
-        if ([self.friendNames containsObject:user.username]) {
+        if ([self.friendNames containsObject:[user[@"firstName"] stringByAppendingFormat:@" %@",user[@"lastName"]]]) {
             [temp addObject:user];
         }
     }

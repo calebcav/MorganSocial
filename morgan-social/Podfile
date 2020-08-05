@@ -13,6 +13,7 @@ target 'morgan-social' do
   pod 'MaterialComponents/Snackbar'
   pod 'MaterialComponents/TextFields'
   pod 'MaterialComponents/TextFields+Theming'
+  pod 'DateTools'
   target 'morgan-socialTests' do
     inherit! :search_paths
     # Pods for testing
