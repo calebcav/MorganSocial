@@ -36,7 +36,6 @@
     [self.refreshControl addTarget:self action:@selector(queryPosts) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
     self.filters = [NSMutableArray new];
-    
     // Do any additional setup after loading the view.
 }
 
@@ -110,6 +109,7 @@
         [self.tableView reloadData];
         [self.refreshControl endRefreshing];
         [self.activityIndicator stopAnimating];
+        [self animateTable];
     }];
 }
 
@@ -118,7 +118,7 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 
 
-- (void)atapCommentsButton:(id)sender {
+- (void)tapCommentsButton:(id)sender {
     UIButton *button = (UIButton*)sender;
     self.CommentsVC.post = self.posts[button.tag];
 }
@@ -128,7 +128,7 @@
     Post *post = self.posts[indexPath.row];
     cell.post = post;
     cell.commentButton.tag = indexPath.row;
-    [cell.commentButton addTarget:self action:@selector(atapCommentsButton:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.commentButton addTarget:self action:@selector(tapCommentsButton:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 
@@ -138,6 +138,7 @@
 
 - (void)didPost {
     [self queryPosts];
+    [self animateTable];
     [self.tableView reloadData];
 }
 
@@ -159,6 +160,25 @@
     } else if ([[segue identifier] isEqual:@"comments"]){
         CommentsViewController *commentsViewController = (CommentsViewController *)[segue destinationViewController];
         self.CommentsVC = commentsViewController;
+    }
+}
+
+- (void)animateTable {
+    [self.tableView reloadData];
+    NSArray *cells = self.tableView.visibleCells;
+    int tableViewHeight = self.tableView.bounds.size.height;
+    
+    for (PostTableViewCell *cell in cells){
+        cell.transform = CGAffineTransformMakeTranslation(0, tableViewHeight);
+    }
+    
+    int delayCounter = 0;
+    
+    for (PostTableViewCell *cell in cells){
+        [UIView animateWithDuration:1.75 delay:(double)delayCounter * 0.05 usingSpringWithDamping:0.8 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            cell.transform = CGAffineTransformIdentity;
+        } completion:nil];
+        delayCounter += 1;
     }
 }
 

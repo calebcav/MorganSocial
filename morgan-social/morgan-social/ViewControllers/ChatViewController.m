@@ -24,7 +24,6 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    [self.tableView reloadData];
     UITapGestureRecognizer *const tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
     [self queryMessages];
@@ -32,6 +31,10 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.messageField.delegate = self;
     self.navigationItem.title = [self.friend[@"firstName"] stringByAppendingFormat:@" %@", self.friend[@"lastName"]];
+    [self.tableView reloadData];
+    //[self.tableView setContentOffset:CGPointMake(0, self.tableView.contentSize.height - self.tableView.frame.size.height)];
+    self.tableView.transform = CGAffineTransformMakeScale(1, -1);
+    
     // Do any additional setup after loading the view.
 }
 
@@ -87,11 +90,15 @@
         SenderTableViewCell *otherCell = [tableView dequeueReusableCellWithIdentifier:@"SenderTableViewCell"];
         otherCell.backgroundColor = [UIColor clearColor];
         otherCell.message = message;
+        otherCell.contentView.transform = CGAffineTransformMakeScale(1, -1);
+        otherCell.accessoryView.transform = CGAffineTransformMakeScale(1, -1);
         return otherCell;
     } else {
         ReceiverTableViewCell *otherCell = [tableView dequeueReusableCellWithIdentifier:@"ReceiverTableViewCell"];
         otherCell.backgroundColor = [UIColor clearColor];
         otherCell.message = message;
+        otherCell.contentView.transform = CGAffineTransformMakeScale(1, -1);
+        otherCell.accessoryView.transform = CGAffineTransformMakeScale(1, -1);
         return otherCell;
     }
     return cell;
