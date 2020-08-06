@@ -37,6 +37,22 @@ PODS:
     - MaterialComponents/Typography
     - MDFInternationalization
     - MDFTextAccessibility
+  - "MaterialComponents/Buttons+ColorThemer (111.0.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Color
+  - "MaterialComponents/Buttons+ShapeThemer (111.0.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Shape
+  - "MaterialComponents/Buttons+Theming (111.0.0)":
+    - MaterialComponents/Buttons
+    - "MaterialComponents/Buttons+ColorThemer"
+    - "MaterialComponents/Buttons+ShapeThemer"
+    - "MaterialComponents/Buttons+TypographyThemer"
+    - MaterialComponents/schemes/Container
+    - MaterialComponents/ShadowElevations
+  - "MaterialComponents/Buttons+TypographyThemer (111.0.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Typography
   - MaterialComponents/Elevation (111.0.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
@@ -138,6 +154,8 @@ DEPENDENCIES:
   - Giphy
   - GoogleMaps
   - GooglePlaces
+  - MaterialComponents/Buttons
+  - "MaterialComponents/Buttons+Theming"
   - MaterialComponents/Snackbar
   - MaterialComponents/TextFields
   - "MaterialComponents/TextFields+Theming"
@@ -175,6 +193,6 @@ SPEC CHECKSUMS:
   Parse: 79bdda34fdb7eb2a707a43a951c8aae236cb3e34
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
 
-PODFILE CHECKSUM: 0f0752fe8dd3906c4fb759431f140b12ae57a82b
+PODFILE CHECKSUM: bdac006cda87adeb69bb487f06c3ff3be5b97294
 
 COCOAPODS: 1.9.3

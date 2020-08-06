@@ -13,6 +13,8 @@
 #import "PostTableViewCell.h"
 #import "CommentsViewController.h"
 #import "CreatePostViewController.h"
+#import "MaterialButtons.h"
+#import <MaterialComponents/MaterialButtons+Theming.h>
 
 @interface HomeFeedViewController () <CreatePostViewControllerDelegate>
 
