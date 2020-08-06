@@ -11,6 +11,8 @@
 #import "Address.h"
 @import GoogleMaps;
 @import GooglePlaces;
+@import GiphyUISDK;
+@import GiphyCoreSDK;
 @interface AppDelegate ()
 
 @end
@@ -27,6 +29,7 @@
     [Parse initializeWithConfiguration:configuration];
     [GMSServices provideAPIKey:@"AIzaSyBK1kCQSh1FOaovXlil5LLIV0MKJCP0nWg"];
     [GMSPlacesClient provideAPIKey:@"AIzaSyBK1kCQSh1FOaovXlil5LLIV0MKJCP0nWg"];
+    [Giphy configureWithApiKey:@"AWyHAyYgei3RYdhjJY6qLdiqraVTtdog" verificationMode:false];
     [self configureAddress];
     
     return YES;

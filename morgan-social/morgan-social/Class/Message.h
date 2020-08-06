@@ -8,6 +8,7 @@
 
 #import <Parse/Parse.h>
 #import <Foundation/Foundation.h>
+@import Parse;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Message : PFObject<PFSubclassing>
@@ -15,8 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) PFUser *sender;
 @property (nonatomic, strong) PFUser *receiver;
 @property (nonatomic, strong) NSString *text;
+@property (nonatomic, strong) NSString *GIF;
 
-+ (void) createMessage: (NSString * _Nullable)text withReceiver: (PFUser * _Nullable)receiver withCompletion: (PFBooleanResultBlock _Nullable)completion;
++ (void) createMessage: (NSString * _Nullable)text withReceiver: (PFUser * _Nullable)receiver withGIF: (NSString *_Nullable)GIF withCompletion: (PFBooleanResultBlock _Nullable)completion;
 
 @end
 

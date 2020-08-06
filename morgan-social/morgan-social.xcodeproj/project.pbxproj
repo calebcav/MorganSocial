@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		327677DED78CCB9BC7B86F41 /* Pods_morgan_social_morgan_socialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4EE9967F7068C65B24C03D /* Pods_morgan_social_morgan_socialUITests.framework */; };
 		3800844424CB90BA0035359F /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 3800844324CB90BA0035359F /* Address.m */; };
 		3800844D24D471A30035359F /* ReceiverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3800844C24D471A30035359F /* ReceiverTableViewCell.m */; };
 		3800845024D471AE0035359F /* SenderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3800844F24D471AE0035359F /* SenderTableViewCell.m */; };
@@ -36,9 +37,12 @@
 		38B1A41424BD162B001A049B /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41324BD162B001A049B /* ChatViewController.m */; };
 		38B1A41A24BD1891001A049B /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41924BD1891001A049B /* SignupViewController.m */; };
 		38B1A41E24BE4888001A049B /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41D24BE4888001A049B /* Post.m */; };
-		5CADD3160CD2B0DAFBF78FB7 /* Pods_morgan_socialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D1BE97B16435D02596E746 /* Pods_morgan_socialTests.framework */; };
-		5FA0ABFAD3F0038567A5877E /* Pods_morgan_social_morgan_socialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E64A2187FC12C91DE32F33 /* Pods_morgan_social_morgan_socialUITests.framework */; };
-		92BBA2099FEE8DA53FAC2741 /* Pods_morgan_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7880714A81A5E09E2F96E5 /* Pods_morgan_social.framework */; };
+		38DE63F024DC621500E8C52C /* UserProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DE63EF24DC621500E8C52C /* UserProfileTableViewCell.m */; };
+		38DE63F324DCA12200E8C52C /* Bridge Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE63F224DCA12200E8C52C /* Bridge Header.swift */; };
+		38DE63F624DCA55A00E8C52C /* ReceiverGIFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DE63F524DCA55A00E8C52C /* ReceiverGIFTableViewCell.m */; };
+		38DE63F924DCA56400E8C52C /* SenderGIFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DE63F824DCA56400E8C52C /* SenderGIFTableViewCell.m */; };
+		A079D8F7D70FF12B1CA16925 /* Pods_morgan_socialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C2C4DF63DF183274D1B03B /* Pods_morgan_socialTests.framework */; };
+		EB2683A94A9A8569DB3A9E87 /* Pods_morgan_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77E2215463F35C6C751022B /* Pods_morgan_social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +63,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		274A760D5B8D4FF93CEA2D7F /* Pods-morgan-socialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-socialTests.release.xcconfig"; path = "Target Support Files/Pods-morgan-socialTests/Pods-morgan-socialTests.release.xcconfig"; sourceTree = "<group>"; };
-		27D1BE97B16435D02596E746 /* Pods_morgan_socialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_morgan_socialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B4EE9967F7068C65B24C03D /* Pods_morgan_social_morgan_socialUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_morgan_social_morgan_socialUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FA3DC470A8F0159651DBB09 /* Pods-morgan-socialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-socialTests.debug.xcconfig"; path = "Target Support Files/Pods-morgan-socialTests/Pods-morgan-socialTests.debug.xcconfig"; sourceTree = "<group>"; };
+		258ED0597496B3228B613E35 /* Pods-morgan-socialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-socialTests.release.xcconfig"; path = "Target Support Files/Pods-morgan-socialTests/Pods-morgan-socialTests.release.xcconfig"; sourceTree = "<group>"; };
+		325426BB3794D0CFA3D6AD32 /* Pods-morgan-social-morgan-socialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-social-morgan-socialUITests.debug.xcconfig"; path = "Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3800844224CB90BA0035359F /* Address.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
 		3800844324CB90BA0035359F /* Address.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
 		3800844B24D471A30035359F /* ReceiverTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiverTableViewCell.h; sourceTree = "<group>"; };
@@ -119,13 +125,19 @@
 		38B1A41924BD1891001A049B /* SignupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 		38B1A41C24BE4888001A049B /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		38B1A41D24BE4888001A049B /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
-		3A7880714A81A5E09E2F96E5 /* Pods_morgan_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_morgan_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FF2582F1A28294F7F0A990A /* Pods-morgan-social-morgan-socialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-social-morgan-socialUITests.debug.xcconfig"; path = "Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		763469C6E2B5A321E68257B1 /* Pods-morgan-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-social.debug.xcconfig"; path = "Target Support Files/Pods-morgan-social/Pods-morgan-social.debug.xcconfig"; sourceTree = "<group>"; };
-		90E64A2187FC12C91DE32F33 /* Pods_morgan_social_morgan_socialUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_morgan_social_morgan_socialUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8921A83775AB35CF7D48059 /* Pods-morgan-social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-social.release.xcconfig"; path = "Target Support Files/Pods-morgan-social/Pods-morgan-social.release.xcconfig"; sourceTree = "<group>"; };
-		AEB3F756E9E48FE7E7859D58 /* Pods-morgan-socialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-socialTests.debug.xcconfig"; path = "Target Support Files/Pods-morgan-socialTests/Pods-morgan-socialTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D2B9934106E9AFD11E79C9FE /* Pods-morgan-social-morgan-socialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-social-morgan-socialUITests.release.xcconfig"; path = "Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests.release.xcconfig"; sourceTree = "<group>"; };
+		38DE63EE24DC621500E8C52C /* UserProfileTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserProfileTableViewCell.h; sourceTree = "<group>"; };
+		38DE63EF24DC621500E8C52C /* UserProfileTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserProfileTableViewCell.m; sourceTree = "<group>"; };
+		38DE63F124DCA12100E8C52C /* morgan-social-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "morgan-social-Bridging-Header.h"; sourceTree = "<group>"; };
+		38DE63F224DCA12200E8C52C /* Bridge Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bridge Header.swift"; sourceTree = "<group>"; };
+		38DE63F424DCA55A00E8C52C /* ReceiverGIFTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiverGIFTableViewCell.h; sourceTree = "<group>"; };
+		38DE63F524DCA55A00E8C52C /* ReceiverGIFTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiverGIFTableViewCell.m; sourceTree = "<group>"; };
+		38DE63F724DCA56400E8C52C /* SenderGIFTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SenderGIFTableViewCell.h; sourceTree = "<group>"; };
+		38DE63F824DCA56400E8C52C /* SenderGIFTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SenderGIFTableViewCell.m; sourceTree = "<group>"; };
+		81C2C4DF63DF183274D1B03B /* Pods_morgan_socialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_morgan_socialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B48A78D83B6C24A15E9923D /* Pods-morgan-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-social.debug.xcconfig"; path = "Target Support Files/Pods-morgan-social/Pods-morgan-social.debug.xcconfig"; sourceTree = "<group>"; };
+		C5ACF1B43640E17DB1733ABA /* Pods-morgan-social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-social.release.xcconfig"; path = "Target Support Files/Pods-morgan-social/Pods-morgan-social.release.xcconfig"; sourceTree = "<group>"; };
+		E4FF997FF14233E52524D818 /* Pods-morgan-social-morgan-socialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-morgan-social-morgan-socialUITests.release.xcconfig"; path = "Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E77E2215463F35C6C751022B /* Pods_morgan_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_morgan_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92BBA2099FEE8DA53FAC2741 /* Pods_morgan_social.framework in Frameworks */,
+				EB2683A94A9A8569DB3A9E87 /* Pods_morgan_social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CADD3160CD2B0DAFBF78FB7 /* Pods_morgan_socialTests.framework in Frameworks */,
+				A079D8F7D70FF12B1CA16925 /* Pods_morgan_socialTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FA0ABFAD3F0038567A5877E /* Pods_morgan_social_morgan_socialUITests.framework in Frameworks */,
+				327677DED78CCB9BC7B86F41 /* Pods_morgan_social_morgan_socialUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +176,7 @@
 				38B1A3E624BCCF2E001A049B /* morgan-socialUITests */,
 				38B1A3BE24BCCF2B001A049B /* Products */,
 				88E1B9E50828F6398945693B /* Pods */,
-				59E34AF61292201D41A7B922 /* Frameworks */,
+				913A6F3B5E43F0DEBE352556 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +205,8 @@
 				38B1A3CE24BCCF2E001A049B /* LaunchScreen.storyboard */,
 				38B1A3D124BCCF2E001A049B /* Info.plist */,
 				38B1A3D224BCCF2E001A049B /* main.m */,
+				38DE63F224DCA12200E8C52C /* Bridge Header.swift */,
+				38DE63F124DCA12100E8C52C /* morgan-social-Bridging-Header.h */,
 			);
 			path = "morgan-social";
 			sourceTree = "<group>";
@@ -259,6 +273,12 @@
 				3800844C24D471A30035359F /* ReceiverTableViewCell.m */,
 				3800844E24D471AE0035359F /* SenderTableViewCell.h */,
 				3800844F24D471AE0035359F /* SenderTableViewCell.m */,
+				38DE63EE24DC621500E8C52C /* UserProfileTableViewCell.h */,
+				38DE63EF24DC621500E8C52C /* UserProfileTableViewCell.m */,
+				38DE63F424DCA55A00E8C52C /* ReceiverGIFTableViewCell.h */,
+				38DE63F524DCA55A00E8C52C /* ReceiverGIFTableViewCell.m */,
+				38DE63F724DCA56400E8C52C /* SenderGIFTableViewCell.h */,
+				38DE63F824DCA56400E8C52C /* SenderGIFTableViewCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -278,27 +298,27 @@
 			path = Class;
 			sourceTree = "<group>";
 		};
-		59E34AF61292201D41A7B922 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3A7880714A81A5E09E2F96E5 /* Pods_morgan_social.framework */,
-				90E64A2187FC12C91DE32F33 /* Pods_morgan_social_morgan_socialUITests.framework */,
-				27D1BE97B16435D02596E746 /* Pods_morgan_socialTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		88E1B9E50828F6398945693B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				763469C6E2B5A321E68257B1 /* Pods-morgan-social.debug.xcconfig */,
-				A8921A83775AB35CF7D48059 /* Pods-morgan-social.release.xcconfig */,
-				6FF2582F1A28294F7F0A990A /* Pods-morgan-social-morgan-socialUITests.debug.xcconfig */,
-				D2B9934106E9AFD11E79C9FE /* Pods-morgan-social-morgan-socialUITests.release.xcconfig */,
-				AEB3F756E9E48FE7E7859D58 /* Pods-morgan-socialTests.debug.xcconfig */,
-				274A760D5B8D4FF93CEA2D7F /* Pods-morgan-socialTests.release.xcconfig */,
+				9B48A78D83B6C24A15E9923D /* Pods-morgan-social.debug.xcconfig */,
+				C5ACF1B43640E17DB1733ABA /* Pods-morgan-social.release.xcconfig */,
+				325426BB3794D0CFA3D6AD32 /* Pods-morgan-social-morgan-socialUITests.debug.xcconfig */,
+				E4FF997FF14233E52524D818 /* Pods-morgan-social-morgan-socialUITests.release.xcconfig */,
+				1FA3DC470A8F0159651DBB09 /* Pods-morgan-socialTests.debug.xcconfig */,
+				258ED0597496B3228B613E35 /* Pods-morgan-socialTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		913A6F3B5E43F0DEBE352556 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E77E2215463F35C6C751022B /* Pods_morgan_social.framework */,
+				1B4EE9967F7068C65B24C03D /* Pods_morgan_social_morgan_socialUITests.framework */,
+				81C2C4DF63DF183274D1B03B /* Pods_morgan_socialTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,12 +328,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38B1A3EC24BCCF2E001A049B /* Build configuration list for PBXNativeTarget "morgan-social" */;
 			buildPhases = (
-				CD6572ACFE5662FBE9912D66 /* [CP] Check Pods Manifest.lock */,
+				FAE156FDC9F229B74132535A /* [CP] Check Pods Manifest.lock */,
 				38B1A3B924BCCF2B001A049B /* Sources */,
 				38B1A3BA24BCCF2B001A049B /* Frameworks */,
 				38B1A3BB24BCCF2B001A049B /* Resources */,
-				19C2D0EF2A9A5B1799CA3389 /* [CP] Embed Pods Frameworks */,
-				F3E35CD66A478185FFA1AA84 /* [CP] Copy Pods Resources */,
+				CFD53E31BB996C67B40AA171 /* [CP] Embed Pods Frameworks */,
+				7E7096EFD430B9206B36E274 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -328,7 +348,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38B1A3EF24BCCF2E001A049B /* Build configuration list for PBXNativeTarget "morgan-socialTests" */;
 			buildPhases = (
-				D7602F1E33BE4F71B1690221 /* [CP] Check Pods Manifest.lock */,
+				DDD749FA97BFCEA441A9E886 /* [CP] Check Pods Manifest.lock */,
 				38B1A3D424BCCF2E001A049B /* Sources */,
 				38B1A3D524BCCF2E001A049B /* Frameworks */,
 				38B1A3D624BCCF2E001A049B /* Resources */,
@@ -347,12 +367,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38B1A3F224BCCF2E001A049B /* Build configuration list for PBXNativeTarget "morgan-socialUITests" */;
 			buildPhases = (
-				F0BE63EA2A10CA4E7051D1B4 /* [CP] Check Pods Manifest.lock */,
+				26DF86FCF55C463ACF271EDD /* [CP] Check Pods Manifest.lock */,
 				38B1A3DF24BCCF2E001A049B /* Sources */,
 				38B1A3E024BCCF2E001A049B /* Frameworks */,
 				38B1A3E124BCCF2E001A049B /* Resources */,
-				46446F6BCD15AF1F99AB6030 /* [CP] Embed Pods Frameworks */,
-				0A328069755368EB5D2EAB23 /* [CP] Copy Pods Resources */,
+				20CE769903D8CFAD82425576 /* [CP] Embed Pods Frameworks */,
+				B84D91A1A0F34BBC6C0D3986 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -375,6 +395,7 @@
 				TargetAttributes = {
 					38B1A3BC24BCCF2B001A049B = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1160;
 					};
 					38B1A3D724BCCF2E001A049B = {
 						CreatedOnToolsVersion = 11.5;
@@ -434,41 +455,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A328069755368EB5D2EAB23 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		19C2D0EF2A9A5B1799CA3389 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-morgan-social/Pods-morgan-social-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-morgan-social/Pods-morgan-social-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-morgan-social/Pods-morgan-social-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		46446F6BCD15AF1F99AB6030 /* [CP] Embed Pods Frameworks */ = {
+		20CE769903D8CFAD82425576 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -485,51 +472,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CD6572ACFE5662FBE9912D66 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-morgan-social-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D7602F1E33BE4F71B1690221 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-morgan-socialTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F0BE63EA2A10CA4E7051D1B4 /* [CP] Check Pods Manifest.lock */ = {
+		26DF86FCF55C463ACF271EDD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -551,7 +494,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F3E35CD66A478185FFA1AA84 /* [CP] Copy Pods Resources */ = {
+		7E7096EFD430B9206B36E274 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -568,6 +511,84 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-morgan-social/Pods-morgan-social-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B84D91A1A0F34BBC6C0D3986 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-morgan-social-morgan-socialUITests/Pods-morgan-social-morgan-socialUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFD53E31BB996C67B40AA171 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-morgan-social/Pods-morgan-social-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-morgan-social/Pods-morgan-social-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-morgan-social/Pods-morgan-social-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDD749FA97BFCEA441A9E886 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-morgan-socialTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAE156FDC9F229B74132535A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-morgan-social-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -579,13 +600,16 @@
 				38B1A40824BD00F1001A049B /* CreatePostViewController.m in Sources */,
 				387F10EA24CB58FD0066CE2C /* ChooseLocationViewController.m in Sources */,
 				38B1A3FF24BCF1B0001A049B /* CategoryCollectionViewCell.m in Sources */,
+				38DE63F024DC621500E8C52C /* UserProfileTableViewCell.m in Sources */,
 				387F10D524C0DFC00066CE2C /* Comment.m in Sources */,
+				38DE63F324DCA12200E8C52C /* Bridge Header.swift in Sources */,
 				38B1A41124BD1610001A049B /* FriendsTableViewCell.m in Sources */,
 				387F10E124CA33750066CE2C /* MapViewController.m in Sources */,
 				38B1A3FC24BCEC25001A049B /* HomeFeedViewController.m in Sources */,
 				38B1A41E24BE4888001A049B /* Post.m in Sources */,
 				38B1A40B24BD0413001A049B /* ProfileViewController.m in Sources */,
 				381024E224BF6244007B64E9 /* SettingsViewController.m in Sources */,
+				38DE63F924DCA56400E8C52C /* SenderGIFTableViewCell.m in Sources */,
 				38B1A40E24BD1402001A049B /* SearchFriendViewController.m in Sources */,
 				38B1A41A24BD1891001A049B /* SignupViewController.m in Sources */,
 				38B1A3C224BCCF2B001A049B /* AppDelegate.m in Sources */,
@@ -597,6 +621,7 @@
 				387F10DE24C60AEF0066CE2C /* Message.m in Sources */,
 				38B1A3F924BCD0E2001A049B /* LoginViewController.m in Sources */,
 				38B1A40524BCF784001A049B /* PostTableViewCell.m in Sources */,
+				38DE63F624DCA55A00E8C52C /* ReceiverGIFTableViewCell.m in Sources */,
 				3800845024D471AE0035359F /* SenderTableViewCell.m in Sources */,
 				3800844D24D471A30035359F /* ReceiverTableViewCell.m in Sources */,
 			);
@@ -765,9 +790,10 @@
 		};
 		38B1A3ED24BCCF2E001A049B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 763469C6E2B5A321E68257B1 /* Pods-morgan-social.debug.xcconfig */;
+			baseConfigurationReference = 9B48A78D83B6C24A15E9923D /* Pods-morgan-social.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2F4B9UHH3;
 				INFOPLIST_FILE = "morgan-social/Info.plist";
@@ -777,15 +803,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "calebc.morgan-social";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "morgan-social/morgan-social-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		38B1A3EE24BCCF2E001A049B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8921A83775AB35CF7D48059 /* Pods-morgan-social.release.xcconfig */;
+			baseConfigurationReference = C5ACF1B43640E17DB1733ABA /* Pods-morgan-social.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2F4B9UHH3;
 				INFOPLIST_FILE = "morgan-social/Info.plist";
@@ -795,14 +825,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "calebc.morgan-social";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "morgan-social/morgan-social-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		38B1A3F024BCCF2E001A049B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEB3F756E9E48FE7E7859D58 /* Pods-morgan-socialTests.debug.xcconfig */;
+			baseConfigurationReference = 1FA3DC470A8F0159651DBB09 /* Pods-morgan-socialTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2F4B9UHH3;
@@ -822,8 +855,9 @@
 		};
 		38B1A3F124BCCF2E001A049B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 274A760D5B8D4FF93CEA2D7F /* Pods-morgan-socialTests.release.xcconfig */;
+			baseConfigurationReference = 258ED0597496B3228B613E35 /* Pods-morgan-socialTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2F4B9UHH3;
@@ -843,8 +877,9 @@
 		};
 		38B1A3F324BCCF2E001A049B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FF2582F1A28294F7F0A990A /* Pods-morgan-social-morgan-socialUITests.debug.xcconfig */;
+			baseConfigurationReference = 325426BB3794D0CFA3D6AD32 /* Pods-morgan-social-morgan-socialUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2F4B9UHH3;
 				INFOPLIST_FILE = "morgan-socialUITests/Info.plist";
@@ -862,8 +897,9 @@
 		};
 		38B1A3F424BCCF2E001A049B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2B9934106E9AFD11E79C9FE /* Pods-morgan-social-morgan-socialUITests.release.xcconfig */;
+			baseConfigurationReference = E4FF997FF14233E52524D818 /* Pods-morgan-social-morgan-socialUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2F4B9UHH3;
 				INFOPLIST_FILE = "morgan-socialUITests/Info.plist";

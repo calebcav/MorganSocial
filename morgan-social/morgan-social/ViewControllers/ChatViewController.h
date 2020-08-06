@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-
+@import GiphyCoreSDK;
+@import GiphyUISDK;
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ChatViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+@interface ChatViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, GiphyDelegate>
 @property (strong, nonatomic) PFUser *friend;
 @end
 

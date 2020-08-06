@@ -22,6 +22,10 @@
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) NSMutableArray *filters;
 @property (strong, nonatomic) CommentsViewController *CommentsVC;
+@property (strong, nonatomic) IBOutlet UIView *dormsView;
+@property (strong, nonatomic) IBOutlet UIView *professorsView;
+@property (strong, nonatomic) IBOutlet UIView *foodView;
+
 @end
 
 @implementation HomeFeedViewController
@@ -36,6 +40,9 @@
     [self.refreshControl addTarget:self action:@selector(queryPosts) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
     self.filters = [NSMutableArray new];
+    self.dormsView.layer.cornerRadius = 7;
+    self.foodView.layer.cornerRadius = 7;
+    self.professorsView.layer.cornerRadius = 7;
     // Do any additional setup after loading the view.
 }
 
@@ -74,23 +81,49 @@
     if (![button isSelected]) {
         [button setSelected:YES];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self changeButtonHelper:name withBoolean:true];
         [button setBackgroundColor:[UIColor lightGrayColor]];
         [self.filters addObject:name];
     } else {
         [button setSelected:NO];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self changeButtonHelper:name withBoolean:false];
         [button setBackgroundColor:[UIColor grayColor]];
         [self.filters removeObject:name];
     }
 }
 
-- (void) queryPosts {
+- (void)changeButtonHelper:(NSString *)name withBoolean: (BOOL)boolean {
+    if (boolean){
+        if ([name isEqualToString:@"Dorms"]) {
+            self.dormsView.backgroundColor = [UIColor lightGrayColor];
+        }
+        if ([name isEqualToString:@"Professors"]) {
+            self.professorsView.backgroundColor = [UIColor lightGrayColor];
+        }
+        if ([name isEqualToString:@"Food"]) {
+            self.foodView.backgroundColor = [UIColor lightGrayColor];
+        }
+    } else {
+        if ([name isEqualToString:@"Dorms"]) {
+            self.dormsView.backgroundColor = [UIColor grayColor];
+        }
+        if ([name isEqualToString:@"Professors"]) {
+            self.professorsView.backgroundColor = [UIColor grayColor];
+        }
+        if ([name isEqualToString:@"Food"]) {
+            self.foodView.backgroundColor = [UIColor grayColor];
+        }
+    }
+    
+}
+
+- (void)queryPosts {
     [self.activityIndicator startAnimating];
     NSString *predicateString;
     int i = 0;
     for (NSString *category in self.filters) {
         predicateString = [self addToPredicate:predicateString withCategory:category withIndex:i];
-        NSLog(@"%@", predicateString);
         i += 1;
     }
     NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
@@ -98,6 +131,7 @@
     [query orderByDescending:@"createdAt"];
     [query includeKey:@"author"];
     [query includeKey:@"likeList"];
+    [query includeKey:@"address"];
     query.limit = 10;
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
         if (posts != nil) {

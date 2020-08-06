@@ -26,13 +26,6 @@
     // Configure the view for the selected state
 }
 
-- (Address *)fetchAddress {
-    PFQuery *query = [PFQuery queryWithClassName:@"Address"];
-    [query whereKey:@"objectId" equalTo:self.post.address.objectId];
-    NSArray *address = [query findObjects];
-    return address[0];
-}
-
 - (void)setPost:(Post *)post {
     _post = post;
     self.postUserPicture.file = post.author[@"picture"];
@@ -46,7 +39,7 @@
     self.commentCount.text = [NSString stringWithFormat:@"%d", post.commentCount];
     self.likeCount.text = [NSString stringWithFormat:@"%d", post.likeCount];
     self.post.likeList = post.likeList;
-    Address *address = [self fetchAddress];
+    Address *address = post.address;
     if (address.city && address.state) {
         self.postLocation.text = [address.city stringByAppendingFormat:@", %@", address.state];
     } else {

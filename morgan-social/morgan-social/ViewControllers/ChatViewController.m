@@ -11,14 +11,19 @@
 #import <Parse/Parse.h>
 #import "SenderTableViewCell.h"
 #import "ReceiverTableViewCell.h"
+#import "ReceiverGIFTableViewCell.h"
+#import "SenderGIFTableViewCell.h"
+@import GiphyCoreSDK;
+@import GiphyUISDK;
 @interface ChatViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *messages;
 @property (strong, nonatomic) IBOutlet UITextField *messageField;
+@property (strong, nonatomic) NSString *gifURL;
 
 @end
 
-@implementation ChatViewController
+@implementation ChatViewController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,8 +37,7 @@
     self.messageField.delegate = self;
     self.navigationItem.title = [self.friend[@"firstName"] stringByAppendingFormat:@" %@", self.friend[@"lastName"]];
     [self.tableView reloadData];
-    //[self.tableView setContentOffset:CGPointMake(0, self.tableView.contentSize.height - self.tableView.frame.size.height)];
-    self.tableView.transform = CGAffineTransformMakeScale(1, -1);
+    //self.tableView.transform = CGAffineTransformMakeScale(1, -1);
     
     // Do any additional setup after loading the view.
 }
@@ -66,11 +70,23 @@
 }
 
 - (IBAction)sendButton:(id)sender {
-    [Message createMessage:self.messageField.text withReceiver:self.friend withCompletion:^(BOOL succeeded, NSError *error){
+    [Message createMessage:self.messageField.text withReceiver:self.friend withGIF:nil withCompletion:^(BOOL succeeded, NSError *error){
         [self queryMessages];
         [self.tableView reloadData];
         self.messageField.text = @"";
     }];
+}
+
+- (IBAction)gifButton:(id)sender {
+    GiphyViewController *giphy = [GiphyViewController new];
+    giphy.layout = GPHGridLayoutWaterfall;
+    giphy.theme = [GPHTheme new];
+    giphy.rating = GPHRatingTypeRatedPG13;
+    giphy.delegate = self;
+    giphy.showConfirmationScreen = true;
+    [giphy setMediaConfigWithTypes: [ [NSMutableArray alloc] initWithObjects:
+    @(GPHContentTypeGifs),@(GPHContentTypeStickers), @(GPHContentTypeText),@(GPHContentTypeEmoji), nil] ];
+    [self presentViewController:giphy animated:true completion:nil];
 }
 
 /*
@@ -83,23 +99,43 @@
 }
 */
 
+- (void)didSelectMediaWithGiphyViewController:(GiphyViewController *)giphyViewController media:(GPHMedia *)media {
+    [Message createMessage:nil withReceiver:self.friend withGIF:media.id withCompletion:^(BOOL succeeded, NSError *error){
+        [self queryMessages];
+        [self.tableView reloadData];
+    }];
+    [giphyViewController dismissViewControllerAnimated:true completion:nil];
+}
+
+- (void)didDismissWithController:(GiphyViewController *)controller {
+    
+}
+
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     Message *message = self.messages[indexPath.row];
     ReceiverTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ReceiverTableViewCell"];
     if ([message.sender.username isEqualToString:PFUser.currentUser.username]) {
-        SenderTableViewCell *otherCell = [tableView dequeueReusableCellWithIdentifier:@"SenderTableViewCell"];
-        otherCell.backgroundColor = [UIColor clearColor];
-        otherCell.message = message;
-        otherCell.contentView.transform = CGAffineTransformMakeScale(1, -1);
-        otherCell.accessoryView.transform = CGAffineTransformMakeScale(1, -1);
-        return otherCell;
+        if (message.text != nil){
+            SenderTableViewCell *otherCell = [tableView dequeueReusableCellWithIdentifier:@"SenderTableViewCell"];
+            otherCell.backgroundColor = [UIColor clearColor];
+            otherCell.message = message;
+            return otherCell;
+        } else {
+            SenderGIFTableViewCell *otherCell = [tableView dequeueReusableCellWithIdentifier:@"SenderGIFTVC"];
+            otherCell.message = message;
+            return otherCell;
+        }
     } else {
-        ReceiverTableViewCell *otherCell = [tableView dequeueReusableCellWithIdentifier:@"ReceiverTableViewCell"];
-        otherCell.backgroundColor = [UIColor clearColor];
-        otherCell.message = message;
-        otherCell.contentView.transform = CGAffineTransformMakeScale(1, -1);
-        otherCell.accessoryView.transform = CGAffineTransformMakeScale(1, -1);
-        return otherCell;
+        if (message.text != nil) {
+            ReceiverTableViewCell *otherCell = [tableView dequeueReusableCellWithIdentifier:@"ReceiverTableViewCell"];
+            otherCell.backgroundColor = [UIColor clearColor];
+            otherCell.message = message;
+            return otherCell;
+        } else {
+            ReceiverGIFTableViewCell *otherCell = [tableView dequeueReusableCellWithIdentifier:@"ReceiverGIFTVC"];
+            otherCell.message = message;
+            return otherCell;
+        }
     }
     return cell;
 }

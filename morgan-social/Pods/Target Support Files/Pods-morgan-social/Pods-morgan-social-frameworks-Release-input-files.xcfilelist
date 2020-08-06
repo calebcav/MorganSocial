@@ -1,7 +1,11 @@
 ${PODS_ROOT}/Target Support Files/Pods-morgan-social/Pods-morgan-social-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework
 ${BUILT_PRODUCTS_DIR}/DateTools/DateTools.framework
+${BUILT_PRODUCTS_DIR}/DeepDiff/DeepDiff.framework
+${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework
 ${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework
 ${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework
 ${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework
+${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework
 ${BUILT_PRODUCTS_DIR}/Parse/Parse.framework
+${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework

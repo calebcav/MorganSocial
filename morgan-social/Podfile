@@ -14,6 +14,8 @@ target 'morgan-social' do
   pod 'MaterialComponents/TextFields'
   pod 'MaterialComponents/TextFields+Theming'
   pod 'DateTools'
+  pod 'Giphy'
+  pod 'FLAnimatedImage', '~> 1.0'
   target 'morgan-socialTests' do
     inherit! :search_paths
     # Pods for testing
