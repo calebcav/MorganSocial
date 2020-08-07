@@ -6,6 +6,8 @@ ${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework
 ${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework
 ${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework
 ${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework
+${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework
+${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework
 ${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework
 ${BUILT_PRODUCTS_DIR}/Parse/Parse.framework
 ${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework

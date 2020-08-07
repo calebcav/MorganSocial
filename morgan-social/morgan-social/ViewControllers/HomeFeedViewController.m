@@ -13,8 +13,7 @@
 #import "PostTableViewCell.h"
 #import "CommentsViewController.h"
 #import "CreatePostViewController.h"
-#import "MaterialButtons.h"
-#import <MaterialComponents/MaterialButtons+Theming.h>
+#import <MaterialActivityIndicator.h>
 
 @interface HomeFeedViewController () <CreatePostViewControllerDelegate>
 
@@ -45,6 +44,9 @@
     self.dormsView.layer.cornerRadius = 7;
     self.foodView.layer.cornerRadius = 7;
     self.professorsView.layer.cornerRadius = 7;
+    self.dormsView.backgroundColor = [UIColor grayColor];
+    self.professorsView.backgroundColor = [UIColor grayColor];
+    self.foodView.backgroundColor = [UIColor grayColor];
     // Do any additional setup after loading the view.
 }
 
@@ -82,6 +84,7 @@
 - (void)changeButton:(UIButton *)button withName: (NSString *)name {
     if (![button isSelected]) {
         [button setSelected:YES];
+        [button setTintColor:[UIColor lightGrayColor]];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self changeButtonHelper:name withBoolean:true];
         [button setBackgroundColor:[UIColor lightGrayColor]];

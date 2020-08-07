@@ -63,7 +63,7 @@
 - (IBAction)deletePost:(id)sender {
     if (self.post) {
         [self.post deleteInBackground];
-        NSLog(@"deleted");
+        [self setHidden:YES];
     } else {
         NSLog(@"Couldn't delete post");
     }

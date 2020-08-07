@@ -23,6 +23,11 @@ PODS:
   - libwebp/mux (1.1.0):
     - libwebp/demux
   - libwebp/webp (1.1.0)
+  - MaterialComponents/ActivityIndicator (111.0.0):
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Application
+    - MDFInternationalization
+    - MotionAnimator (~> 2.0)
   - MaterialComponents/AnimationTiming (111.0.0)
   - MaterialComponents/Availability (111.0.0)
   - MaterialComponents/Buttons (111.0.0):
@@ -140,6 +145,9 @@ PODS:
     - MDFTextAccessibility
   - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.0)
+  - MotionAnimator (2.8.1):
+    - MotionInterchange (~> 1.6)
+  - MotionInterchange (1.6.0)
   - Parse (1.18.0):
     - Parse/Core (= 1.18.0)
   - Parse/Core (1.18.0):
@@ -154,6 +162,7 @@ DEPENDENCIES:
   - Giphy
   - GoogleMaps
   - GooglePlaces
+  - MaterialComponents/ActivityIndicator
   - MaterialComponents/Buttons
   - "MaterialComponents/Buttons+Theming"
   - MaterialComponents/Snackbar
@@ -175,6 +184,8 @@ SPEC REPOS:
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
+    - MotionAnimator
+    - MotionInterchange
     - Parse
     - PINCache
 
@@ -190,9 +201,11 @@ SPEC CHECKSUMS:
   MaterialComponents: 533042da998b97ad13a6f544268f8026e8161cc5
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
+  MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
+  MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   Parse: 79bdda34fdb7eb2a707a43a951c8aae236cb3e34
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
 
-PODFILE CHECKSUM: bdac006cda87adeb69bb487f06c3ff3be5b97294
+PODFILE CHECKSUM: 3b892e98c132f69f90410c7741fec57c42002738
 
 COCOAPODS: 1.9.3

@@ -18,6 +18,7 @@ target 'morgan-social' do
   pod 'FLAnimatedImage', '~> 1.0'
   pod 'MaterialComponents/Buttons'
   pod 'MaterialComponents/Buttons+Theming'
+  pod 'MaterialComponents/ActivityIndicator'
   target 'morgan-socialTests' do
     inherit! :search_paths
     # Pods for testing

@@ -32,7 +32,7 @@
     UITapGestureRecognizer *const tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
     [self queryMessages];
-    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(reloadTable) userInfo:nil repeats:YES];
+    //[NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(reloadTable) userInfo:nil repeats:YES];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.messageField.delegate = self;
     self.navigationItem.title = [self.friend[@"firstName"] stringByAppendingFormat:@" %@", self.friend[@"lastName"]];
