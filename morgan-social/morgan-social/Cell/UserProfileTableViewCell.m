@@ -37,6 +37,8 @@
     [self.postView.layer setShadowOpacity:0.8];
     [self.postView.layer setShadowRadius:3.0];
     [self.postView.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
+    self.userProfilePicture.layer.cornerRadius = self.userProfilePicture.frame.size.width / 2;
+    self.userProfilePicture.clipsToBounds = YES;
 }
 
 @end

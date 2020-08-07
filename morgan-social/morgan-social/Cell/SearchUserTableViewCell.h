@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Parse/Parse.h>
+@import Parse;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchUserTableViewCell : UITableViewCell
-
+@property (strong, nonatomic) IBOutlet UILabel *username;
+@property (strong, nonatomic) IBOutlet PFImageView *userPicture;
+@property (strong, nonatomic) PFUser *user;
+@property (strong, nonatomic) IBOutlet UIButton *addButton;
 @end
 
 NS_ASSUME_NONNULL_END

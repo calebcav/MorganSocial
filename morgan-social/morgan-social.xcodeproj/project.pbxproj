@@ -37,6 +37,10 @@
 		38B1A41424BD162B001A049B /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41324BD162B001A049B /* ChatViewController.m */; };
 		38B1A41A24BD1891001A049B /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41924BD1891001A049B /* SignupViewController.m */; };
 		38B1A41E24BE4888001A049B /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A41D24BE4888001A049B /* Post.m */; };
+		38D5E1BF24DDFFA500BF06AD /* OtherUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D5E1BE24DDFFA500BF06AD /* OtherUserViewController.m */; };
+		38D5E1C524DE078100BF06AD /* SearchUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D5E1C424DE078100BF06AD /* SearchUserViewController.m */; };
+		38D5E1C824DE088900BF06AD /* SearchUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D5E1C724DE088900BF06AD /* SearchUserTableViewCell.m */; };
+		38D5E1CB24DE0F1000BF06AD /* OtherUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D5E1CA24DE0F1000BF06AD /* OtherUserTableViewCell.m */; };
 		38DE63F024DC621500E8C52C /* UserProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DE63EF24DC621500E8C52C /* UserProfileTableViewCell.m */; };
 		38DE63F324DCA12200E8C52C /* Bridge Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE63F224DCA12200E8C52C /* Bridge Header.swift */; };
 		38DE63F624DCA55A00E8C52C /* ReceiverGIFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DE63F524DCA55A00E8C52C /* ReceiverGIFTableViewCell.m */; };
@@ -125,6 +129,14 @@
 		38B1A41924BD1891001A049B /* SignupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 		38B1A41C24BE4888001A049B /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		38B1A41D24BE4888001A049B /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		38D5E1BD24DDFFA500BF06AD /* OtherUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherUserViewController.h; sourceTree = "<group>"; };
+		38D5E1BE24DDFFA500BF06AD /* OtherUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherUserViewController.m; sourceTree = "<group>"; };
+		38D5E1C324DE078100BF06AD /* SearchUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchUserViewController.h; sourceTree = "<group>"; };
+		38D5E1C424DE078100BF06AD /* SearchUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchUserViewController.m; sourceTree = "<group>"; };
+		38D5E1C624DE088900BF06AD /* SearchUserTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchUserTableViewCell.h; sourceTree = "<group>"; };
+		38D5E1C724DE088900BF06AD /* SearchUserTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchUserTableViewCell.m; sourceTree = "<group>"; };
+		38D5E1C924DE0F1000BF06AD /* OtherUserTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherUserTableViewCell.h; sourceTree = "<group>"; };
+		38D5E1CA24DE0F1000BF06AD /* OtherUserTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherUserTableViewCell.m; sourceTree = "<group>"; };
 		38DE63EE24DC621500E8C52C /* UserProfileTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserProfileTableViewCell.h; sourceTree = "<group>"; };
 		38DE63EF24DC621500E8C52C /* UserProfileTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserProfileTableViewCell.m; sourceTree = "<group>"; };
 		38DE63F124DCA12100E8C52C /* morgan-social-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "morgan-social-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -254,6 +266,10 @@
 				387F10E024CA33750066CE2C /* MapViewController.m */,
 				387F10E824CB58FD0066CE2C /* ChooseLocationViewController.h */,
 				387F10E924CB58FD0066CE2C /* ChooseLocationViewController.m */,
+				38D5E1BD24DDFFA500BF06AD /* OtherUserViewController.h */,
+				38D5E1BE24DDFFA500BF06AD /* OtherUserViewController.m */,
+				38D5E1C324DE078100BF06AD /* SearchUserViewController.h */,
+				38D5E1C424DE078100BF06AD /* SearchUserViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -279,6 +295,10 @@
 				38DE63F524DCA55A00E8C52C /* ReceiverGIFTableViewCell.m */,
 				38DE63F724DCA56400E8C52C /* SenderGIFTableViewCell.h */,
 				38DE63F824DCA56400E8C52C /* SenderGIFTableViewCell.m */,
+				38D5E1C624DE088900BF06AD /* SearchUserTableViewCell.h */,
+				38D5E1C724DE088900BF06AD /* SearchUserTableViewCell.m */,
+				38D5E1C924DE0F1000BF06AD /* OtherUserTableViewCell.h */,
+				38D5E1CA24DE0F1000BF06AD /* OtherUserTableViewCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -602,11 +622,13 @@
 				38B1A3FF24BCF1B0001A049B /* CategoryCollectionViewCell.m in Sources */,
 				38DE63F024DC621500E8C52C /* UserProfileTableViewCell.m in Sources */,
 				387F10D524C0DFC00066CE2C /* Comment.m in Sources */,
+				38D5E1C524DE078100BF06AD /* SearchUserViewController.m in Sources */,
 				38DE63F324DCA12200E8C52C /* Bridge Header.swift in Sources */,
 				38B1A41124BD1610001A049B /* FriendsTableViewCell.m in Sources */,
 				387F10E124CA33750066CE2C /* MapViewController.m in Sources */,
 				38B1A3FC24BCEC25001A049B /* HomeFeedViewController.m in Sources */,
 				38B1A41E24BE4888001A049B /* Post.m in Sources */,
+				38D5E1C824DE088900BF06AD /* SearchUserTableViewCell.m in Sources */,
 				38B1A40B24BD0413001A049B /* ProfileViewController.m in Sources */,
 				381024E224BF6244007B64E9 /* SettingsViewController.m in Sources */,
 				38DE63F924DCA56400E8C52C /* SenderGIFTableViewCell.m in Sources */,
@@ -614,8 +636,10 @@
 				38B1A41A24BD1891001A049B /* SignupViewController.m in Sources */,
 				38B1A3C224BCCF2B001A049B /* AppDelegate.m in Sources */,
 				3800844424CB90BA0035359F /* Address.m in Sources */,
+				38D5E1BF24DDFFA500BF06AD /* OtherUserViewController.m in Sources */,
 				38B1A3D324BCCF2E001A049B /* main.m in Sources */,
 				387F10D824C0FB190066CE2C /* CommentsViewController.m in Sources */,
+				38D5E1CB24DE0F1000BF06AD /* OtherUserTableViewCell.m in Sources */,
 				38B1A3C524BCCF2B001A049B /* SceneDelegate.m in Sources */,
 				387F10DB24C0FEEC0066CE2C /* CommentTableViewCell.m in Sources */,
 				387F10DE24C60AEF0066CE2C /* Message.m in Sources */,
