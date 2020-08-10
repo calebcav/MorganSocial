@@ -581,13 +581,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dj-dF-RjG">
-                                                    <rect key="frame" x="389" y="60" width="18" height="22"/>
-                                                    <state key="normal" image="plus" catalog="system"/>
-                                                    <connections>
-                                                        <action selector="addFriend:" destination="Lkq-ax-tOa" eventType="touchUpInside" id="op6-yb-W3z"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="50h-qm-kCJ" firstAttribute="top" secondItem="VJp-1e-wt7" secondAttribute="top" constant="21" id="21G-Il-TwB"/>
@@ -595,12 +588,9 @@
                                                 <constraint firstItem="50h-qm-kCJ" firstAttribute="leading" secondItem="VJp-1e-wt7" secondAttribute="leading" constant="13" id="DWt-Vk-dDe"/>
                                                 <constraint firstAttribute="bottom" secondItem="50h-qm-kCJ" secondAttribute="bottom" constant="28" id="byM-Rk-yvx"/>
                                                 <constraint firstItem="NVe-HA-UXu" firstAttribute="leading" secondItem="50h-qm-kCJ" secondAttribute="trailing" constant="41" id="dbh-68-u8F"/>
-                                                <constraint firstItem="4dj-dF-RjG" firstAttribute="top" secondItem="VJp-1e-wt7" secondAttribute="top" constant="60" id="hAo-sO-bSx"/>
-                                                <constraint firstAttribute="trailing" secondItem="4dj-dF-RjG" secondAttribute="trailing" constant="7" id="uLk-zb-jZE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="addButton" destination="4dj-dF-RjG" id="Ub5-0D-T4g"/>
                                             <outlet property="userPicture" destination="50h-qm-kCJ" id="l4M-Ui-klZ"/>
                                             <outlet property="username" destination="NVe-HA-UXu" id="pix-4h-WyH"/>
                                             <segue destination="c7g-tS-U2p" kind="show" id="slo-g4-loQ"/>
@@ -1666,7 +1656,6 @@
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.2" catalog="system" width="128" height="81"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.and.pencil" catalog="system" width="128" height="118"/>
         <image name="trash" catalog="system" width="121" height="128"/>
     </resources>
