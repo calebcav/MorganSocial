@@ -41,6 +41,8 @@
     // Do any additional setup after loading the view.
 }
 
+//calebc@morgan.edu
+
 - (IBAction)signupButton:(id)sender {
     NSArray *class = @[@"Freshman", @"Sophomore", @"Junior", @"Senior"];
     PFUser *newUser = [PFUser user];
@@ -52,15 +54,22 @@
     newUser[@"major"] = self.majorField.text;
     newUser[@"classification"] = class[self.segmentedClass.selectedSegmentIndex];
     if ([self checkAllFields]){
+        long lengthOfEmail = self.emailField.text.length - 11;
+        if ([[self.emailField.text substringFromIndex:lengthOfEmail] isEqualToString:@"@morgan.edu"]){
+            [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+                if (error != nil) {
+                    NSLog(@"Error: %@", error.localizedDescription);
+                } else {
+                    NSLog(@"User registered successfully");
+                    [self dismissViewControllerAnimated:true completion:nil];
+                }
+            }];
+        } else {
+            MDCSnackbarMessage *message = [MDCSnackbarMessage new];
+            message.text = @"The email you are using is not a Morgan.edu email address";
+            [MDCSnackbarManager showMessage:message];
+        }
         
-        [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
-            if (error != nil) {
-                NSLog(@"Error: %@", error.localizedDescription);
-            } else {
-                NSLog(@"User registered successfully");
-                [self dismissViewControllerAnimated:true completion:nil];
-            }
-        }];
     } else {
         MDCSnackbarMessage *message = [MDCSnackbarMessage new];
         message.text = @"All of the fields' haven't been filled";
