@@ -90,7 +90,6 @@ Morgan Social is an app strictly for Morgan State Students that provides news, e
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="https://i.imgur.com/4m3q0TV.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
